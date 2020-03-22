@@ -1,22 +1,27 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<h3>Covid-19 related fact-checks</h3>
+<div class="hero">
+    <div class="hero-body text-center">
+        <img src="/images/icon.png" style="width: 128px; height: 128px">
+        <h1>CovidMis.Info</h1>
+        <p>Tracking spread of Covid-19 claims on the Web.</p>
+    </div>
+</div>
 
 <div class="columns">
     {% for _, fact_check in fact_checks.iterrows() %}
-    <div class="column col-6 p-2">
-        <div class="card">
-            <div class="card-header">
-                <div class="card-title h5">
-                    <a href="/fact_checks/{{ fact_check['id'] }}.html">{{ fact_check['claim'] }}</a>
-                </div>
-                <div class="card-subtitle text-error">{{ fact_check['rating']['overall_rating'] }}</div>
-            </div>
-            <div class="card-body">
-                {{ fact_check['description'][:500] }}
-            </div>
-        </div>
+    <div class="column col-12 mt-2 pt-2">
+        <h5>
+            <a href="{{ fact_check['path'] }}">{{ fact_check['claim'] }}</a>
+        </h5>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        <a href="{{ fact_check['url'] }}">{{ fact_check['domain'] }}</a><br>
+        {{ fact_check['num_articles'] }} Web articles
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-error">{{ fact_check['rating']['overall_rating'] }}</div>
     </div>
     {% endfor %}
 </div>

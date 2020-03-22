@@ -30,7 +30,7 @@ def save_mappings():
 
 
 def save_articles():
-    columns = ['id', 'title', 'url']
+    columns = ['id', 'title', 'url', 'published_at']
     cur.execute(f"""SELECT {', '.join(columns)} FROM articles""")
     rows = cur.fetchall()
 
@@ -46,8 +46,8 @@ def save_claims():
         WHERE is_deleted = FALSE""")
     rows = cur.fetchall()
 
-    articles = pd.DataFrame(rows, columns=columns)
-    articles.to_pickle('cache/claims.p')
+    claims = pd.DataFrame(rows, columns=columns)
+    claims.to_pickle('cache/claims.p')
     print('Fetched claims')
 
 
@@ -86,13 +86,21 @@ def process_fact_checks():
     fact_checks.to_pickle('cache/fact_checks.p')
     print('Processed fact checks')
 
+def process_articles():
+    mappings = pd.read_pickle('cache/mappings.p')
+    article_ids = set(mappings['source_entity_id'])
+    articles = pd.read_pickle('cache/articles.p')
+    articles = articles.loc[articles['id'].isin(article_ids)]
+    articles.to_pickle('cache/articles.p')
+    print('Processed articles')
+
 
 with SSHTunnelForwarder(
     (os.environ['SSH_HOST'], 22),
     ssh_private_key='/Users/matus/.ssh/id_rsa',
     ssh_username=os.environ['SSH_USERNAME'],
     remote_bind_address=('localhost', 5433),
-    local_bind_address=('localhost', 7543)
+    local_bind_address=('localhost', 8543)
 ) as tunnel:
 
     tunnel.start()
@@ -113,12 +121,13 @@ with SSHTunnelForwarder(
     try:
         # save_fact_checks()
         # save_mappings()
-        # save_articles()
+        save_articles()
         # save_claims()
         # save_fact_check_claim_transformations()
         # save_mappings()
         # create_claim_to_articles()
-        process_fact_checks()
+        # process_fact_checks()
+        process_articles()
     except Exception as inst:
         print(type(inst))
         print(inst.args)
