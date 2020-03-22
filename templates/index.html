@@ -16,13 +16,14 @@
             <a href="{{ fact_check.path() }}">{{ fact_check.statement }}</a>
         </h5>
     </div>
-    <div class="column col-6 mb-2 pb-2">
+    <div class="column col-6">
         <a href="{{ fact_check.url }}">{{ fact_check.domain() }}</a><br>
         {{ fact_check.num_articles() }} Web articles
     </div>
-    <div class="column col-6 mb-2 pb-2 text-right">
+    <div class="column col-6 text-right">
         <div class="{{ fact_check.rating_style() }}">{{ fact_check.rating }}</div>
     </div>
+    <div class="column col-12">&nbsp;</div>
     {% endfor %}
 </div>
 

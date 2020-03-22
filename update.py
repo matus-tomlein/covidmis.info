@@ -100,7 +100,7 @@ with SSHTunnelForwarder(
     ssh_private_key='/Users/matus/.ssh/id_rsa',
     ssh_username=os.environ['SSH_USERNAME'],
     remote_bind_address=('localhost', 5433),
-    local_bind_address=('localhost', 8543)
+    local_bind_address=('localhost', 7543)
 ) as tunnel:
 
     tunnel.start()
@@ -119,14 +119,14 @@ with SSHTunnelForwarder(
     print('database connected')
 
     try:
-        # save_fact_checks()
-        # save_mappings()
+        save_fact_checks()
+        save_mappings()
         save_articles()
-        # save_claims()
-        # save_fact_check_claim_transformations()
-        # save_mappings()
-        # create_claim_to_articles()
-        # process_fact_checks()
+        save_claims()
+        save_fact_check_claim_transformations()
+        save_mappings()
+        create_claim_to_articles()
+        process_fact_checks()
         process_articles()
     except Exception as inst:
         print(type(inst))
