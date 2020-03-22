@@ -8,42 +8,44 @@
 </div>
 
 <h3 class="text-center">
-    {{ fact_check['claim'] }}
+    {{ fact_check.statement }}
 </h3>
 
 <p>
-    {{ fact_check['description'] }}
+    {{ fact_check.short_description() }}
 </p>
 
-<div class="text-center text-error text-large m-2 p-2">
-    Verdict: {{ fact_check['rating']['overall_rating'] }}
+<div class="text-center {{ fact_check.rating_style() }} text-large m-2 p-2">
+    Verdict: {{ fact_check.rating }}
 </div>
 
 <div class="text-center m-2 p-2">
-    <a href="{{ fact_check['url'] }}" class="btn btn-lg">
-        Source: {{ fact_check['domain']}}
+    <a href="{{ fact_check.url }}" class="btn btn-lg">
+        Source: {{ fact_check.domain() }}
     </a>
 </div>
 
-{% if articles.shape[0] > 0 %}
+{% if fact_check.num_articles() > 0 %}
 
 <div class="columns pt-2 mt-2">
     <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
         <h4>Articles Found on the Web</h4>
     </div>
-    {% for _, article in articles.iterrows() %}
+    {% for article_mapping in fact_check.get_article_mappings() %}
     <div class="column col-12 mt-2">
         <h6>
-            <a href="{{ article['url'] }}" rel="nofollow">
-                {{ article['title'] }}
+            <a href="{{ article_mapping.article.url }}" rel="nofollow">
+                {{ article_mapping.article.title }}
             </a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        {{ article['domain'] }}
+        {{ article_mapping.article.domain() }}
     </div>
     <div class="column col-6 mb-2 pb-2 text-right">
-        <div class="text-error">Likely Contains</div>
+        <div class="{{ article_mapping.confidence_style() }}">
+            {{ article_mapping.confidence_text() }}
+        </div>
     </div>
     {% endfor %}
 </div>

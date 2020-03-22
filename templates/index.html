@@ -10,18 +10,18 @@
 </div>
 
 <div class="columns">
-    {% for _, fact_check in fact_checks.iterrows() %}
+    {% for fact_check in fact_checks %}
     <div class="column col-12 mt-2 pt-2">
         <h5>
-            <a href="{{ fact_check['path'] }}">{{ fact_check['claim'] }}</a>
+            <a href="{{ fact_check.path() }}">{{ fact_check.statement }}</a>
         </h5>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        <a href="{{ fact_check['url'] }}">{{ fact_check['domain'] }}</a><br>
-        {{ fact_check['num_articles'] }} Web articles
+        <a href="{{ fact_check.url }}">{{ fact_check.domain() }}</a><br>
+        {{ fact_check.num_articles() }} Web articles
     </div>
     <div class="column col-6 mb-2 pb-2 text-right">
-        <div class="text-error">{{ fact_check['rating']['overall_rating'] }}</div>
+        <div class="{{ fact_check.rating_style() }}">{{ fact_check.rating }}</div>
     </div>
     {% endfor %}
 </div>
