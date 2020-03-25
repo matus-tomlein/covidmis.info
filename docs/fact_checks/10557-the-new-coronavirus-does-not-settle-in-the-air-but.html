@@ -13,36 +13,122 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
+    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
 </head>
 
 <body>
 
+    <header class="navbar">
+        <section class="navbar-section"></section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                CovidMis.Info
+            </a>
+        </section>
+        <section class="navbar-section"></section>
+    </header>
+
     <div class="container grid-lg">
         
 
-<div class="text-center m-2 p-2">
-    <a href="/">
-        <img src="/images/icon.png" style="width: 64px; height: 64px">
-    </a>
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h3 class="text-center">
+            The new coronavirus does not settle in the air but is grounded so it is not transmitted by air.
+        </h3>
+
+        <p>
+            Coronavirus graphics you may have been sent on WhatsApp are not actually from Unicef
+        </p>
+
+        <div class="text-center text-warning text-large m-2 p-2">
+            Verdict: The virus can spread via sneeze and cough droplets that can move a short distance through the air and into someone else’s system.
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="https://fullfact.org/health/coronavirus-graphics-unicef/#fc4346fe0ba3c78d27022e07e9f57982" class="btn btn-primary btn-lg">
+                Open at fullfact.org
+            </a>
+        </div>
+
+    </div>
 </div>
 
-<h3 class="text-center">
-    The new coronavirus does not settle in the air but is grounded so it is not transmitted by air.
-</h3>
 
-<p>
-    Coronavirus graphics you may have been sent on WhatsApp are not actually from Unicef
-</p>
-
-<div class="text-center text-warning text-large m-2 p-2">
-    Verdict: The virus can spread via sneeze and cough droplets that can move a short distance through the air and into someone else’s system.
+<div class="columns pt-2 mt-2 pb-2 mb-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>Similar fact-checks</h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10703-covid-19-is-confirmed-as-airborne-and-remain-8-hrs.html">"COVID-19 is confirmed as airborne and remain 8 hrs in air! So everyone is required to wear mask everywhere!"</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 22, 2020,
+        <a href="https://www.factcheck.org/2020/03/posts-distort-facts-on-coronavirus-air-transmission-masks/#91bb36eefaca9d1cb264a5ad29cf2671">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Distorts the Facts</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10668-if-someone-with-the-new-coronavirus-sneezes-it-tra.html">If someone with the new coronavirus sneezes, it travels about 10 feet before it drops to the ground and is no longer airborne.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 20, 2020,
+        <a href="https://fullfact.org/online/coronavirus-claims-symptoms-prevention-viral/#3f2002a8be611a992a49d3031fb35d98">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">How far the droplets spread from a sneeze depends on environmental factors, but it is likely to be several metres.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10683-if-someone-with-the-new-coronavirus-sneezes-it-tra.html">If someone with the new coronavirus sneezes, it travels about 10 feet before it drops to the ground and is no longer airborne.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 20, 2020,
+        <a href="https://fullfact.org/online/viral-posts-sharing-symptoms-and-treatments-covid-19-contain-false-information/#3f2002a8be611a992a49d3031fb35d98">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Environmental factors impact how far droplets from a sneeze can travel, but it is likely to be several metres.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10477-if-someone-with-the-new-coronavirus-sneezes-it-tra.html">If someone with the new coronavirus sneezes, it travels about 10 feet before it drops to the ground and is no longer airborne</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 05, 2020,
+        <a href="https://fullfact.org/online/coronavirus-claims-symptoms-viral/#85c585b18803fe0ab92f4c5ed0b26c3a">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">How far the droplets spread from a sneeze depends on environmental factors, but it is likely to be several metres.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10601-the-coronavirus-outbreak-is-not-actually-caused-by.html">The coronavirus outbreak is not actually caused by a virus, but by 5G technology</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 22, 2020,
+        <a href="https://healthfeedback.org/claimreview/viral-claim-falsely-asserts-that-covid-19-is-due-to-5g-technology-rollout-not-a-virus/#d2d31121158b124360082baaeec45227">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Incorrect</div>
+    </div>
+    
 </div>
 
-<div class="text-center m-2 p-2">
-    <a href="https://fullfact.org/health/coronavirus-graphics-unicef/#fc4346fe0ba3c78d27022e07e9f57982" class="btn btn-primary btn-lg">
-        Open at fullfact.org
-    </a>
-</div>
 
 
 
@@ -51,7 +137,7 @@
 
     <div class="text-center text-gray" style="font-size: small; margin-top: 50px; margin-bottom: 50px">
         Part of the <a href="https://misdeed.fiit.stuba.sk">MISDEED</a> project at <a href="https://www.fiit.stuba.sk">FIIT STU</a>.
-        Powered by the <a href="http://labss2.fiit.stuba.sk/TeamProject/2018/team14iss-it/">MonAnt</a> platform.
+        Powered by the <a href="https://documenter.getpostman.com/view/8615295/SVtPWq1j?version=latest">MonAnt</a> platform.
         Put together by <a href="https://matus.tomlein.org">Matúš Tomlein</a>.
     </div>
 

@@ -13,36 +13,122 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
+    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
 </head>
 
 <body>
 
+    <header class="navbar">
+        <section class="navbar-section"></section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                CovidMis.Info
+            </a>
+        </section>
+        <section class="navbar-section"></section>
+    </header>
+
     <div class="container grid-lg">
         
 
-<div class="text-center m-2 p-2">
-    <a href="/">
-        <img src="/images/icon.png" style="width: 64px; height: 64px">
-    </a>
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h3 class="text-center">
+            Coronavirus pneumonia is a dry cough with no runny nose.
+        </h3>
+
+        <p>
+            Viral post about someone’s uncle’s coronavirus advice is not all it’s cracked up to be
+        </p>
+
+        <div class="text-center text-warning text-large m-2 p-2">
+            Verdict: Some Covid-19 patients do get pneumonia, and one of the symptoms is a dry cough. A runny nose doesn’t rule out Covid-19.
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="https://fullfact.org/online/coronavirus-claims-symptoms-viral/#1f0d9401e23838f042b8ddb6ab3f3c6d" class="btn btn-primary btn-lg">
+                Open at fullfact.org
+            </a>
+        </div>
+
+    </div>
 </div>
 
-<h3 class="text-center">
-    Coronavirus pneumonia is a dry cough with no runny nose.
-</h3>
 
-<p>
-    Viral post about someone’s uncle’s coronavirus advice is not all it’s cracked up to be
-</p>
-
-<div class="text-center text-warning text-large m-2 p-2">
-    Verdict: Some Covid-19 patients do get pneumonia, and one of the symptoms is a dry cough. A runny nose doesn’t rule out Covid-19.
+<div class="columns pt-2 mt-2 pb-2 mb-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>Similar fact-checks</h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10662-coronavirus-pneumonia-is-a-dry-cough-with-no-runny.html">Coronavirus pneumonia is a dry cough with no runny nose.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 20, 2020,
+        <a href="https://fullfact.org/online/coronavirus-claims-symptoms-prevention-viral/#1f0d9401e23838f042b8ddb6ab3f3c6d">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Some Covid-19 patients do get pneumonia, and one of the symptoms is a dry cough. A runny nose doesn’t rule out Covid-19.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10664-if-you-have-a-runny-nose-and-sputum-you-have-a-com.html">If you have a runny nose and sputum, you have a common cold, not Covid-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 20, 2020,
+        <a href="https://fullfact.org/online/coronavirus-claims-symptoms-prevention-viral/#72c386a85bbe383dcf0875b463ce3e55">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">These are the symptoms for the common cold, but they don’t rule out Covid-19.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10685-coronavirus-pneumonia-is-a-dry-cough-with-no-runny.html">Coronavirus pneumonia is a dry cough with no runny nose.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 20, 2020,
+        <a href="https://fullfact.org/online/viral-posts-sharing-symptoms-and-treatments-covid-19-contain-false-information/#1f0d9401e23838f042b8ddb6ab3f3c6d">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Some Covid-19 patients do get pneumonia, and one of the symptoms is a dry cough. A runny nose doesn’t rule out Covid-19.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10688-covid-19-starts-with-a-sore-throat-lasting-3-4-day.html">Covid-19 starts with a sore throat lasting 3-4 days. It then blends into a nasal fluid that enters the trachea and the lungs, causing pneumonia, which takes about 5 or 6 days. With pneumonia comes high fever and difficulty breathing. The nasal congestion makes you feel like you’re drowning.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 20, 2020,
+        <a href="https://fullfact.org/online/viral-posts-sharing-symptoms-and-treatments-covid-19-contain-false-information/#98d6dcae3fde29c5f9836332a94d0858">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">This is a roughly accurate description of the most common symptoms, although not everyone with Covid-19 gets pneumonia. The symptoms may not come in this order or at these times. There have been no reports of sufferers experiencing nasal congestion that makes them feel they are drowning.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10488-if-you-have-a-runny-nose-and-sputum-you-have-a-com.html">If you have a runny nose and sputum, you have a common cold, not Covid-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 05, 2020,
+        <a href="https://fullfact.org/online/coronavirus-claims-symptoms-viral/#72c386a85bbe383dcf0875b463ce3e55">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">These are the symptoms for the common cold, but they don’t rule out Covid-19.</div>
+    </div>
+    
 </div>
 
-<div class="text-center m-2 p-2">
-    <a href="https://fullfact.org/online/coronavirus-claims-symptoms-viral/#1f0d9401e23838f042b8ddb6ab3f3c6d" class="btn btn-primary btn-lg">
-        Open at fullfact.org
-    </a>
-</div>
 
 
 
@@ -51,7 +137,7 @@
 
     <div class="text-center text-gray" style="font-size: small; margin-top: 50px; margin-bottom: 50px">
         Part of the <a href="https://misdeed.fiit.stuba.sk">MISDEED</a> project at <a href="https://www.fiit.stuba.sk">FIIT STU</a>.
-        Powered by the <a href="http://labss2.fiit.stuba.sk/TeamProject/2018/team14iss-it/">MonAnt</a> platform.
+        Powered by the <a href="https://documenter.getpostman.com/view/8615295/SVtPWq1j?version=latest">MonAnt</a> platform.
         Put together by <a href="https://matus.tomlein.org">Matúš Tomlein</a>.
     </div>
 

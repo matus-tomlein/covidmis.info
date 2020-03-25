@@ -13,40 +13,124 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
+    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
 </head>
 
 <body>
 
+    <header class="navbar">
+        <section class="navbar-section"></section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                CovidMis.Info
+            </a>
+        </section>
+        <section class="navbar-section"></section>
+    </header>
+
     <div class="container grid-lg">
         
 
-<div class="text-center m-2 p-2">
-    <a href="/">
-        <img src="/images/icon.png" style="width: 64px; height: 64px">
-    </a>
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h3 class="text-center">
+            Are zinc lozenges effective for coronavirus?
+        </h3>
+
+        <p>
+            <p>There have been many people claiming 'zinc lozenges have been proven effective in blocking coronavirus from multiplying in your throat' to reduce the symptoms of colds and coronavirus. Is this true?</p>
+        </p>
+
+        <div class="text-center text-warning text-large m-2 p-2">
+            Verdict: Not Enough Experts
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="https://metafact.io/factchecks/1482-are-zinc-lozenges-effective-for-coronavirus" class="btn btn-primary btn-lg">
+                Open at metafact.io
+            </a>
+        </div>
+
+    </div>
 </div>
 
-<h3 class="text-center">
-    Are zinc lozenges effective for coronavirus?
-</h3>
 
-<p>
-    <p>There have been many people claiming 'zinc lozenges have been proven effective in blocking coronavirus from multiplying in your throat' to reduce the symptoms of colds and coronavirus. Is this true?</p>
-</p>
-
-<div class="text-center text-warning text-large m-2 p-2">
-    Verdict: Not Enough Experts
+<div class="columns pt-2 mt-2 pb-2 mb-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>Similar fact-checks</h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10688-covid-19-starts-with-a-sore-throat-lasting-3-4-day.html">Covid-19 starts with a sore throat lasting 3-4 days. It then blends into a nasal fluid that enters the trachea and the lungs, causing pneumonia, which takes about 5 or 6 days. With pneumonia comes high fever and difficulty breathing. The nasal congestion makes you feel like you’re drowning.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 20, 2020,
+        <a href="https://fullfact.org/online/viral-posts-sharing-symptoms-and-treatments-covid-19-contain-false-information/#98d6dcae3fde29c5f9836332a94d0858">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">This is a roughly accurate description of the most common symptoms, although not everyone with Covid-19 gets pneumonia. The symptoms may not come in this order or at these times. There have been no reports of sufferers experiencing nasal congestion that makes them feel they are drowning.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10533-hand-sanitiser-is-effective-against-covid-19.html">Hand sanitiser is effective against Covid-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://fullfact.org/health/coronavirus-hand-sanitiser/#d8ace6692d8307d80816e65dcebbfa1b">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Hand sanitisers with 60% alcohol content and above are effective against viruses, such as the new coronavirus, but soap and water is the best option.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10342-dettol-antiseptic-spray-says-it-kills-coronavirus.html">Dettol antiseptic spray says it kills coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 17, 2020,
+        <a href="https://fullfact.org/online/coronavirus-dettol/#9d26261e42480d67a7a87d8a998510b3">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">That is correct but that doesn’t refer to the new coronavirus (Covid-19) identified in Wuhan. Coronavirus is a large category of viruses that includes the common cold. Dettol has said its products haven’t been tested against the new virus yet.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10171-are-alcohol-sanitizers-effective-against-viruses-l.html">Are alcohol sanitizers effective against viruses like SARS/coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1416-are-alcohol-sanitizers-effective-against-viruses-like-sars-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Not Enough Experts</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10199-are-face-masks-effective-in-preventing-transmissio.html">Are face masks effective in preventing transmission of viruses like coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1415-are-face-masks-effective-in-preventing-transmission-of-viruses-like-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Not Enough Experts</div>
+    </div>
+    
 </div>
 
-<div class="text-center m-2 p-2">
-    <a href="https://metafact.io/factchecks/1482-are-zinc-lozenges-effective-for-coronavirus" class="btn btn-primary btn-lg">
-        Open at metafact.io
-    </a>
-</div>
 
 
-
-<div class="m-2 p-2">&nbsp;</div>
 
 <div class="columns pt-2 mt-2">
     <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
@@ -78,7 +162,7 @@
 
     <div class="text-center text-gray" style="font-size: small; margin-top: 50px; margin-bottom: 50px">
         Part of the <a href="https://misdeed.fiit.stuba.sk">MISDEED</a> project at <a href="https://www.fiit.stuba.sk">FIIT STU</a>.
-        Powered by the <a href="http://labss2.fiit.stuba.sk/TeamProject/2018/team14iss-it/">MonAnt</a> platform.
+        Powered by the <a href="https://documenter.getpostman.com/view/8615295/SVtPWq1j?version=latest">MonAnt</a> platform.
         Put together by <a href="https://matus.tomlein.org">Matúš Tomlein</a>.
     </div>
 

@@ -13,36 +13,122 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
+    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
 </head>
 
 <body>
 
+    <header class="navbar">
+        <section class="navbar-section"></section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                CovidMis.Info
+            </a>
+        </section>
+        <section class="navbar-section"></section>
+    </header>
+
     <div class="container grid-lg">
         
 
-<div class="text-center m-2 p-2">
-    <a href="/">
-        <img src="/images/icon.png" style="width: 64px; height: 64px">
-    </a>
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h3 class="text-center">
+            “President Obama set up anti-pandemic programs in 47 vulnerable countries, as a way to protect against something just like Coronavirus breaking out across the world. Experts begged Trump to keep them open. He closed 37 of them."
+        </h3>
+
+        <p>
+            False Claim About CDC's Global Anti-Pandemic Work
+        </p>
+
+        <div class="text-center text-error text-large m-2 p-2">
+            Verdict: False
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="https://www.factcheck.org/2020/03/false-claim-about-cdcs-global-anti-pandemic-work/#da8a2a9a8c8917d8e2cba90c76370791" class="btn btn-primary btn-lg">
+                Open at factcheck.org
+            </a>
+        </div>
+
+    </div>
 </div>
 
-<h3 class="text-center">
-    “President Obama set up anti-pandemic programs in 47 vulnerable countries, as a way to protect against something just like Coronavirus breaking out across the world. Experts begged Trump to keep them open. He closed 37 of them."
-</h3>
 
-<p>
-    False Claim About CDC's Global Anti-Pandemic Work
-</p>
-
-<div class="text-center text-error text-large m-2 p-2">
-    Verdict: False
+<div class="columns pt-2 mt-2 pb-2 mb-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>Similar fact-checks</h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10713-the-italian-prime-minister-has-said-his-country-ha.html">The Italian Prime Minister has said his country has exhausted all options to fight against the coronavirus pandemic and pleads to God to “rescue your people.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 24, 2020,
+        <a href="https://fullfact.org/online/conte-bolsonaro-covid-coronavirus/#eee37b65549d5084be7b78acf3070bc7">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">This quote is made up.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10704-starting-the-next-day-dr-nancy-messonnier-no-longe.html">"Starting the next day, Dr. [Nancy] Messonnier no longer appeared at public briefings of the White House coronavirus task force. The president and the White House sent a clear message to scientists in the government -- there would be a price for speaking out and speaking up."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 21, 2020,
+        <a href="https://www.factcheck.org/2020/03/biden-video-on-trump-silencing-expert/#71cad90e609388bd4ccb7566bbe328c1">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">Misleading</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10658-a-screenshot-purports-to-show-a-tweet-from-preside.html">A screenshot purports to show a tweet from President Donald Trump that says, before the U.S. issues financial assistance to individuals to deal with the coronavirus pandemic, "we will go through your social media history from the last 4 years and search for any post with #NotMyPresident in it."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 19, 2020,
+        <a href="https://www.factcheck.org/2020/03/trump-didnt-tweet-threat-to-withhold-relief-from-critics/#42b73ffa302f633bb19d6e53973b0685">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10608-are-governments-doing-enough-to-limit-the-coronavi.html">Are governments doing enough to limit the coronavirus pandemic?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1492-are-governments-doing-enough-to-limit-the-coronavirus-pandemic">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Not Enough Experts</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10199-are-face-masks-effective-in-preventing-transmissio.html">Are face masks effective in preventing transmission of viruses like coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1415-are-face-masks-effective-in-preventing-transmission-of-viruses-like-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Not Enough Experts</div>
+    </div>
+    
 </div>
 
-<div class="text-center m-2 p-2">
-    <a href="https://www.factcheck.org/2020/03/false-claim-about-cdcs-global-anti-pandemic-work/#da8a2a9a8c8917d8e2cba90c76370791" class="btn btn-primary btn-lg">
-        Open at factcheck.org
-    </a>
-</div>
 
 
 
@@ -51,7 +137,7 @@
 
     <div class="text-center text-gray" style="font-size: small; margin-top: 50px; margin-bottom: 50px">
         Part of the <a href="https://misdeed.fiit.stuba.sk">MISDEED</a> project at <a href="https://www.fiit.stuba.sk">FIIT STU</a>.
-        Powered by the <a href="http://labss2.fiit.stuba.sk/TeamProject/2018/team14iss-it/">MonAnt</a> platform.
+        Powered by the <a href="https://documenter.getpostman.com/view/8615295/SVtPWq1j?version=latest">MonAnt</a> platform.
         Put together by <a href="https://matus.tomlein.org">Matúš Tomlein</a>.
     </div>
 

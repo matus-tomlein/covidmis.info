@@ -13,36 +13,122 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
+    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
 </head>
 
 <body>
 
+    <header class="navbar">
+        <section class="navbar-section"></section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                CovidMis.Info
+            </a>
+        </section>
+        <section class="navbar-section"></section>
+    </header>
+
     <div class="container grid-lg">
         
 
-<div class="text-center m-2 p-2">
-    <a href="/">
-        <img src="/images/icon.png" style="width: 64px; height: 64px">
-    </a>
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h3 class="text-center">
+            The coronavirus outbreak is not actually caused by a virus, but by 5G technology
+        </h3>
+
+        <p>
+            Viral claim falsely asserts that COVID-19 is due to 5G technology rollout, not a virus
+        </p>
+
+        <div class="text-center text-warning text-large m-2 p-2">
+            Verdict: Incorrect
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="https://healthfeedback.org/claimreview/viral-claim-falsely-asserts-that-covid-19-is-due-to-5g-technology-rollout-not-a-virus/#d2d31121158b124360082baaeec45227" class="btn btn-primary btn-lg">
+                Open at healthfeedback.org
+            </a>
+        </div>
+
+    </div>
 </div>
 
-<h3 class="text-center">
-    The coronavirus outbreak is not actually caused by a virus, but by 5G technology
-</h3>
 
-<p>
-    Viral claim falsely asserts that COVID-19 is due to 5G technology rollout, not a virus
-</p>
-
-<div class="text-center text-warning text-large m-2 p-2">
-    Verdict: Incorrect
+<div class="columns pt-2 mt-2 pb-2 mb-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>Similar fact-checks</h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10612-people-who-have-survived-the-covid-19-coronavirus.html">People who have survived the COVID-19 coronavirus disease can become reinfected by the virus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 15, 2020,
+        <a href="https://www.snopes.com/fact-check/covid-19-reinfection/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">Unproven</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10632-the-new-coronavirus-is-the-least-deadly-virus-and.html">The new coronavirus is the “least deadly virus” and has a death rate lower than the 2009 H1N1 outbreak.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://www.factcheck.org/2020/03/infographic-on-facebook-distorts-comparative-facts-on-viruses/#754910be73d2ca9877af693b2602c5c8">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10535-a-coronavirus-vaccine-for-cows-shows-that-the-viru.html">A coronavirus vaccine for cows shows that the virus behind the current outbreak is not new.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://fullfact.org/online/coronavirus-cows/#0783ab22d7a8fd4f9037c811d8879fab">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">This is a different coronavirus from SARS-CoV-2, the virus that causes Covid-19. Coronaviruses are a large family of viruses that can affect a range of species.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10211-t-he-label-of-the-popular-lysol-already-show-that.html">"[T]he label of the popular Lysol already show that the product Kill the Coronavirus, so that means that this Virus is nothing new.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 29, 2020,
+        <a href="https://www.factcheck.org/2020/01/no-clorox-and-lysol-didnt-already-know-about-new-coronavirus/#ef8de3852f051928c366fbd02d9b4676">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10232-coronavirus-is-not-a-new-virus.html">Coronavirus is not a new virus</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 24, 2020,
+        <a href="https://healthfeedback.org/claimreview/the-2019-coronavirus-outbreak-is-caused-by-a-novel-virus-past-mentions-of-coronaviruses-refer-to-different-strains/#3c6aa5972374b9b774008ad45343e067">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">Inaccurate</div>
+    </div>
+    
 </div>
 
-<div class="text-center m-2 p-2">
-    <a href="https://healthfeedback.org/claimreview/viral-claim-falsely-asserts-that-covid-19-is-due-to-5g-technology-rollout-not-a-virus/#d2d31121158b124360082baaeec45227" class="btn btn-primary btn-lg">
-        Open at healthfeedback.org
-    </a>
-</div>
 
 
 
@@ -51,7 +137,7 @@
 
     <div class="text-center text-gray" style="font-size: small; margin-top: 50px; margin-bottom: 50px">
         Part of the <a href="https://misdeed.fiit.stuba.sk">MISDEED</a> project at <a href="https://www.fiit.stuba.sk">FIIT STU</a>.
-        Powered by the <a href="http://labss2.fiit.stuba.sk/TeamProject/2018/team14iss-it/">MonAnt</a> platform.
+        Powered by the <a href="https://documenter.getpostman.com/view/8615295/SVtPWq1j?version=latest">MonAnt</a> platform.
         Put together by <a href="https://matus.tomlein.org">Matúš Tomlein</a>.
     </div>
 

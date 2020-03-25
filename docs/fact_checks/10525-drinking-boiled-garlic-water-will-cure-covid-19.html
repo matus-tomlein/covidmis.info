@@ -13,38 +13,124 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
+    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
 </head>
 
 <body>
 
+    <header class="navbar">
+        <section class="navbar-section"></section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                CovidMis.Info
+            </a>
+        </section>
+        <section class="navbar-section"></section>
+    </header>
+
     <div class="container grid-lg">
         
 
-<div class="text-center m-2 p-2">
-    <a href="/">
-        <img src="/images/icon.png" style="width: 64px; height: 64px">
-    </a>
-</div>
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h3 class="text-center">
+            Drinking boiled garlic water will cure COVID-19.
+        </h3>
 
-<h3 class="text-center">
-    Drinking boiled garlic water will cure COVID-19.
-</h3>
-
-<p>
-    Will Garlic Water Cure Coronavirus?
+        <p>
+            Will Garlic Water Cure Coronavirus?
 On the plus side, this "treatment" might help keep away others who could potentially infect you.
 In early 2020 the global spread of COVID-19, a disease caused by the new coronavirus, saw the internet flooded with dubious medical advice about how to avoid or cure the illness. One such example — supposedly originating with the medical sage known as “old Chinese doctor” — held that consuming a bowl of boiled garlic water would “improve and cure” persons afflicted&hellip;
-</p>
+        </p>
 
-<div class="text-center text-error text-large m-2 p-2">
-    Verdict: False
+        <div class="text-center text-error text-large m-2 p-2">
+            Verdict: False
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="https://www.snopes.com/fact-check/garlic-cure-coronavirus/" class="btn btn-primary btn-lg">
+                Open at snopes.com
+            </a>
+        </div>
+
+    </div>
 </div>
 
-<div class="text-center m-2 p-2">
-    <a href="https://www.snopes.com/fact-check/garlic-cure-coronavirus/" class="btn btn-primary btn-lg">
-        Open at snopes.com
-    </a>
+
+<div class="columns pt-2 mt-2 pb-2 mb-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>Similar fact-checks</h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10665-if-the-new-coronavirus-gets-into-your-mouth-drinki.html">If the new coronavirus gets into your mouth, drinking water or other liquids will wash them down through the oesophagus. Once they’re in the stomach, the acid will kill the virus. If you don't drink enough water more regularly, the virus can enter your windpipes and into the lungs.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 20, 2020,
+        <a href="https://fullfact.org/online/coronavirus-claims-symptoms-prevention-viral/#1c8fa9bbf611be0edf4d64ec8f6c5153">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">This is incorrect. Drinking water does not prevent an infection.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10639-drinking-lots-of-water-will-eliminate-the-new-coro.html">Drinking lots of water will eliminate the new coronavirus from your throat.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://fullfact.org/health/gargle-salt-vinegar-water-coronavirus/#9fe7d1be8871c02b11b76d707327bee4">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">There is no evidence for this. It is a common myth.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10635-gargling-with-warm-water-salt-or-vinegar-eliminate.html">"Gargling with warm water & salt or vinegar eliminates" the coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://www.factcheck.org/2020/03/gargling-water-with-salt-wont-eliminate-coronavirus/#d104c0bfef19455f8752b86c19211163">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10300-wuhans-corona-virus-can-be-cured-by-one-bowl-of-fr.html">"Wuhan’s corona virus can be cured by one bowl of freshly boiled garlic water."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 01, 2020,
+        <a href="https://www.factcheck.org/2020/02/fake-coronavirus-cures-part-2-garlic-isnt-a-cure/#a28cad424707688c4cf03673eb392a70">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10171-are-alcohol-sanitizers-effective-against-viruses-l.html">Are alcohol sanitizers effective against viruses like SARS/coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1416-are-alcohol-sanitizers-effective-against-viruses-like-sars-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Not Enough Experts</div>
+    </div>
+    
 </div>
+
 
 
 
@@ -53,7 +139,7 @@ In early 2020 the global spread of COVID-19, a disease caused by the new coronav
 
     <div class="text-center text-gray" style="font-size: small; margin-top: 50px; margin-bottom: 50px">
         Part of the <a href="https://misdeed.fiit.stuba.sk">MISDEED</a> project at <a href="https://www.fiit.stuba.sk">FIIT STU</a>.
-        Powered by the <a href="http://labss2.fiit.stuba.sk/TeamProject/2018/team14iss-it/">MonAnt</a> platform.
+        Powered by the <a href="https://documenter.getpostman.com/view/8615295/SVtPWq1j?version=latest">MonAnt</a> platform.
         Put together by <a href="https://matus.tomlein.org">Matúš Tomlein</a>.
     </div>
 

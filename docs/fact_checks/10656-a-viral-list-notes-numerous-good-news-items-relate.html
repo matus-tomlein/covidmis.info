@@ -13,40 +13,126 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
+    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
 </head>
 
 <body>
 
+    <header class="navbar">
+        <section class="navbar-section"></section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                CovidMis.Info
+            </a>
+        </section>
+        <section class="navbar-section"></section>
+    </header>
+
     <div class="container grid-lg">
         
 
-<div class="text-center m-2 p-2">
-    <a href="/">
-        <img src="/images/icon.png" style="width: 64px; height: 64px">
-    </a>
-</div>
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h3 class="text-center">
+            A viral list notes numerous "good news" items related to the fight against the COVID-19 coronavirus disease pandemic.
+        </h3>
 
-<h3 class="text-center">
-    A viral list notes numerous "good news" items related to the fight against the COVID-19 coronavirus disease pandemic.
-</h3>
-
-<p>
-    Is This ‘Good News’ List About the COVID-19 Pandemic Accurate?
+        <p>
+            Is This ‘Good News’ List About the COVID-19 Pandemic Accurate?
 A few bright spots do indeed shine amid the doom and gloom of the new coronavirus.
 As governments fight the COVID-19 pandemic, Snopes is fighting an “infodemic” of rumors and misinformation, and you can help. Browse our coronavirus fact checks here. Tell us about any questionable or concerning rumors and “advice” you encounter here.
 
 Things appeared pretty bleak in March 2020 as the COVID-19 coronavirus disease continued to spread ac&hellip;
-</p>
+        </p>
 
-<div class="text-center text-warning text-large m-2 p-2">
-    Verdict: Mostly-true
+        <div class="text-center text-warning text-large m-2 p-2">
+            Verdict: Mostly-true
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="https://www.snopes.com/fact-check/covid-good-news-list-accurate/" class="btn btn-primary btn-lg">
+                Open at snopes.com
+            </a>
+        </div>
+
+    </div>
 </div>
 
-<div class="text-center m-2 p-2">
-    <a href="https://www.snopes.com/fact-check/covid-good-news-list-accurate/" class="btn btn-primary btn-lg">
-        Open at snopes.com
-    </a>
+
+<div class="columns pt-2 mt-2 pb-2 mb-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>Similar fact-checks</h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10612-people-who-have-survived-the-covid-19-coronavirus.html">People who have survived the COVID-19 coronavirus disease can become reinfected by the virus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 15, 2020,
+        <a href="https://www.snopes.com/fact-check/covid-19-reinfection/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">Unproven</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10632-the-new-coronavirus-is-the-least-deadly-virus-and.html">The new coronavirus is the “least deadly virus” and has a death rate lower than the 2009 H1N1 outbreak.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://www.factcheck.org/2020/03/infographic-on-facebook-distorts-comparative-facts-on-viruses/#754910be73d2ca9877af693b2602c5c8">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10541-are-there-ways-for-individuals-to-prepare-for-the.html">Are there ways for individuals to prepare for the coronavirus pandemic? </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://metafact.io/factchecks/1466-are-there-ways-for-individuals-to-prepare-for-the-coronavirus-pandemic">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Not Enough Experts</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10539-are-healthcare-systems-prepared-for-the-coronaviru.html">Are healthcare systems prepared for the coronavirus pandemic?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://metafact.io/factchecks/1464-are-healthcare-systems-prepared-for-the-coronavirus-pandemic">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Not Enough Experts</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10394-a-video-demonstrates-there-have-been-exponentially.html">A video demonstrates there have been exponentially more cases of new coronavirus than other diseases such as SARS, MERS, Ebola, and swine flu.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 26, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-graph-spreading-faster/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Mixture</div>
+    </div>
+    
 </div>
+
 
 
 
@@ -55,7 +141,7 @@ Things appeared pretty bleak in March 2020 as the COVID-19 coronavirus disease c
 
     <div class="text-center text-gray" style="font-size: small; margin-top: 50px; margin-bottom: 50px">
         Part of the <a href="https://misdeed.fiit.stuba.sk">MISDEED</a> project at <a href="https://www.fiit.stuba.sk">FIIT STU</a>.
-        Powered by the <a href="http://labss2.fiit.stuba.sk/TeamProject/2018/team14iss-it/">MonAnt</a> platform.
+        Powered by the <a href="https://documenter.getpostman.com/view/8615295/SVtPWq1j?version=latest">MonAnt</a> platform.
         Put together by <a href="https://matus.tomlein.org">Matúš Tomlein</a>.
     </div>
 

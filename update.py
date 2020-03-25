@@ -3,6 +3,9 @@ import pickle
 import psycopg2
 from sshtunnel import SSHTunnelForwarder
 import os
+from nltk.tokenize import sent_tokenize
+from sentence_embedder import SentenceEmbedder
+from sklearn.metrics.pairwise import cosine_similarity
 
 
 def save_fact_checks():
@@ -83,6 +86,14 @@ def process_fact_checks():
     fact_checks['article_ids'] = fact_checks['claim_id'].apply(lambda claim_id: claim_to_articles[claim_id] if claim_id in claim_to_articles else [])
     fact_checks['num_articles'] = fact_checks['article_ids'].apply(len)
 
+    fact_checks = fact_checks.loc[
+        (fact_checks.claim.str.lower().str.contains('covid')) |
+        (
+            (fact_checks.claim.str.lower().str.contains('corona')) &
+            (fact_checks.claim.str.lower().str.contains('virus'))
+        )
+    ]
+
     fact_checks.to_pickle('cache/fact_checks.p')
     print('Processed fact checks')
 
@@ -95,12 +106,47 @@ def process_articles():
     print('Processed articles')
 
 
+def find_similar_fact_checks():
+    fact_checks = pd.read_pickle('cache/fact_checks.p')
+    sentence_embedder = SentenceEmbedder()
+
+    fact_check_sentences = [
+        (fact_check['id'], sentence)
+        for _, fact_check in fact_checks.iterrows()
+        for sentence in sent_tokenize(fact_check['claim'])
+    ]
+
+    embeddings = sentence_embedder.embed_sentences([s[1] for s in fact_check_sentences])
+    pairwise_similarities = cosine_similarity(embeddings)
+
+    similarities = pd.DataFrame([
+        (fact_check_id, other_fact_check_id,
+         pairwise_similarities[sentence_i][other_sentence_i])
+        for fact_check_id in fact_checks['id']
+        for sentence_i in [
+            i for i, (fid, _) in enumerate(fact_check_sentences)
+            if fid == fact_check_id
+        ]
+        for other_sentence_i, other_fact_check_id in [
+            (i, fid) for i, (fid, _) in enumerate(fact_check_sentences)
+            if fid != fact_check_id
+        ]
+    ], columns=['fact_check_1', 'fact_check_2', 'similarity'])
+
+    similarities = similarities.loc[similarities['similarity'] >= 0.3]
+    similar_fact_checks = pd.Series({
+        fact_check_id: list(row.sort_values(ascending=False).iloc[:5].index)
+        for fact_check_id, row in similarities.groupby(['fact_check_1', 'fact_check_2'])['similarity'].max().unstack().iterrows()
+    })
+    similar_fact_checks.to_pickle('cache/similar_fact_checks.p')
+    print('Found similar fact-checks')
+
 with SSHTunnelForwarder(
     (os.environ['SSH_HOST'], 22),
     ssh_private_key='/Users/matus/.ssh/id_rsa',
     ssh_username=os.environ['SSH_USERNAME'],
     remote_bind_address=('localhost', 5433),
-    local_bind_address=('localhost', 7543)
+    local_bind_address=('localhost', 8543)
 ) as tunnel:
 
     tunnel.start()
@@ -128,6 +174,7 @@ with SSHTunnelForwarder(
         create_claim_to_articles()
         process_fact_checks()
         process_articles()
+        find_similar_fact_checks()
     except Exception as inst:
         print(type(inst))
         print(inst.args)

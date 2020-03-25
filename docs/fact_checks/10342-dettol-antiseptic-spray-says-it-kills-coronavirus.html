@@ -13,36 +13,122 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
+    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
 </head>
 
 <body>
 
+    <header class="navbar">
+        <section class="navbar-section"></section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                CovidMis.Info
+            </a>
+        </section>
+        <section class="navbar-section"></section>
+    </header>
+
     <div class="container grid-lg">
         
 
-<div class="text-center m-2 p-2">
-    <a href="/">
-        <img src="/images/icon.png" style="width: 64px; height: 64px">
-    </a>
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h3 class="text-center">
+            Dettol antiseptic spray says it kills coronavirus.
+        </h3>
+
+        <p>
+            Dettol hasn’t tested its products against the new Wuhan coronavirus yet
+        </p>
+
+        <div class="text-center text-warning text-large m-2 p-2">
+            Verdict: That is correct but that doesn’t refer to the new coronavirus (Covid-19) identified in Wuhan. Coronavirus is a large category of viruses that includes the common cold. Dettol has said its products haven’t been tested against the new virus yet.
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="https://fullfact.org/online/coronavirus-dettol/#9d26261e42480d67a7a87d8a998510b3" class="btn btn-primary btn-lg">
+                Open at fullfact.org
+            </a>
+        </div>
+
+    </div>
 </div>
 
-<h3 class="text-center">
-    Dettol antiseptic spray says it kills coronavirus.
-</h3>
 
-<p>
-    Dettol hasn’t tested its products against the new Wuhan coronavirus yet
-</p>
-
-<div class="text-center text-warning text-large m-2 p-2">
-    Verdict: That is correct but that doesn’t refer to the new coronavirus (Covid-19) identified in Wuhan. Coronavirus is a large category of viruses that includes the common cold. Dettol has said its products haven’t been tested against the new virus yet.
+<div class="columns pt-2 mt-2 pb-2 mb-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>Similar fact-checks</h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10533-hand-sanitiser-is-effective-against-covid-19.html">Hand sanitiser is effective against Covid-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://fullfact.org/health/coronavirus-hand-sanitiser/#d8ace6692d8307d80816e65dcebbfa1b">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Hand sanitisers with 60% alcohol content and above are effective against viruses, such as the new coronavirus, but soap and water is the best option.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10529-hand-sanitizer-will-do-nothing-for-the-coronavirus.html">Hand "sanitizer will do nothing for the coronavirus."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 03, 2020,
+        <a href="https://www.factcheck.org/2020/03/contrary-to-false-posts-sanitizer-helpful-against-coronavirus/#70d0388e70d68dc651d87b8c56ffcf01">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10341-coronavirus-isnt-dangerous-as-it-can-be-killed-by.html">Coronavirus isn’t dangerous as it can be killed by Dettol products.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 17, 2020,
+        <a href="https://fullfact.org/online/coronavirus-dettol/#49c99da44083fbf835e302ca504a14fa">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">How dangerous the novel coronavirus is doesn’t relate to whether disinfectants work against it. Coronavirus is a large category of viruses that includes the common cold. Dettol has said its products haven’t been tested against the new virus yet.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10203-dettol-antiseptic-spray-says-it-kills-human-corona.html">Dettol antiseptic spray says it kills human coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 30, 2020,
+        <a href="https://fullfact.org/online/dettol-coronavirus/#72db3fc397e3e88964f28652eb945978">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">That is correct but that doesn’t mean that Dettol spray can kill the new coronavirus identified in Wuhan. Coronavirus is a category of viruses that includes the common cold, and it is likely this the label is referring to.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10171-are-alcohol-sanitizers-effective-against-viruses-l.html">Are alcohol sanitizers effective against viruses like SARS/coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1416-are-alcohol-sanitizers-effective-against-viruses-like-sars-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Not Enough Experts</div>
+    </div>
+    
 </div>
 
-<div class="text-center m-2 p-2">
-    <a href="https://fullfact.org/online/coronavirus-dettol/#9d26261e42480d67a7a87d8a998510b3" class="btn btn-primary btn-lg">
-        Open at fullfact.org
-    </a>
-</div>
 
 
 
@@ -51,7 +137,7 @@
 
     <div class="text-center text-gray" style="font-size: small; margin-top: 50px; margin-bottom: 50px">
         Part of the <a href="https://misdeed.fiit.stuba.sk">MISDEED</a> project at <a href="https://www.fiit.stuba.sk">FIIT STU</a>.
-        Powered by the <a href="http://labss2.fiit.stuba.sk/TeamProject/2018/team14iss-it/">MonAnt</a> platform.
+        Powered by the <a href="https://documenter.getpostman.com/view/8615295/SVtPWq1j?version=latest">MonAnt</a> platform.
         Put together by <a href="https://matus.tomlein.org">Matúš Tomlein</a>.
     </div>
 

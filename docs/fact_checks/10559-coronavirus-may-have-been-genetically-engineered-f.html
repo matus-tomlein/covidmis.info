@@ -13,36 +13,122 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
+    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
 </head>
 
 <body>
 
+    <header class="navbar">
+        <section class="navbar-section"></section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                CovidMis.Info
+            </a>
+        </section>
+        <section class="navbar-section"></section>
+    </header>
+
     <div class="container grid-lg">
         
 
-<div class="text-center m-2 p-2">
-    <a href="/">
-        <img src="/images/icon.png" style="width: 64px; height: 64px">
-    </a>
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h3 class="text-center">
+            Coronavirus may have been genetically engineered for “efficient spreading in the human population,” a bombshell new study has claimed.
+        </h3>
+
+        <p>
+            A study has not claimed the new coronavirus was ‘genetically engineered for efficient spread in humans’
+        </p>
+
+        <div class="text-center text-warning text-large m-2 p-2">
+            Verdict: This is wrong and the study does not claim the new coronavirus has been genetically engineered. It simply compares the genome sequence of SARS-CoV-2 with other coronaviruses, and suggests a reason why it might be spreading relatively efficiently.
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="https://fullfact.org/health/new-coronavirus-not-genetically-engineered/#4bb2192291c5b92e4fa59d466cbfac5c" class="btn btn-primary btn-lg">
+                Open at fullfact.org
+            </a>
+        </div>
+
+    </div>
 </div>
 
-<h3 class="text-center">
-    Coronavirus may have been genetically engineered for “efficient spreading in the human population,” a bombshell new study has claimed.
-</h3>
 
-<p>
-    A study has not claimed the new coronavirus was ‘genetically engineered for efficient spread in humans’
-</p>
-
-<div class="text-center text-warning text-large m-2 p-2">
-    Verdict: This is wrong and the study does not claim the new coronavirus has been genetically engineered. It simply compares the genome sequence of SARS-CoV-2 with other coronaviruses, and suggests a reason why it might be spreading relatively efficiently.
+<div class="columns pt-2 mt-2 pb-2 mb-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>Similar fact-checks</h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10597-bill-gates-created-the-new-coronavirus-and-a-vacci.html">Bill Gates created the new coronavirus and a vaccine for it.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://fullfact.org/online/coronavirus-5G/#a328076f1c919dcfc6841ecbc0292f09">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">This is incorrect. The Bill Gates and Melinda Gates Foundation has funded a research institute that has a patent to a different coronavirus.  Coronavirus is a large category of viruses that includes the common cold, SARS and the new virus that causes Covid-19.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10449-a-bovine-coronavirus-vaccine-for-cattle-is-proof-t.html">A bovine coronavirus vaccine, for cattle, is proof that the novel coronavirus isn't "new" and is evidence of "how much the media controls people."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 01, 2020,
+        <a href="https://www.factcheck.org/2020/03/cattle-vaccine-not-related-to-2019-novel-coronavirus/#d5caec6f2577df455b2a609159417105">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10354-scientists-knew-about-the-new-coronavirus-long-ago.html">Scientists knew about the new coronavirus long ago and called it “Disease X”.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 18, 2020,
+        <a href="https://fullfact.org/health/coronavirus-covid-disease-x-express/#3717d252eccd81fb607453b16e2c6fc0">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">They didn’t. This is a misunderstanding about the phrase “Disease X”, which the WHO used to denote an unknown serious new disease that might cause a pandemic.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10339-scientists-believe-that-coronavirus-may-have-come.html">Scientists believe that coronavirus may have come from bats in a Chinese research facility.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 17, 2020,
+        <a href="https://fullfact.org/health/coronavirus-government-laboratory/#f1e1f6da129a8627cd1706aa3d9d348d">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Two Chinese scientists have published an article suggesting that the 2019 coronavirus outbreak could have originated from bats in a laboratory in Wuhan. However, apart from maps showing the proximity of laboratories, they offer no evidence to prove this.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10337-chinese-doctors-confirmed-that-african-people-are.html">Chinese doctors confirmed that African people are "genetically resistant" to new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 17, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-cameroonian-student/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
 </div>
 
-<div class="text-center m-2 p-2">
-    <a href="https://fullfact.org/health/new-coronavirus-not-genetically-engineered/#4bb2192291c5b92e4fa59d466cbfac5c" class="btn btn-primary btn-lg">
-        Open at fullfact.org
-    </a>
-</div>
 
 
 
@@ -51,7 +137,7 @@
 
     <div class="text-center text-gray" style="font-size: small; margin-top: 50px; margin-bottom: 50px">
         Part of the <a href="https://misdeed.fiit.stuba.sk">MISDEED</a> project at <a href="https://www.fiit.stuba.sk">FIIT STU</a>.
-        Powered by the <a href="http://labss2.fiit.stuba.sk/TeamProject/2018/team14iss-it/">MonAnt</a> platform.
+        Powered by the <a href="https://documenter.getpostman.com/view/8615295/SVtPWq1j?version=latest">MonAnt</a> platform.
         Put together by <a href="https://matus.tomlein.org">Matúš Tomlein</a>.
     </div>
 

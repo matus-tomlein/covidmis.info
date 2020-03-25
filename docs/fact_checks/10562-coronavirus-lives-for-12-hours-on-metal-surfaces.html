@@ -13,36 +13,122 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
+    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
 </head>
 
 <body>
 
+    <header class="navbar">
+        <section class="navbar-section"></section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                CovidMis.Info
+            </a>
+        </section>
+        <section class="navbar-section"></section>
+    </header>
+
     <div class="container grid-lg">
         
 
-<div class="text-center m-2 p-2">
-    <a href="/">
-        <img src="/images/icon.png" style="width: 64px; height: 64px">
-    </a>
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h3 class="text-center">
+            Coronavirus lives for 12 hours on metal surfaces.
+        </h3>
+
+        <p>
+            Coronavirus graphics you may have been sent on WhatsApp are not actually from Unicef
+        </p>
+
+        <div class="text-center text-warning text-large m-2 p-2">
+            Verdict: We don’t know how long the virus can survive on surfaces yet, it could be between hours and days.
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="https://fullfact.org/health/coronavirus-graphics-unicef/#47d738d512afcc18a7ac8fb104f9a21c" class="btn btn-primary btn-lg">
+                Open at fullfact.org
+            </a>
+        </div>
+
+    </div>
 </div>
 
-<h3 class="text-center">
-    Coronavirus lives for 12 hours on metal surfaces.
-</h3>
 
-<p>
-    Coronavirus graphics you may have been sent on WhatsApp are not actually from Unicef
-</p>
-
-<div class="text-center text-warning text-large m-2 p-2">
-    Verdict: We don’t know how long the virus can survive on surfaces yet, it could be between hours and days.
+<div class="columns pt-2 mt-2 pb-2 mb-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>Similar fact-checks</h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10556-coronavirus-lives-on-the-hands-for-10-minutes-but.html">Coronavirus lives on the hands for 10 minutes, but can be prevented with alcohol hand sanitiser.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://fullfact.org/health/coronavirus-graphics-unicef/#2c6763d010c1787d1d7151704f55387d">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">It’s not clear how long the virus can ‘survive’ on hands, but hand sanitiser with at least 60% alcohol is a good second choice to washing your hands with soap and water.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10558-coronavirus-stays-on-fabric-for-9-hours-so-washing.html">Coronavirus stays on fabric for 9 hours, so washing clothes or being exposed to the sun for two hours meets the purpose of killing it.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://fullfact.org/health/coronavirus-graphics-unicef/#c26a389a246ef8b635b129b936c6b046">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">We don’t know how long the virus can survive on fabric. There isn’t evidence that it can transmit from fabrics to people, though soiled clothing from Covid-19 patients should be washed normally.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10172-does-coronavirus-survive-on-hard-surfaces.html">Does coronavirus survive on hard surfaces?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1417-does-coronavirus-survive-on-hard-surfaces">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Not Enough Experts</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10159-the-coronavirus-is-new-yet-it-was-lab-created-and.html">[The coronavirus is] “new” yet it was lab-created and patented in 2015</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 23, 2020,
+        <a href="https://healthfeedback.org/claimreview/contrary-to-claims-in-viral-social-media-posts-wuhan-coronavirus-was-not-lab-created-nor-was-it-patented-years-before-outbreak/#669eb1759e85c596637aa75ee416d486">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">Inaccurate</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10162-the-new-fad-disease-called-the-coronavirus-is-swee.html">“The new fad disease called the ‘coronavirus’ is sweeping headlines. Funny enough, there was a patent for the coronavirus was filed in 2015 and granted in 2018.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 21, 2020,
+        <a href="https://www.factcheck.org/2020/01/social-media-posts-spread-bogus-coronavirus-conspiracy-theory/#fb1fb7a85e0a818c39a84546cb30d3e0">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
 </div>
 
-<div class="text-center m-2 p-2">
-    <a href="https://fullfact.org/health/coronavirus-graphics-unicef/#47d738d512afcc18a7ac8fb104f9a21c" class="btn btn-primary btn-lg">
-        Open at fullfact.org
-    </a>
-</div>
 
 
 
@@ -51,7 +137,7 @@
 
     <div class="text-center text-gray" style="font-size: small; margin-top: 50px; margin-bottom: 50px">
         Part of the <a href="https://misdeed.fiit.stuba.sk">MISDEED</a> project at <a href="https://www.fiit.stuba.sk">FIIT STU</a>.
-        Powered by the <a href="http://labss2.fiit.stuba.sk/TeamProject/2018/team14iss-it/">MonAnt</a> platform.
+        Powered by the <a href="https://documenter.getpostman.com/view/8615295/SVtPWq1j?version=latest">MonAnt</a> platform.
         Put together by <a href="https://matus.tomlein.org">Matúš Tomlein</a>.
     </div>
 

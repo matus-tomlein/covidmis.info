@@ -13,36 +13,122 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
+    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
 </head>
 
 <body>
 
+    <header class="navbar">
+        <section class="navbar-section"></section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                CovidMis.Info
+            </a>
+        </section>
+        <section class="navbar-section"></section>
+    </header>
+
     <div class="container grid-lg">
         
 
-<div class="text-center m-2 p-2">
-    <a href="/">
-        <img src="/images/icon.png" style="width: 64px; height: 64px">
-    </a>
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h3 class="text-center">
+            Drinking lots of water will eliminate the new coronavirus from your throat.
+        </h3>
+
+        <p>
+            Drinking and gargling water will not cure the new coronavirus
+        </p>
+
+        <div class="text-center text-warning text-large m-2 p-2">
+            Verdict: There is no evidence for this. It is a common myth.
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="https://fullfact.org/health/gargle-salt-vinegar-water-coronavirus/#9fe7d1be8871c02b11b76d707327bee4" class="btn btn-primary btn-lg">
+                Open at fullfact.org
+            </a>
+        </div>
+
+    </div>
 </div>
 
-<h3 class="text-center">
-    Drinking lots of water will eliminate the new coronavirus from your throat.
-</h3>
 
-<p>
-    Drinking and gargling water will not cure the new coronavirus
-</p>
-
-<div class="text-center text-warning text-large m-2 p-2">
-    Verdict: There is no evidence for this. It is a common myth.
+<div class="columns pt-2 mt-2 pb-2 mb-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>Similar fact-checks</h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10665-if-the-new-coronavirus-gets-into-your-mouth-drinki.html">If the new coronavirus gets into your mouth, drinking water or other liquids will wash them down through the oesophagus. Once they’re in the stomach, the acid will kill the virus. If you don't drink enough water more regularly, the virus can enter your windpipes and into the lungs.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 20, 2020,
+        <a href="https://fullfact.org/online/coronavirus-claims-symptoms-prevention-viral/#1c8fa9bbf611be0edf4d64ec8f6c5153">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">This is incorrect. Drinking water does not prevent an infection.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10638-gargling-water-mixed-with-salt-or-vinegar-eliminat.html">Gargling water mixed with salt or vinegar eliminates the new coronavirus from your throat.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://fullfact.org/health/gargle-salt-vinegar-water-coronavirus/#e638fa37e7cef1aed1c822769164c27d">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">There is no evidence for this.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10586-if-the-new-coronavirus-gets-into-your-mouth-drinki.html">If the new coronavirus gets into your mouth, drinking water or other liquids will wash them down through the oesophagus. Once they’re in the stomach, the acid will kill the virus. If you don't drink enough water more regularly, the virus can enter your windpipes and into the lungs.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://fullfact.org/online/coronavirus-water-breath-test-bad-advice/#1c8fa9bbf611be0edf4d64ec8f6c5153">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">This is incorrect. Drinking water does not prevent an infection and there have been cases where the virus has survived in the stomach and affected people’s intestines.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10582-take-a-few-sips-of-water-every-15-minutes-at-least.html">"Take a few sips of water every 15 minutes at least ... drinking water or other liquids will wash" the coronavirus "down through your throat and into the stomach. Once there, your stomach acid will kill all the virus."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://www.factcheck.org/2020/03/viral-social-media-posts-offer-false-coronavirus-tips/#efd62558c43510a07bc13c66fadf86f0">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10550-taking-a-few-sips-of-water-every-15-mins-will-prev.html">Taking a few sips of water every 15 mins will prevent the new coronavirus from entering your windpipe and lungs.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://www.snopes.com/fact-check/drinking-water-prevent-coronavirus/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
 </div>
 
-<div class="text-center m-2 p-2">
-    <a href="https://fullfact.org/health/gargle-salt-vinegar-water-coronavirus/#9fe7d1be8871c02b11b76d707327bee4" class="btn btn-primary btn-lg">
-        Open at fullfact.org
-    </a>
-</div>
 
 
 
@@ -51,7 +137,7 @@
 
     <div class="text-center text-gray" style="font-size: small; margin-top: 50px; margin-bottom: 50px">
         Part of the <a href="https://misdeed.fiit.stuba.sk">MISDEED</a> project at <a href="https://www.fiit.stuba.sk">FIIT STU</a>.
-        Powered by the <a href="http://labss2.fiit.stuba.sk/TeamProject/2018/team14iss-it/">MonAnt</a> platform.
+        Powered by the <a href="https://documenter.getpostman.com/view/8615295/SVtPWq1j?version=latest">MonAnt</a> platform.
         Put together by <a href="https://matus.tomlein.org">Matúš Tomlein</a>.
     </div>
 

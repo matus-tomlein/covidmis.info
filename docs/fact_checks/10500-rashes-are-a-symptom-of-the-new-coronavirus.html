@@ -13,36 +13,122 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
+    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
 </head>
 
 <body>
 
+    <header class="navbar">
+        <section class="navbar-section"></section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                CovidMis.Info
+            </a>
+        </section>
+        <section class="navbar-section"></section>
+    </header>
+
     <div class="container grid-lg">
         
 
-<div class="text-center m-2 p-2">
-    <a href="/">
-        <img src="/images/icon.png" style="width: 64px; height: 64px">
-    </a>
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h3 class="text-center">
+            Rashes are a symptom of the new coronavirus.
+        </h3>
+
+        <p>
+            A rash isn’t a listed symptom of the new coronavirus
+        </p>
+
+        <div class="text-center text-warning text-large m-2 p-2">
+            Verdict: No official advice list rashes as a symptom of the new coronavirus.
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="https://fullfact.org/health/coronavirus-rash/#6870c9db92e529b6a3dd4f9ae41c0692" class="btn btn-primary btn-lg">
+                Open at fullfact.org
+            </a>
+        </div>
+
+    </div>
 </div>
 
-<h3 class="text-center">
-    Rashes are a symptom of the new coronavirus.
-</h3>
 
-<p>
-    A rash isn’t a listed symptom of the new coronavirus
-</p>
-
-<div class="text-center text-warning text-large m-2 p-2">
-    Verdict: No official advice list rashes as a symptom of the new coronavirus.
+<div class="columns pt-2 mt-2 pb-2 mb-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>Similar fact-checks</h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10694-eating-bananas-is-a-preventative-against-the-covid.html">Eating bananas is a preventative against the COVID-19 coronavirus disease.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 22, 2020,
+        <a href="https://www.snopes.com/fact-check/bananas-coronavirus/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10669-the-symptoms-of-covid-19-are-a-sore-throat-lasting.html">The symptoms of Covid-19 are a sore throat lasting 3 or 4 days. The virus then blends into nasal fluid, enters the trachea and then the lungs causing pneumonia. With pneumonia comes high fever and difficulty breathing. The nasal congestion feels like you're drowning</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 20, 2020,
+        <a href="https://fullfact.org/online/coronavirus-claims-symptoms-prevention-viral/#b5444b02f26bfd81f2a0dc6223f78322">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">This is a roughly accurate description of the most common symptoms, although not everyone with Covid-19 gets pneumonia, and the symptoms may not come in this exact order or at these times. The NHS does not mention nasal congestion that ‘feels like drowning’ as a specific symptom for Covid-19.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10481-children-cant-get-the-new-coronavirus.html">Children can’t get the new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 05, 2020,
+        <a href="https://fullfact.org/health/children-can-get-coronavirus/#21f835763784f04fb3ecdc7a6bc64c71">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Children can get Covid-19 but there have been relatively few cases in children and in general, their symptoms tend to be milder.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10232-coronavirus-is-not-a-new-virus.html">Coronavirus is not a new virus</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 24, 2020,
+        <a href="https://healthfeedback.org/claimreview/the-2019-coronavirus-outbreak-is-caused-by-a-novel-virus-past-mentions-of-coronaviruses-refer-to-different-strains/#3c6aa5972374b9b774008ad45343e067">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">Inaccurate</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10162-the-new-fad-disease-called-the-coronavirus-is-swee.html">“The new fad disease called the ‘coronavirus’ is sweeping headlines. Funny enough, there was a patent for the coronavirus was filed in 2015 and granted in 2018.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 21, 2020,
+        <a href="https://www.factcheck.org/2020/01/social-media-posts-spread-bogus-coronavirus-conspiracy-theory/#fb1fb7a85e0a818c39a84546cb30d3e0">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
 </div>
 
-<div class="text-center m-2 p-2">
-    <a href="https://fullfact.org/health/coronavirus-rash/#6870c9db92e529b6a3dd4f9ae41c0692" class="btn btn-primary btn-lg">
-        Open at fullfact.org
-    </a>
-</div>
 
 
 
@@ -51,7 +137,7 @@
 
     <div class="text-center text-gray" style="font-size: small; margin-top: 50px; margin-bottom: 50px">
         Part of the <a href="https://misdeed.fiit.stuba.sk">MISDEED</a> project at <a href="https://www.fiit.stuba.sk">FIIT STU</a>.
-        Powered by the <a href="http://labss2.fiit.stuba.sk/TeamProject/2018/team14iss-it/">MonAnt</a> platform.
+        Powered by the <a href="https://documenter.getpostman.com/view/8615295/SVtPWq1j?version=latest">MonAnt</a> platform.
         Put together by <a href="https://matus.tomlein.org">Matúš Tomlein</a>.
     </div>
 

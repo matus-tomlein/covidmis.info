@@ -13,36 +13,122 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
+    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
 </head>
 
 <body>
 
+    <header class="navbar">
+        <section class="navbar-section"></section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                CovidMis.Info
+            </a>
+        </section>
+        <section class="navbar-section"></section>
+    </header>
+
     <div class="container grid-lg">
         
 
-<div class="text-center m-2 p-2">
-    <a href="/">
-        <img src="/images/icon.png" style="width: 64px; height: 64px">
-    </a>
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h3 class="text-center">
+            The World Health Organization “offered the [coronavirus] testing kits that they have available” but “we refused them.”
+        </h3>
+
+        <p>
+            Biden, Trump Wrong About WHO Coronavirus Tests
+        </p>
+
+        <div class="text-center text-error text-large m-2 p-2">
+            Verdict: False
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="https://www.factcheck.org/2020/03/biden-trump-wrong-about-who-coronavirus-tests/#b246582dc1db2731327c8ce696635ba5" class="btn btn-primary btn-lg">
+                Open at factcheck.org
+            </a>
+        </div>
+
+    </div>
 </div>
 
-<h3 class="text-center">
-    The World Health Organization “offered the [coronavirus] testing kits that they have available” but “we refused them.”
-</h3>
 
-<p>
-    Biden, Trump Wrong About WHO Coronavirus Tests
-</p>
-
-<div class="text-center text-error text-large m-2 p-2">
-    Verdict: False
+<div class="columns pt-2 mt-2 pb-2 mb-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>Similar fact-checks</h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10450-the-us-is-charging-over-3000-per-test-for-patients.html">“The US is charging over $3,000 per test” for patients who may have COVID-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 29, 2020,
+        <a href="https://www.factcheck.org/2020/03/covid-19-tests-dont-cost-over-3000/#27483881812a448fde354f5a9bdd5540">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10677-the-world-health-organization-test-for-the-new-cor.html">The World Health Organization test for the new coronavirus "was a bad test."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 20, 2020,
+        <a href="https://www.factcheck.org/2020/03/biden-trump-wrong-about-who-coronavirus-tests/#ea69a9ee045e8928ea9030a01c0ad440">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10527-anybody-that-wants-a-test-for-covid-19-can-get-a-t.html">"Anybody that wants a test [for COVID-19] can get a test. That’s what the bottom line is. ... Anybody right now and yesterday — anybody that needs a test gets a test. We — they’re there. They have the tests. And the tests are beautiful. Anybody that needs a test gets a test."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://www.factcheck.org/2020/03/the-facts-on-coronavirus-testing/#7092596e2039e6a49599737e1cfc8c0b">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Exaggerates</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10526-t-hey-don-t-even-have-a-test-kit-for-covid-19-a-te.html">"[T]hey don't even have a test kit [for COVID-19]. A test kit to determine whether or not someone has the disease."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://www.factcheck.org/2020/03/the-facts-on-coronavirus-testing/#3eb370e361c50c947ee351f2d4087141">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10337-chinese-doctors-confirmed-that-african-people-are.html">Chinese doctors confirmed that African people are "genetically resistant" to new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 17, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-cameroonian-student/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
 </div>
 
-<div class="text-center m-2 p-2">
-    <a href="https://www.factcheck.org/2020/03/biden-trump-wrong-about-who-coronavirus-tests/#b246582dc1db2731327c8ce696635ba5" class="btn btn-primary btn-lg">
-        Open at factcheck.org
-    </a>
-</div>
 
 
 
@@ -51,7 +137,7 @@
 
     <div class="text-center text-gray" style="font-size: small; margin-top: 50px; margin-bottom: 50px">
         Part of the <a href="https://misdeed.fiit.stuba.sk">MISDEED</a> project at <a href="https://www.fiit.stuba.sk">FIIT STU</a>.
-        Powered by the <a href="http://labss2.fiit.stuba.sk/TeamProject/2018/team14iss-it/">MonAnt</a> platform.
+        Powered by the <a href="https://documenter.getpostman.com/view/8615295/SVtPWq1j?version=latest">MonAnt</a> platform.
         Put together by <a href="https://matus.tomlein.org">Matúš Tomlein</a>.
     </div>
 

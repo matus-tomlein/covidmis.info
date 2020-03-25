@@ -1,11 +1,13 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<div class="hero">
-    <div class="hero-body text-center">
-        <img src="/images/icon.png" style="width: 128px; height: 128px">
-        <h1>CovidMis.Info</h1>
-        <p>Tracking the spread of Covid-19 claims on the Web.</p>
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h3 class="text-center">
+            Fact checks related to Covid-19.
+        </h3>
+
+        {% include 'fact_checks_chart.html' %}
     </div>
 </div>
 
@@ -17,8 +19,8 @@
         </h5>
     </div>
     <div class="column col-6">
-        <a href="{{ fact_check.url }}">{{ fact_check.domain() }}</a><br>
-        {{ fact_check.num_articles() }} Web articles
+        {{ fact_check.published_at.strftime("%b %d, %Y") }},
+        <a href="{{ fact_check.url }}">{{ fact_check.domain() }}</a>
     </div>
     <div class="column col-6 text-right">
         <div class="{{ fact_check.rating_style() }}">{{ fact_check.rating }}</div>

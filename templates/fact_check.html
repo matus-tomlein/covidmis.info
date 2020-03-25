@@ -1,33 +1,52 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<div class="text-center m-2 p-2">
-    <a href="/">
-        <img src="/images/icon.png" style="width: 64px; height: 64px">
-    </a>
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h3 class="text-center">
+            {{ fact_check.statement }}
+        </h3>
+
+        <p>
+            {{ fact_check.short_description() }}
+        </p>
+
+        <div class="text-center {{ fact_check.rating_style() }} text-large m-2 p-2">
+            Verdict: {{ fact_check.rating }}
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="{{ fact_check.url }}" class="btn btn-primary btn-lg">
+                Open at {{ fact_check.domain() }}
+            </a>
+        </div>
+
+    </div>
 </div>
 
-<h3 class="text-center">
-    {{ fact_check.statement }}
-</h3>
-
-<p>
-    {{ fact_check.short_description() }}
-</p>
-
-<div class="text-center {{ fact_check.rating_style() }} text-large m-2 p-2">
-    Verdict: {{ fact_check.rating }}
+{% if similar_fact_checks|length > 0 %}
+<div class="columns pt-2 mt-2 pb-2 mb-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>Similar fact-checks</h4>
+    </div>
+    {% for fact_check in similar_fact_checks %}
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="{{ fact_check.path() }}">{{ fact_check.statement }}</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        {{ fact_check.published_at.strftime("%b %d, %Y") }},
+        <a href="{{ fact_check.url }}">{{ fact_check.domain() }}</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="{{ fact_check.rating_style() }}">{{ fact_check.rating }}</div>
+    </div>
+    {% endfor %}
 </div>
-
-<div class="text-center m-2 p-2">
-    <a href="{{ fact_check.url }}" class="btn btn-primary btn-lg">
-        Open at {{ fact_check.domain() }}
-    </a>
-</div>
+{% endif %}
 
 {% if fact_check.num_articles() > 0 %}
-
-<div class="m-2 p-2">&nbsp;</div>
 
 <div class="columns pt-2 mt-2">
     <div class="column col-12 mt-2 pt-2 mb-2 pb-2">

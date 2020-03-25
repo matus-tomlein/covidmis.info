@@ -13,36 +13,122 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
+    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
 </head>
 
 <body>
 
+    <header class="navbar">
+        <section class="navbar-section"></section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                CovidMis.Info
+            </a>
+        </section>
+        <section class="navbar-section"></section>
+    </header>
+
     <div class="container grid-lg">
         
 
-<div class="text-center m-2 p-2">
-    <a href="/">
-        <img src="/images/icon.png" style="width: 64px; height: 64px">
-    </a>
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h3 class="text-center">
+            Coronaviruses can live on surfaces for up to 28 days, so you should be careful if you receive a package from China.
+        </h3>
+
+        <p>
+            There’s no evidence that the new coronavirus can survive on packages for 28 days
+        </p>
+
+        <div class="text-center text-warning text-large m-2 p-2">
+            Verdict: There is currently no evidence that this virus can survive on surfaces that long. Most other coronaviruses do not. Current health advice suggests the risk of contracting the virus from a package is very low.
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="https://fullfact.org/online/coronavirus-surfaces-packages-china/#46bcd697dc5fee369878aa337322f172" class="btn btn-primary btn-lg">
+                Open at fullfact.org
+            </a>
+        </div>
+
+    </div>
 </div>
 
-<h3 class="text-center">
-    Coronaviruses can live on surfaces for up to 28 days, so you should be careful if you receive a package from China.
-</h3>
 
-<p>
-    There’s no evidence that the new coronavirus can survive on packages for 28 days
-</p>
-
-<div class="text-center text-warning text-large m-2 p-2">
-    Verdict: There is currently no evidence that this virus can survive on surfaces that long. Most other coronaviruses do not. Current health advice suggests the risk of contracting the virus from a package is very low.
+<div class="columns pt-2 mt-2 pb-2 mb-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>Similar fact-checks</h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10496-108-people-died-from-covid-19-in-china-on-february.html">108 people died from Covid-19 in China on February 10th, one of the worst days so far.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 06, 2020,
+        <a href="https://fullfact.org/online/coronavirus-daily-deaths/#9a2a7fd09f0196e2b2df81f84ff32afc">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">It is true that 108 people died in China from Covid-19 on 10 February, however, this death toll has since been surpassed.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10675-the-government-of-shanghai-china-has-announced-its.html">The government of Shanghai, China has announced its official recommendation that COVID-19 should be treated with high amounts of intravenous vitamin C</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 03, 2020,
+        <a href="https://healthfeedback.org/claimreview/no-the-shanghai-government-has-not-recommended-intravenous-vitamin-c-as-a-treatment-for-covid-19/#8cfd85e1226033678145c88fa895d97c">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">Misleading</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10341-coronavirus-isnt-dangerous-as-it-can-be-killed-by.html">Coronavirus isn’t dangerous as it can be killed by Dettol products.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 17, 2020,
+        <a href="https://fullfact.org/online/coronavirus-dettol/#49c99da44083fbf835e302ca504a14fa">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">How dangerous the novel coronavirus is doesn’t relate to whether disinfectants work against it. Coronavirus is a large category of viruses that includes the common cold. Dettol has said its products haven’t been tested against the new virus yet.</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10218-the-chinese-government-is-building-a-hospital-in-1.html">The Chinese government is building a hospital in 10 days to deal with the new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 03, 2020,
+        <a href="https://www.snopes.com/fact-check/china-hospital-10-days/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-success">True</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10159-the-coronavirus-is-new-yet-it-was-lab-created-and.html">[The coronavirus is] “new” yet it was lab-created and patented in 2015</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 23, 2020,
+        <a href="https://healthfeedback.org/claimreview/contrary-to-claims-in-viral-social-media-posts-wuhan-coronavirus-was-not-lab-created-nor-was-it-patented-years-before-outbreak/#669eb1759e85c596637aa75ee416d486">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">Inaccurate</div>
+    </div>
+    
 </div>
 
-<div class="text-center m-2 p-2">
-    <a href="https://fullfact.org/online/coronavirus-surfaces-packages-china/#46bcd697dc5fee369878aa337322f172" class="btn btn-primary btn-lg">
-        Open at fullfact.org
-    </a>
-</div>
 
 
 
@@ -51,7 +137,7 @@
 
     <div class="text-center text-gray" style="font-size: small; margin-top: 50px; margin-bottom: 50px">
         Part of the <a href="https://misdeed.fiit.stuba.sk">MISDEED</a> project at <a href="https://www.fiit.stuba.sk">FIIT STU</a>.
-        Powered by the <a href="http://labss2.fiit.stuba.sk/TeamProject/2018/team14iss-it/">MonAnt</a> platform.
+        Powered by the <a href="https://documenter.getpostman.com/view/8615295/SVtPWq1j?version=latest">MonAnt</a> platform.
         Put together by <a href="https://matus.tomlein.org">Matúš Tomlein</a>.
     </div>
 

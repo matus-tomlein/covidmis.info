@@ -44,19 +44,27 @@ fact_checks = fact_checks.loc[
         (fact_checks.claim.str.lower().str.contains('virus'))
     )
 ]
-fact_checks = fact_checks.sort_values('num_articles', ascending=False)
+fact_checks['published_at'] = pd.to_datetime(fact_checks['published_at'])
+fact_checks = fact_checks.sort_values('published_at', ascending=False)
+fact_check_counts = (
+    fact_checks['published_at'] - pd.to_timedelta(fact_checks['published_at'].dt.dayofweek, unit='d')
+).dt.date.value_counts().sort_index().cumsum()
 fact_checks = [
     FactCheck(
         id=fact_check['id'],
         claim_id=fact_check['claim_id'],
         statement=fact_check['claim'],
+        published_at=fact_check['published_at'],
         description=fact_check['description'],
         url=fact_check['url'],
         rating=fact_check['rating']['overall_rating'],
-        article_mappings=mappings_by_claim_id[fact_check['claim_id']] if fact_check['claim_id'] in mappings_by_claim_id else []
+        article_mappings=mappings_by_claim_id[fact_check['claim_id']] if fact_check['claim_id'] in mappings_by_claim_id else [],
+        other_info=fact_check['other_info']
     )
     for _, fact_check in fact_checks.iterrows()
 ]
+
+similar_fact_checks = pd.read_pickle('cache/similar_fact_checks.p')
 
 page_title = 'CovidMis.Info'
 render_to_file(
@@ -64,16 +72,20 @@ render_to_file(
     output_path='index.html',
     data={
         'title': page_title,
-        'fact_checks': fact_checks
+        'fact_checks': fact_checks,
+        'fact_check_counts': fact_check_counts
     }
 )
 
 for fact_check in fact_checks:
+    similar_fact_check_ids = similar_fact_checks.loc[fact_check.id] if fact_check.id in similar_fact_checks.index else []
+
     render_to_file(
         template='fact_check.html',
         output_path=fact_check.file_name(),
         data={
             'title': page_title + ' – ' + fact_check.statement,
-            'fact_check': fact_check
+            'fact_check': fact_check,
+            'similar_fact_checks': [f for f in fact_checks if f.id in similar_fact_check_ids]
         }
     )

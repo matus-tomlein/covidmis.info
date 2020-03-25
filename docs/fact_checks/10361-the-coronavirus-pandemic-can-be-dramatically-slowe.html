@@ -13,40 +13,124 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
+    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
 </head>
 
 <body>
 
+    <header class="navbar">
+        <section class="navbar-section"></section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                CovidMis.Info
+            </a>
+        </section>
+        <section class="navbar-section"></section>
+    </header>
+
     <div class="container grid-lg">
         
 
-<div class="text-center m-2 p-2">
-    <a href="/">
-        <img src="/images/icon.png" style="width: 64px; height: 64px">
-    </a>
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h3 class="text-center">
+            The coronavirus pandemic can be dramatically slowed, or stopped, with the immediate widespread use of high doses of vitamin C
+        </h3>
+
+        <p>
+            Vitamin C supplementation does not prevent viral respiratory infections, such as those caused by coronaviruses, in the general population
+        </p>
+
+        <div class="text-center text-error text-large m-2 p-2">
+            Verdict: Unsupported
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="https://healthfeedback.org/claimreview/vitamin-c-supplementation-does-not-prevent-viral-respiratory-infections-such-as-those-caused-by-coronaviruses-in-the-general-population/#6adac4850daf0310feb1abf8cbe8c973" class="btn btn-primary btn-lg">
+                Open at healthfeedback.org
+            </a>
+        </div>
+
+    </div>
 </div>
 
-<h3 class="text-center">
-    The coronavirus pandemic can be dramatically slowed, or stopped, with the immediate widespread use of high doses of vitamin C
-</h3>
 
-<p>
-    Vitamin C supplementation does not prevent viral respiratory infections, such as those caused by coronaviruses, in the general population
-</p>
-
-<div class="text-center text-error text-large m-2 p-2">
-    Verdict: Unsupported
+<div class="columns pt-2 mt-2 pb-2 mb-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>Similar fact-checks</h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10632-the-new-coronavirus-is-the-least-deadly-virus-and.html">The new coronavirus is the “least deadly virus” and has a death rate lower than the 2009 H1N1 outbreak.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://www.factcheck.org/2020/03/infographic-on-facebook-distorts-comparative-facts-on-viruses/#754910be73d2ca9877af693b2602c5c8">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10394-a-video-demonstrates-there-have-been-exponentially.html">A video demonstrates there have been exponentially more cases of new coronavirus than other diseases such as SARS, MERS, Ebola, and swine flu.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 26, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-graph-spreading-faster/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Mixture</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10601-the-coronavirus-outbreak-is-not-actually-caused-by.html">The coronavirus outbreak is not actually caused by a virus, but by 5G technology</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 22, 2020,
+        <a href="https://healthfeedback.org/claimreview/viral-claim-falsely-asserts-that-covid-19-is-due-to-5g-technology-rollout-not-a-virus/#d2d31121158b124360082baaeec45227">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">Incorrect</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10301-mms-chlorine-dioxide-can-be-very-effective-in-both.html">"MMS (chlorine dioxide), can be very effective in both preventing and eradicating the coronavirus."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 27, 2020,
+        <a href="https://www.factcheck.org/2020/02/fake-coronavirus-cures-part-1-mms-is-industrial-bleach/#3ba45ed9a3e7aa7f3a5cc80d9d98045f">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10310-the-coronavirus-pandemic-can-be-dramatically-slowe.html">“The coronavirus pandemic can be dramatically slowed, or stopped completely, with the immediate widespread use of high doses of vitamin C.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 25, 2020,
+        <a href="https://www.factcheck.org/2020/02/fake-coronavirus-cures-part-3-vitamin-c-isnt-a-shield/#6c5139b332899f26049d4348c830a716">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">False</div>
+    </div>
+    
 </div>
 
-<div class="text-center m-2 p-2">
-    <a href="https://healthfeedback.org/claimreview/vitamin-c-supplementation-does-not-prevent-viral-respiratory-infections-such-as-those-caused-by-coronaviruses-in-the-general-population/#6adac4850daf0310feb1abf8cbe8c973" class="btn btn-primary btn-lg">
-        Open at healthfeedback.org
-    </a>
-</div>
 
 
-
-<div class="m-2 p-2">&nbsp;</div>
 
 <div class="columns pt-2 mt-2">
     <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
@@ -94,7 +178,7 @@
 
     <div class="text-center text-gray" style="font-size: small; margin-top: 50px; margin-bottom: 50px">
         Part of the <a href="https://misdeed.fiit.stuba.sk">MISDEED</a> project at <a href="https://www.fiit.stuba.sk">FIIT STU</a>.
-        Powered by the <a href="http://labss2.fiit.stuba.sk/TeamProject/2018/team14iss-it/">MonAnt</a> platform.
+        Powered by the <a href="https://documenter.getpostman.com/view/8615295/SVtPWq1j?version=latest">MonAnt</a> platform.
         Put together by <a href="https://matus.tomlein.org">Matúš Tomlein</a>.
     </div>
 
