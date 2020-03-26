@@ -99,6 +99,7 @@ for fact_check in fact_checks:
         language=language
     )
 
+page_title = 'CovidDez.info'
 language = 'sk'
 for fact_check in fact_checks:
     fact_check.translate(language)
