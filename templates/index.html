@@ -4,7 +4,7 @@
 <div class="hero hero-sm">
     <div class="hero-body">
         <h3 class="text-center">
-            Fact checks related to Covid-19.
+            {% if language == 'sk' %}Preverené fakty o víruse Covid-19{% else %}Fact checks related to Covid-19.{% endif %}
         </h3>
 
         {% include 'fact_checks_chart.html' %}
@@ -15,7 +15,7 @@
     {% for fact_check in fact_checks %}
     <div class="column col-12 mt-2 pt-2">
         <h5>
-            <a href="{{ fact_check.path() }}">{{ fact_check.statement }}</a>
+            <a href="{{ fact_check.path() }}">{{ fact_check.get_statement() }}</a>
         </h5>
     </div>
     <div class="column col-6">
@@ -23,7 +23,7 @@
         <a href="{{ fact_check.url }}">{{ fact_check.domain() }}</a>
     </div>
     <div class="column col-6 text-right">
-        <div class="{{ fact_check.rating_style() }}">{{ fact_check.rating }}</div>
+        <div class="{{ fact_check.rating_style() }}">{{ fact_check.get_rating() }}</div>
     </div>
     <div class="column col-12">&nbsp;</div>
     {% endfor %}

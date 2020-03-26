@@ -4,7 +4,7 @@
 <div class="hero hero-sm">
     <div class="hero-body">
         <h3 class="text-center">
-            {{ fact_check.statement }}
+            {{ fact_check.get_statement() }}
         </h3>
 
         <p>
@@ -12,12 +12,14 @@
         </p>
 
         <div class="text-center {{ fact_check.rating_style() }} text-large m-2 p-2">
-            Verdict: {{ fact_check.rating }}
+            {% if language == 'sk' %}Záver:{% else %}Verdict:{% endif %}
+            {{ fact_check.get_rating() }}
         </div>
 
         <div class="text-center m-2 p-2">
             <a href="{{ fact_check.url }}" class="btn btn-primary btn-lg">
-                Open at {{ fact_check.domain() }}
+                {% if language == 'sk' %}Otvoriť na{% else %}Open at{% endif %}
+                {{ fact_check.domain() }}
             </a>
         </div>
 
@@ -27,12 +29,14 @@
 {% if similar_fact_checks|length > 0 %}
 <div class="columns pt-2 mt-2 pb-2 mb-2">
     <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
-        <h4>Similar fact-checks</h4>
+        <h4>
+            {% if language == 'sk' %}Podobné preverené fakty{% else %}Similar Fact Checks{% endif %}
+        </h4>
     </div>
     {% for fact_check in similar_fact_checks %}
     <div class="column col-12 mt-2">
         <h6>
-            <a href="{{ fact_check.path() }}">{{ fact_check.statement }}</a>
+            <a href="{{ fact_check.path() }}">{{ fact_check.get_statement() }}</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
@@ -40,7 +44,9 @@
         <a href="{{ fact_check.url }}">{{ fact_check.domain() }}</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
-        <div class="{{ fact_check.rating_style() }}">{{ fact_check.rating }}</div>
+        <div class="{{ fact_check.rating_style() }}">
+            {{ fact_check.get_rating() }}
+        </div>
     </div>
     {% endfor %}
 </div>
@@ -50,7 +56,9 @@
 
 <div class="columns pt-2 mt-2">
     <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
-        <h4>Articles Found on the Web</h4>
+        <h4>
+            {% if language == 'sk' %}Články nájdené na Webe{% else %}Articles Found on the Web{% endif %}
+        </h4>
     </div>
     {% for article_mapping in fact_check.get_article_mappings() %}
     <div class="column col-12 mt-2">
@@ -65,7 +73,7 @@
     </div>
     <div class="column col-6 mb-2 pb-2 text-right">
         <div class="{{ article_mapping.confidence_style() }}">
-            {{ article_mapping.confidence_text() }}
+            {{ article_mapping.confidence_text(language) }}
         </div>
     </div>
     {% endfor %}

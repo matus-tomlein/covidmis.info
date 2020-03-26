@@ -10,8 +10,14 @@ class ArticleMapping:
         else:
             return 'text-error'
 
-    def confidence_text(self):
+    def confidence_text(self, language):
         if self.score < 0.5:
-            return 'Might contain claim'
+            if language == 'sk':
+                return 'Môže obsahovať výrok'
+            else:
+                return 'Might contain claim'
         else:
-            return 'Likely contains claim'
+            if language == 'sk':
+                return 'Pravdepodobne obsahuje výrok'
+            else:
+                return 'Likely contains claim'

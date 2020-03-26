@@ -1,0 +1,26 @@
+{
+  "name": "covidmis.info",
+  "version": "1.0.0",
+  "description": "Fact checks related to Covid-19",
+  "main": "translate.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "translation-google": "^0.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matus-tomlein/covidmis.info.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matus-tomlein/covidmis.info/issues"
+  },
+  "homepage": "https://github.com/matus-tomlein/covidmis.info#readme"
+}

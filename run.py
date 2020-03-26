@@ -66,14 +66,16 @@ fact_checks = [
 
 similar_fact_checks = pd.read_pickle('cache/similar_fact_checks.p')
 
-page_title = 'CovidMis.Info'
+page_title = 'CovidMis.info'
+language = 'en'
 render_to_file(
     template='index.html',
     output_path='index.html',
     data={
         'title': page_title,
         'fact_checks': fact_checks,
-        'fact_check_counts': fact_check_counts
+        'fact_check_counts': fact_check_counts,
+        'language': language
     }
 )
 
@@ -86,6 +88,36 @@ for fact_check in fact_checks:
         data={
             'title': page_title + ' – ' + fact_check.statement,
             'fact_check': fact_check,
-            'similar_fact_checks': [f for f in fact_checks if f.id in similar_fact_check_ids]
+            'similar_fact_checks': [f for f in fact_checks if f.id in similar_fact_check_ids],
+            'language': language
+        }
+    )
+
+language = 'sk'
+for fact_check in fact_checks:
+    fact_check.translate(language)
+
+render_to_file(
+    template='index.html',
+    output_path=f'{language}/index.html',
+    data={
+        'title': page_title,
+        'fact_checks': fact_checks,
+        'fact_check_counts': fact_check_counts,
+        'language': language
+    }
+)
+
+for fact_check in fact_checks:
+    similar_fact_check_ids = similar_fact_checks.loc[fact_check.id] if fact_check.id in similar_fact_checks.index else []
+
+    render_to_file(
+        template='fact_check.html',
+        output_path=fact_check.file_name(),
+        data={
+            'title': page_title + ' – ' + fact_check.statement,
+            'fact_check': fact_check,
+            'similar_fact_checks': [f for f in fact_checks if f.id in similar_fact_check_ids],
+            'language': language
         }
     )
