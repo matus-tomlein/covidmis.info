@@ -23,17 +23,17 @@
     <header class="navbar">
         <section class="navbar-section"></section>
         <section class="navbar-center">
-            <a href="/{% if language == 'sk' %}sk{% endif %}" class="navbar-brand mr-2">
-                CovidMis.info
+            <a href="/" class="navbar-brand mr-2">
+                {% if language == 'sk' %}CovidDez.info{% else %}CovidMis.info{% endif %}
             </a>
         </section>
         <section class="navbar-section">
             {% if language == 'sk' %}
-            <a href="/">
+            <a href="https://covidmis.info">
                 <img src="/images/english.png" class="mr-2" style="height: 24px">
             </a>
             {% else %}
-            <a href="/sk">
+            <a href="https://coviddez.info">
                 <img src="/images/slovak.png" class="mr-2" style="height: 24px">
             </a>
             {% endif %}

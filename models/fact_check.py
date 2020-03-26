@@ -26,11 +26,17 @@ class FactCheck:
         else:
             return capitalize(translate(self.statement, self.language))
 
+    def get_original_description(self):
+        description = self.description
+        if len(description) > 2000:
+            return description[:2000] + '...'
+        return description
+
     def get_description(self):
         if self.language is None:
-            return self.description
+            return self.get_original_description()
         else:
-            return translate(self.description, self.language)
+            return translate(self.get_original_description(), self.language)
 
     def get_rating(self):
         if self.language is None:
@@ -62,11 +68,7 @@ class FactCheck:
         return description
 
     def file_name(self):
-        path = 'fact_checks/' + str(self.id) + '-' + slugify(self.statement, max_length=50) + '.html'
-        if self.language is not None:
-            return f'{self.language}/{path}'
-
-        return path
+        return 'fact_checks/' + str(self.id) + '-' + slugify(self.statement, max_length=50) + '.html'
 
     def path(self):
         return '/' + self.file_name()

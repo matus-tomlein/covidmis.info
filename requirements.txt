@@ -2,3 +2,4 @@ Jinja2==2.11.1
 sshtunnel==0.1.5
 psycopg2-binary==2.8.4
 python-slugify==4.0.0
+ratelimit==2.2.1

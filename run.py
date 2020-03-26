@@ -12,9 +12,13 @@ def render_template(file_name, data={}):
     html_str = template.render(**data)
     return html_str
 
-def render_to_file(template, output_path, data):
+def render_to_file(template, output_path, data, language):
     html = render_template(template, data)
-    with open(f'docs/{output_path}', 'w') as f:
+    folder = f'docs/{output_path}'
+    if language == 'sk':
+        folder = f'docs_sk/{output_path}'
+
+    with open(folder, 'w') as f:
         f.write(html)
 
 articles = pd.read_pickle('cache/articles.p')
@@ -76,7 +80,8 @@ render_to_file(
         'fact_checks': fact_checks,
         'fact_check_counts': fact_check_counts,
         'language': language
-    }
+    },
+    language=language
 )
 
 for fact_check in fact_checks:
@@ -90,7 +95,8 @@ for fact_check in fact_checks:
             'fact_check': fact_check,
             'similar_fact_checks': [f for f in fact_checks if f.id in similar_fact_check_ids],
             'language': language
-        }
+        },
+        language=language
     )
 
 language = 'sk'
@@ -99,13 +105,14 @@ for fact_check in fact_checks:
 
 render_to_file(
     template='index.html',
-    output_path=f'{language}/index.html',
+    output_path='index.html',
     data={
         'title': page_title,
         'fact_checks': fact_checks,
         'fact_check_counts': fact_check_counts,
         'language': language
-    }
+    },
+    language=language
 )
 
 for fact_check in fact_checks:
@@ -119,5 +126,6 @@ for fact_check in fact_checks:
             'fact_check': fact_check,
             'similar_fact_checks': [f for f in fact_checks if f.id in similar_fact_check_ids],
             'language': language
-        }
+        },
+        language=language
     )
