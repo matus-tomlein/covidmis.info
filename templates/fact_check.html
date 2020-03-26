@@ -1,30 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<div class="hero hero-sm">
-    <div class="hero-body">
-        <h3 class="text-center">
-            {{ fact_check.get_statement() }}
-        </h3>
-
-        <p>
-            {{ fact_check.short_description() }}
-        </p>
-
-        <div class="text-center {{ fact_check.rating_style() }} text-large m-2 p-2">
-            {% if language == 'sk' %}Záver:{% else %}Verdict:{% endif %}
-            {{ fact_check.get_rating() }}
-        </div>
-
-        <div class="text-center m-2 p-2">
-            <a href="{{ fact_check.url }}" class="btn btn-primary btn-lg">
-                {% if language == 'sk' %}Otvoriť na{% else %}Open at{% endif %}
-                {{ fact_check.domain() }}
-            </a>
-        </div>
-
-    </div>
-</div>
+{% include '_fact_check.html' %}
 
 {% if similar_fact_checks|length > 0 %}
 <div class="columns pt-2 mt-2 pb-2 mb-2">
@@ -53,32 +30,8 @@
 {% endif %}
 
 {% if fact_check.num_articles() > 0 %}
-
-<div class="columns pt-2 mt-2">
-    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
-        <h4>
-            {% if language == 'sk' %}Články nájdené na Webe{% else %}Articles Found on the Web{% endif %}
-        </h4>
-    </div>
-    {% for article_mapping in fact_check.get_article_mappings() %}
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="{{ article_mapping.article.url }}" rel="nofollow">
-                {{ article_mapping.article.title }}
-            </a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        {{ article_mapping.article.domain() }}
-    </div>
-    <div class="column col-6 mb-2 pb-2 text-right">
-        <div class="{{ article_mapping.confidence_style() }}">
-            {{ article_mapping.confidence_text(language) }}
-        </div>
-    </div>
-    {% endfor %}
-</div>
-
+    {% set article_mappings = fact_check.get_article_mappings() %}
+    {% include '_article_mappings.html' %}
 {% endif %}
 
 {% endblock %}

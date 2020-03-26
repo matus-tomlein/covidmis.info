@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{% for fact_check in fact_check_group.fact_checks %}
+    {% include "_fact_check.html" %}
+{% endfor %}
+
+{% if fact_check_group.num_articles() > 0 %}
+    {% set article_mappings = fact_check_group.get_article_mappings() %}
+    {% include '_article_mappings.html' %}
+{% endif %}
+
+{% endblock %}

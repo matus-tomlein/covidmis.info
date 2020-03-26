@@ -21,10 +21,10 @@ class FactCheck:
         self.language = language
 
     def get_statement(self):
-        if self.language is None:
-            return capitalize(self.statement)
-        else:
+        if self.language == 'sk':
             return capitalize(translate(self.statement, self.language))
+        else:
+            return capitalize(self.statement)
 
     def get_original_description(self):
         description = self.description
@@ -33,16 +33,16 @@ class FactCheck:
         return description
 
     def get_description(self):
-        if self.language is None:
-            return self.get_original_description()
-        else:
+        if self.language == 'sk':
             return translate(self.get_original_description(), self.language)
+        else:
+            return self.get_original_description()
 
     def get_rating(self):
-        if self.language is None:
-            return capitalize(self.rating)
-        else:
+        if self.language == 'sk':
             return capitalize(translate(self.rating, self.language))
+        else:
+            return capitalize(self.rating)
 
     def get_article_mappings(self):
         return reversed(sorted(self.article_mappings, key=lambda m: m.score))

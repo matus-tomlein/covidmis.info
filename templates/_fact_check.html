@@ -1,0 +1,24 @@
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h4 class="text-center">
+            {{ fact_check.get_statement() }}
+        </h4>
+
+        <p>
+            {{ fact_check.short_description() }}
+        </p>
+
+        <div class="text-center {{ fact_check.rating_style() }} text-large m-2 p-2">
+            {% if language == 'sk' %}Záver:{% else %}Verdict:{% endif %}
+            {{ fact_check.get_rating() }}
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="{{ fact_check.url }}" class="btn btn-primary btn-lg">
+                {% if language == 'sk' %}Otvoriť na{% else %}Open at{% endif %}
+                {{ fact_check.domain() }}
+            </a>
+        </div>
+
+    </div>
+</div>

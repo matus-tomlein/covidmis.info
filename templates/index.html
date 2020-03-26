@@ -12,6 +12,31 @@
 </div>
 
 <div class="columns">
+
+    {% for fact_check_group in fact_check_groups %}
+    <div class="column col-12 mt-2 pt-2">
+        <h5>
+            <a href="{{ fact_check_group.path() }}">{{ fact_check_group.promoted_fact_check.get_statement() }}</a>
+        </h5>
+    </div>
+    <div class="column col-6">
+        {{ fact_check_group.promoted_fact_check.published_at.strftime("%b %d, %Y") }},
+        <a href="{{ fact_check_group.promoted_fact_check.url }}">{{ fact_check_group.promoted_fact_check.domain() }}</a>
+    </div>
+    <div class="column col-6 text-right">
+        <div class="{{ fact_check_group.promoted_fact_check.rating_style() }}">{{ fact_check_group.promoted_fact_check.get_rating() }}</div>
+    </div>
+    <div class="column col-12">&nbsp;</div>
+    {% endfor %}
+
+    <div class="column col-12">&nbsp;</div>
+
+    <div class="column col-12 mt-2 pt-2">
+        <h4>
+            {% if language == 'sk' %}Najnovšie{% else %}Latest{% endif %}
+        </h4>
+    </div>
+
     {% for fact_check in fact_checks %}
     <div class="column col-12 mt-2 pt-2">
         <h5>

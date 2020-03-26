@@ -1,8 +1,10 @@
 from jinja2 import Environment, FileSystemLoader
+import json
 import pandas as pd
 from models.article import Article
 from models.article_mapping import ArticleMapping
 from models.fact_check import FactCheck
+from models.fact_check_group import FactCheckGroup
 
 def render_template(file_name, data={}):
     with open(f'templates/{file_name}') as f:
@@ -67,66 +69,71 @@ fact_checks = [
     )
     for _, fact_check in fact_checks.iterrows()
 ]
+fact_checks_by_id = {
+    fact_check.id: fact_check
+    for fact_check in fact_checks
+}
 
 similar_fact_checks = pd.read_pickle('cache/similar_fact_checks.p')
 
-page_title = 'CovidMis.info'
-language = 'en'
-render_to_file(
-    template='index.html',
-    output_path='index.html',
-    data={
-        'title': page_title,
-        'fact_checks': fact_checks,
-        'fact_check_counts': fact_check_counts,
-        'language': language
-    },
-    language=language
-)
+with open('cache/fact_groups.json') as f:
+    fact_check_groups = json.load(f)
 
-for fact_check in fact_checks:
-    similar_fact_check_ids = similar_fact_checks.loc[fact_check.id] if fact_check.id in similar_fact_checks.index else []
+fact_check_groups = list(reversed(sorted([
+    FactCheckGroup(
+        promoted_fact_check=fact_checks_by_id[group['promoted'][0]],
+        fact_checks=[
+            fact_checks_by_id[fact_check]
+            for fact_check in group['fact_checks']
+        ]
+    )
+    for group in fact_check_groups[:5]
+], key=lambda group: len(group.fact_checks))))
+
+
+for page_title, language in [
+    ('CovidMis.info', 'en'),
+    ('CovidDez.info', 'sk')
+]:
+    for fact_check in fact_checks:
+        fact_check.translate(language)
 
     render_to_file(
-        template='fact_check.html',
-        output_path=fact_check.file_name(),
+        template='index.html',
+        output_path='index.html',
         data={
-            'title': page_title + ' – ' + fact_check.statement,
-            'fact_check': fact_check,
-            'similar_fact_checks': [f for f in fact_checks if f.id in similar_fact_check_ids],
+            'title': page_title,
+            'fact_checks': fact_checks,
+            'fact_check_groups': fact_check_groups,
+            'fact_check_counts': fact_check_counts,
             'language': language
         },
         language=language
     )
 
-page_title = 'CovidDez.info'
-language = 'sk'
-for fact_check in fact_checks:
-    fact_check.translate(language)
+    for fact_check in fact_checks:
+        similar_fact_check_ids = similar_fact_checks.loc[fact_check.id] if fact_check.id in similar_fact_checks.index else []
 
-render_to_file(
-    template='index.html',
-    output_path='index.html',
-    data={
-        'title': page_title,
-        'fact_checks': fact_checks,
-        'fact_check_counts': fact_check_counts,
-        'language': language
-    },
-    language=language
-)
+        render_to_file(
+            template='fact_check.html',
+            output_path=fact_check.file_name(),
+            data={
+                'title': page_title + ' – ' + fact_check.get_statement(),
+                'fact_check': fact_check,
+                'similar_fact_checks': [f for f in fact_checks if f.id in similar_fact_check_ids],
+                'language': language
+            },
+            language=language
+        )
 
-for fact_check in fact_checks:
-    similar_fact_check_ids = similar_fact_checks.loc[fact_check.id] if fact_check.id in similar_fact_checks.index else []
-
-    render_to_file(
-        template='fact_check.html',
-        output_path=fact_check.file_name(),
-        data={
-            'title': page_title + ' – ' + fact_check.statement,
-            'fact_check': fact_check,
-            'similar_fact_checks': [f for f in fact_checks if f.id in similar_fact_check_ids],
-            'language': language
-        },
-        language=language
-    )
+    for fact_check_group in fact_check_groups:
+        render_to_file(
+            template='fact_check_group.html',
+            output_path=fact_check_group.file_name(),
+            data={
+                'title': page_title + ' – ' + fact_check_group.promoted_fact_check.get_statement(),
+                'fact_check_group': fact_check_group,
+                'language': language
+            },
+            language=language
+        )

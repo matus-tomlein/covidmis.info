@@ -1,0 +1,24 @@
+<div class="columns pt-2 mt-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>
+            {% if language == 'sk' %}Články nájdené na Webe{% else %}Articles Found on the Web{% endif %}
+        </h4>
+    </div>
+    {% for article_mapping in article_mappings %}
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="{{ article_mapping.article.url }}" rel="nofollow">
+                {{ article_mapping.article.title }}
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        {{ article_mapping.article.domain() }}
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="{{ article_mapping.confidence_style() }}">
+            {{ article_mapping.confidence_text(language) }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
