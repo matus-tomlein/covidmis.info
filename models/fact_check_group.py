@@ -3,9 +3,9 @@ from slugify import slugify
 
 class FactCheckGroup:
 
-    def __init__(self, promoted_fact_check, fact_checks):
-        self.promoted_fact_check = promoted_fact_check
-        self.fact_checks = fact_checks
+    def __init__(self, fact_checks):
+        self.fact_checks = list(sorted(fact_checks, key=lambda fact_check: len(fact_check.get_statement())))
+        self.promoted_fact_check = self.fact_checks[0]
 
     def file_name(self):
         return 'fact_check_groups/' + str(self.promoted_fact_check.id) + '-' + slugify(self.promoted_fact_check.statement, max_length=50) + '.html'

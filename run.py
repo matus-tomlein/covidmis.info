@@ -81,7 +81,6 @@ with open('cache/fact_groups.json') as f:
 
 fact_check_groups = list(reversed(sorted([
     FactCheckGroup(
-        promoted_fact_check=fact_checks_by_id[group['promoted'][0]],
         fact_checks=[
             fact_checks_by_id[fact_check]
             for fact_check in group['fact_checks']
