@@ -24,6 +24,9 @@ def fetch_translation(text):
 def translate(text, language='sk'):
     global translations
 
+    if text.strip() == '':
+        return text
+
     if text in translations: # and translations[text] != '':
         return translations[text]
 
