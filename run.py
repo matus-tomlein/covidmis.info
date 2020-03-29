@@ -5,6 +5,7 @@ from models.article import Article
 from models.article_mapping import ArticleMapping
 from models.fact_check import FactCheck
 from models.fact_check_group import FactCheckGroup
+from graph_data import get_graph_data
 
 def render_template(file_name, data={}):
     with open(f'templates/{file_name}') as f:
@@ -106,6 +107,16 @@ for page_title, language in [
             'fact_check_groups': fact_check_groups,
             'fact_check_counts': fact_check_counts,
             'language': language
+        },
+        language=language
+    )
+
+    render_to_file(
+        template='graph.html',
+        output_path='graph/index.html',
+        data={
+            'title': page_title,
+            'data': json.dumps(get_graph_data(articles=articles, fact_checks=fact_checks, fact_checks_by_id=fact_checks_by_id))
         },
         language=language
     )

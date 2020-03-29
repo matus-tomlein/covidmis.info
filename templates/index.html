@@ -8,6 +8,12 @@
         </h3>
 
         {% include 'fact_checks_chart.html' %}
+
+        <div class="text-center">
+            <a href="/graph" class="btn btn-lg btn-primary">
+                {% if language == 'sk' %}Zobraziť tvrdenia v grafe{% else %}Show fact checks in a graph{% endif %}
+            </a>
+        </div>
     </div>
 </div>
 

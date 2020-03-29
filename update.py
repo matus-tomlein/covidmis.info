@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import json
 import networkx as nx
 import pickle
@@ -26,12 +27,25 @@ def save_mappings():
     columns = ['id', 'method_id', 'annotation_type_id', 'source_entity_id', 'target_entity_id', 'value']
     cur.execute(f"""SELECT {', '.join(columns)}
     FROM relation_annotations
-    WHERE method_id = 6 AND value->>'value' = 'yes' AND is_deleted = FALSE""")
+    WHERE method_id = 6 AND is_deleted = FALSE""")
     rows = cur.fetchall()
 
     mappings = pd.DataFrame(rows, columns=columns)
     mappings.to_pickle('cache/mappings.p')
+    # mappings = mappings.loc[
+    #     mappings['value'].apply(lambda v: v['value'] == 'yes')
+    # ]
+    # mappings.to_pickle('cache/mappings.p')
     print('Fetched mappings')
+
+
+def process_mappings():
+    fact_checks = pd.read_pickle('cache/fact_checks.p')
+    fact_check_ids = set(int(claim_id) for claim_id in fact_checks['claim_id'] if not np.isnan(claim_id))
+
+    mappings = pd.read_pickle('cache/mappings.p')
+    mappings = mappings.loc[mappings['target_entity_id'].isin(fact_check_ids)]
+    mappings.to_pickle('cache/mappings.p')
 
 
 def save_articles():
@@ -139,6 +153,7 @@ def find_similar_fact_checks():
 
     similarities = similarities.loc[similarities['similarity'] >= 0.3]
     all_links = similarities.groupby(['fact_check_1', 'fact_check_2'])['similarity'].max()
+    all_links.to_pickle('cache/fact_check_similarities.p')
 
     similar_fact_checks = pd.Series({
         fact_check_id: list(row.sort_values(ascending=False).iloc[:5].index)
@@ -183,7 +198,7 @@ with SSHTunnelForwarder(
     ssh_private_key='/Users/matus/.ssh/id_rsa',
     ssh_username=os.environ['SSH_USERNAME'],
     remote_bind_address=('localhost', 5433),
-    local_bind_address=('localhost', 7543)
+    local_bind_address=('localhost', 8543)
 ) as tunnel:
 
     tunnel.start()
@@ -207,9 +222,9 @@ with SSHTunnelForwarder(
         save_articles()
         save_claims()
         save_fact_check_claim_transformations()
-        save_mappings()
         create_claim_to_articles()
         process_fact_checks()
+        process_mappings()
         process_articles()
         find_similar_fact_checks()
     except Exception as inst:

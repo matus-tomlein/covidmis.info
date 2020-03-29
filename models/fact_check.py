@@ -45,7 +45,7 @@ class FactCheck:
             return capitalize(self.rating)
 
     def get_article_mappings(self):
-        return reversed(sorted(self.article_mappings, key=lambda m: m.score))
+        return list(reversed(sorted(self.article_mappings, key=lambda m: m.score)))[:10]
 
     def domain(self):
         return self.url.split('/')[2].replace('www.', '')
@@ -60,6 +60,15 @@ class FactCheck:
             return 'text-success'
         else:
             return 'text-warning'
+
+    def rating_color(self):
+        style = self.rating_style()
+        if style == 'text-error':
+            return '#e54c00'
+        elif style == 'text-success':
+            return '#2cad3b'
+        else:
+            return '#ffae00'
 
     def short_description(self):
         description = self.get_description()
