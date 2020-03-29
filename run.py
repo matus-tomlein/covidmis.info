@@ -116,7 +116,8 @@ for page_title, language in [
         output_path='graph/index.html',
         data={
             'title': page_title,
-            'data': json.dumps(get_graph_data(articles=articles, fact_checks=fact_checks, fact_checks_by_id=fact_checks_by_id))
+            'data': json.dumps(get_graph_data(articles=articles, fact_checks=fact_checks, fact_checks_by_id=fact_checks_by_id)),
+            'language': language
         },
         language=language
     )
