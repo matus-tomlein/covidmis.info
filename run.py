@@ -51,7 +51,7 @@ fact_checks = fact_checks.loc[
         (fact_checks.claim.str.lower().str.contains('virus'))
     )
 ]
-fact_checks['published_at'] = pd.to_datetime(fact_checks['published_at'])
+fact_checks['published_at'] = pd.to_datetime(fact_checks['published_at'], utc=True)
 fact_checks = fact_checks.sort_values('published_at', ascending=False)
 fact_check_counts = (
     fact_checks['published_at'] - pd.to_timedelta(fact_checks['published_at'].dt.dayofweek, unit='d')
