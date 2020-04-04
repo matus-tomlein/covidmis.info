@@ -18,7 +18,8 @@
         .nodeCanvasObject((node, ctx, globalScale) => {
             if (node.type == 'group') {
                 const label = node.label.substring(0, 100);
-                const fontSize = 12 / globalScale;
+                // const fontSize = 12 / globalScale;
+                const fontSize = 12;
                 ctx.font = `${fontSize}px Sans-Serif`;
                 const textWidth = ctx.measureText(label).width;
                 const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.2); // some padding
