@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -77,12 +86,27 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10619-is-covid-19-more-dangerous-the-seasonal-flu.html">Is COVID-19 more dangerous the seasonal flu?</a>
+            <a href="/fact_checks/10540-are-lock-downs-the-best-option-to-slow-the-spread.html">Are lock-downs the best option to slow the spread of coronavirus?</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 16, 2020,
-        <a href="https://metafact.io/factchecks/1495-is-covid-19-more-dangerous-the-seasonal-flu">metafact.io</a>
+        Mar 11, 2020,
+        <a href="https://metafact.io/factchecks/1465-are-lock-downs-the-best-option-to-slow-the-spread-of-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10191-is-the-novel-wuhan-coronavirus-more-dangerous-than.html">Is the novel Wuhan coronavirus more dangerous than MERS? </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 29, 2020,
+        <a href="https://metafact.io/factchecks/1425-is-the-novel-wuhan-coronavirus-more-dangerous-than-mers">metafact.io</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
@@ -107,27 +131,12 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10431-the-nhs-has-warned-people-should-not-shake-hands-t.html">The NHS has warned people should not shake hands to prevent the spread of the Wuhan coronavirus</a>
+            <a href="/fact_checks/10619-is-covid-19-more-dangerous-the-seasonal-flu.html">Is COVID-19 more dangerous the seasonal flu?</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Feb 28, 2020,
-        <a href="https://fullfact.org/health/nhs-hasnt-advised-people-stop-shaking-hands-avoid-wuhan-coronavirus/#6e0a7bb82ac5eb8336edc361487339dd">fullfact.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-warning">
-            This is incorrect. Although some doctors have suggested this may be a good idea, no advice around shaking hands has been issued by the government
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="/fact_checks/10191-is-the-novel-wuhan-coronavirus-more-dangerous-than.html">Is the novel Wuhan coronavirus more dangerous than MERS? </a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Jan 29, 2020,
-        <a href="https://metafact.io/factchecks/1425-is-the-novel-wuhan-coronavirus-more-dangerous-than-mers">metafact.io</a>
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1495-is-covid-19-more-dangerous-the-seasonal-flu">metafact.io</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
@@ -147,6 +156,21 @@
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
             Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10431-the-nhs-has-warned-people-should-not-shake-hands-t.html">The NHS has warned people should not shake hands to prevent the spread of the Wuhan coronavirus</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 28, 2020,
+        <a href="https://fullfact.org/health/nhs-hasnt-advised-people-stop-shaking-hands-avoid-wuhan-coronavirus/#6e0a7bb82ac5eb8336edc361487339dd">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is incorrect. Although some doctors have suggested this may be a good idea, no advice around shaking hands has been issued by the government
         </div>
     </div>
     

@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -111,12 +120,27 @@ In March 2020, as the COVID-19 coronavirus disease continued to spread around th
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10608-are-governments-doing-enough-to-limit-the-coronavi.html">Are governments doing enough to limit the coronavirus pandemic?</a>
+            <a href="/fact_checks/10211-t-he-label-of-the-popular-lysol-already-show-that.html">"[T]he label of the popular Lysol already show that the product Kill the Coronavirus, so that means that this Virus is nothing new.”</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 16, 2020,
-        <a href="https://metafact.io/factchecks/1492-are-governments-doing-enough-to-limit-the-coronavirus-pandemic">metafact.io</a>
+        Jan 29, 2020,
+        <a href="https://www.factcheck.org/2020/01/no-clorox-and-lysol-didnt-already-know-about-new-coronavirus/#ef8de3852f051928c366fbd02d9b4676">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10539-are-healthcare-systems-prepared-for-the-coronaviru.html">Are healthcare systems prepared for the coronavirus pandemic?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://metafact.io/factchecks/1464-are-healthcare-systems-prepared-for-the-coronavirus-pandemic">metafact.io</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
@@ -141,16 +165,31 @@ In March 2020, as the COVID-19 coronavirus disease continued to spread around th
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10539-are-healthcare-systems-prepared-for-the-coronaviru.html">Are healthcare systems prepared for the coronavirus pandemic?</a>
+            <a href="/fact_checks/10608-are-governments-doing-enough-to-limit-the-coronavi.html">Are governments doing enough to limit the coronavirus pandemic?</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 11, 2020,
-        <a href="https://metafact.io/factchecks/1464-are-healthcare-systems-prepared-for-the-coronavirus-pandemic">metafact.io</a>
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1492-are-governments-doing-enough-to-limit-the-coronavirus-pandemic">metafact.io</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
             Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10526-t-hey-don-t-even-have-a-test-kit-for-covid-19-a-te.html">"[T]hey don't even have a test kit [for COVID-19]. A test kit to determine whether or not someone has the disease."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://www.factcheck.org/2020/03/the-facts-on-coronavirus-testing/#3eb370e361c50c947ee351f2d4087141">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
         </div>
     </div>
     

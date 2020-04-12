@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -92,31 +101,46 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10669-the-symptoms-of-covid-19-are-a-sore-throat-lasting.html">The symptoms of Covid-19 are a sore throat lasting 3 or 4 days. The virus then blends into nasal fluid, enters the trachea and then the lungs causing pneumonia. With pneumonia comes high fever and difficulty breathing. The nasal congestion feels like you're drowning</a>
+            <a href="/fact_checks/10488-if-you-have-a-runny-nose-and-sputum-you-have-a-com.html">If you have a runny nose and sputum, you have a common cold, not Covid-19.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 20, 2020,
-        <a href="https://fullfact.org/online/coronavirus-claims-symptoms-prevention-viral/#b5444b02f26bfd81f2a0dc6223f78322">fullfact.org</a>
+        Mar 05, 2020,
+        <a href="https://fullfact.org/online/coronavirus-claims-symptoms-viral/#72c386a85bbe383dcf0875b463ce3e55">fullfact.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
-            This is a roughly accurate description of the most common symptoms, although not everyone with Covid-19 gets pneumonia, and the symptoms may not come in this exact order or at these times. The NHS does not mention nasal congestion that ‘feels like drowning’ as a specific symptom for Covid-19.
+            These are the symptoms for the common cold, but they don’t rule out Covid-19.
         </div>
     </div>
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10551-if-you-can-hold-your-breath-without-coughing-disco.html">If you can hold your breath without coughing, discomfort, stiffness, or tightness, your lungs do not suffer from fibrosis and therefore you have no COVID-19 infection.</a>
+            <a href="/fact_checks/10668-if-someone-with-the-new-coronavirus-sneezes-it-tra.html">If someone with the new coronavirus sneezes, it travels about 10 feet before it drops to the ground and is no longer airborne.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 10, 2020,
-        <a href="https://www.snopes.com/fact-check/taiwan-experts-self-check/">snopes.com</a>
+        Mar 20, 2020,
+        <a href="https://fullfact.org/online/coronavirus-claims-symptoms-prevention-viral/#3f2002a8be611a992a49d3031fb35d98">fullfact.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-error">
-            False
+        <div class="text-warning">
+            How far the droplets spread from a sneeze depends on environmental factors, but it is likely to be several metres.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10477-if-someone-with-the-new-coronavirus-sneezes-it-tra.html">If someone with the new coronavirus sneezes, it travels about 10 feet before it drops to the ground and is no longer airborne</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 05, 2020,
+        <a href="https://fullfact.org/online/coronavirus-claims-symptoms-viral/#85c585b18803fe0ab92f4c5ed0b26c3a">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            How far the droplets spread from a sneeze depends on environmental factors, but it is likely to be several metres.
         </div>
     </div>
     
@@ -137,16 +161,91 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10488-if-you-have-a-runny-nose-and-sputum-you-have-a-com.html">If you have a runny nose and sputum, you have a common cold, not Covid-19.</a>
+            <a href="/fact_checks/10669-the-symptoms-of-covid-19-are-a-sore-throat-lasting.html">The symptoms of Covid-19 are a sore throat lasting 3 or 4 days. The virus then blends into nasal fluid, enters the trachea and then the lungs causing pneumonia. With pneumonia comes high fever and difficulty breathing. The nasal congestion feels like you're drowning</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 05, 2020,
-        <a href="https://fullfact.org/online/coronavirus-claims-symptoms-viral/#72c386a85bbe383dcf0875b463ce3e55">fullfact.org</a>
+        Mar 20, 2020,
+        <a href="https://fullfact.org/online/coronavirus-claims-symptoms-prevention-viral/#b5444b02f26bfd81f2a0dc6223f78322">fullfact.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
-            These are the symptoms for the common cold, but they don’t rule out Covid-19.
+            This is a roughly accurate description of the most common symptoms, although not everyone with Covid-19 gets pneumonia, and the symptoms may not come in this exact order or at these times. The NHS does not mention nasal congestion that ‘feels like drowning’ as a specific symptom for Covid-19.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10550-taking-a-few-sips-of-water-every-15-mins-will-prev.html">Taking a few sips of water every 15 mins will prevent the new coronavirus from entering your windpipe and lungs.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://www.snopes.com/fact-check/drinking-water-prevent-coronavirus/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10551-if-you-can-hold-your-breath-without-coughing-disco.html">If you can hold your breath without coughing, discomfort, stiffness, or tightness, your lungs do not suffer from fibrosis and therefore you have no COVID-19 infection.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://www.snopes.com/fact-check/taiwan-experts-self-check/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10232-coronavirus-is-not-a-new-virus.html">Coronavirus is not a new virus</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 24, 2020,
+        <a href="https://healthfeedback.org/claimreview/the-2019-coronavirus-outbreak-is-caused-by-a-novel-virus-past-mentions-of-coronaviruses-refer-to-different-strains/#3c6aa5972374b9b774008ad45343e067">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Inaccurate
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10585-to-test-for-the-new-coronavirus-take-a-deep-breath.html">To test for the new coronavirus, take a deep breath and hold for more than 10 seconds. If you complete it successfully without coughing, discomfort, stuffiness or tightness it proves there is no fibrosis in the lungs, basically indicating no infection.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://fullfact.org/online/coronavirus-water-breath-test-bad-advice/#bad949b722d7b655a0751bffe0820040">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            There is no evidence to suggest this test can show if you have the new coronavirus.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10619-is-covid-19-more-dangerous-the-seasonal-flu.html">Is COVID-19 more dangerous the seasonal flu?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1495-is-covid-19-more-dangerous-the-seasonal-flu">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
         </div>
     </div>
     

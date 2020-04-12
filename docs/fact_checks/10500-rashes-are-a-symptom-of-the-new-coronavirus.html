@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -77,6 +86,36 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10688-covid-19-starts-with-a-sore-throat-lasting-3-4-day.html">Covid-19 starts with a sore throat lasting 3-4 days. It then blends into a nasal fluid that enters the trachea and the lungs, causing pneumonia, which takes about 5 or 6 days. With pneumonia comes high fever and difficulty breathing. The nasal congestion makes you feel like you’re drowning.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 20, 2020,
+        <a href="https://fullfact.org/online/viral-posts-sharing-symptoms-and-treatments-covid-19-contain-false-information/#98d6dcae3fde29c5f9836332a94d0858">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is a roughly accurate description of the most common symptoms, although not everyone with Covid-19 gets pneumonia. The symptoms may not come in this order or at these times. There have been no reports of sufferers experiencing nasal congestion that makes them feel they are drowning.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10596-the-new-coronavirus-is-actually-the-impact-of-5g-e.html">The new coronavirus is actually the impact of 5G exposure.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://fullfact.org/online/coronavirus-5G/#8372da843876f953c960a4f2ee3c2a76">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is incorrect, the new coronavirus is a virus and there is no evidence that 5G is harmful to people’s health.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10694-eating-bananas-is-a-preventative-against-the-covid.html">Eating bananas is a preventative against the COVID-19 coronavirus disease.</a>
         </h6>
     </div>
@@ -87,6 +126,21 @@
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">
             False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10535-a-coronavirus-vaccine-for-cows-shows-that-the-viru.html">A coronavirus vaccine for cows shows that the virus behind the current outbreak is not new.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://fullfact.org/online/coronavirus-cows/#0783ab22d7a8fd4f9037c811d8879fab">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is a different coronavirus from SARS-CoV-2, the virus that causes Covid-19. Coronaviruses are a large family of viruses that can affect a range of species.
         </div>
     </div>
     
@@ -107,6 +161,36 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10478-the-symptoms-of-covid-19-are-that-it-first-infects.html">The symptoms of Covid-19 are that it first infects the throat, so you’ll have a sore throat lasting 3 or 4 days. The virus then blends into nasal fluid that enters the trachea and then the lungs causing pneumonia. This takes about 5 or 6 days. With pneumonia comes high fever and difficulty breathing</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 05, 2020,
+        <a href="https://fullfact.org/online/coronavirus-claims-symptoms-viral/#46b2b14aabe896f15575c09aa9e77b20">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is a roughly accurate description of the most common symptoms, although not everyone with Covid-19 gets pneumonia, and the symptoms may not come in this exact order or at these times.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10542-for-covid-19-are-there-any-lessons-learned-from-pr.html">For COVID-19, are there any lessons learned from previous flu pandemics?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://metafact.io/factchecks/1467-for-covid-19-are-there-any-lessons-learned-from-previous-flu-pandemics">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10481-children-cant-get-the-new-coronavirus.html">Children can’t get the new coronavirus.</a>
         </h6>
     </div>
@@ -117,6 +201,51 @@
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
             Children can get Covid-19 but there have been relatively few cases in children and in general, their symptoms tend to be milder.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10162-the-new-fad-disease-called-the-coronavirus-is-swee.html">“The new fad disease called the ‘coronavirus’ is sweeping headlines. Funny enough, there was a patent for the coronavirus was filed in 2015 and granted in 2018.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 21, 2020,
+        <a href="https://www.factcheck.org/2020/01/social-media-posts-spread-bogus-coronavirus-conspiracy-theory/#fb1fb7a85e0a818c39a84546cb30d3e0">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10609-are-children-more-at-risk-to-coronavirus.html">Are children more at risk to coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1493-are-children-more-at-risk-to-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10677-the-world-health-organization-test-for-the-new-cor.html">The World Health Organization test for the new coronavirus "was a bad test."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 20, 2020,
+        <a href="https://www.factcheck.org/2020/03/biden-trump-wrong-about-who-coronavirus-tests/#ea69a9ee045e8928ea9030a01c0ad440">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
         </div>
     </div>
     
@@ -137,16 +266,16 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10162-the-new-fad-disease-called-the-coronavirus-is-swee.html">“The new fad disease called the ‘coronavirus’ is sweeping headlines. Funny enough, there was a patent for the coronavirus was filed in 2015 and granted in 2018.”</a>
+            <a href="/fact_checks/10751-are-certain-types-of-soap-more-effective-on-corona.html">Are certain types of soap more effective on coronavirus?</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Jan 21, 2020,
-        <a href="https://www.factcheck.org/2020/01/social-media-posts-spread-bogus-coronavirus-conspiracy-theory/#fb1fb7a85e0a818c39a84546cb30d3e0">factcheck.org</a>
+        Mar 28, 2020,
+        <a href="https://metafact.io/factchecks/1520-are-certain-types-of-soap-more-effective-on-coronavirus">metafact.io</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-error">
-            False
+        <div class="text-warning">
+            Not Enough Experts
         </div>
     </div>
     

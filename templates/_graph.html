@@ -1,0 +1,12 @@
+<div id="graph" class="text-center"></div>
+
+<script>
+    var data = {{ data }};
+
+    let width = {% if graph_width %}{{ graph_width }}{% else %}null{% endif %};
+    let height = {% if graph_height %}{{ graph_height }}{% else %}null{% endif %};
+    let zoomOut = {% if zoom_out %}true{% else %}false{% endif %};
+    let freeze = {% if freeze %}true{% else %}false{% endif %};
+
+    drawGraph(data, 'graph', width, height, zoomOut, freeze);
+</script>

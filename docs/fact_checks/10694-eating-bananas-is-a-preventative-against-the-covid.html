@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -84,16 +93,16 @@ However, the video did not stem from any reputable news agency, nor&hellip;
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10759-does-vitamin-c-supplementation-prevent-coronavirus.html">Does Vitamin C supplementation prevent coronavirus?</a>
+            <a href="/fact_checks/10500-rashes-are-a-symptom-of-the-new-coronavirus.html">Rashes are a symptom of the new coronavirus.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Apr 01, 2020,
-        <a href="https://metafact.io/factchecks/1525-does-vitamin-c-supplementation-prevent-coronavirus">metafact.io</a>
+        Mar 06, 2020,
+        <a href="https://fullfact.org/health/coronavirus-rash/#6870c9db92e529b6a3dd4f9ae41c0692">fullfact.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
-            Not Enough Experts
+            No official advice list rashes as a symptom of the new coronavirus.
         </div>
     </div>
     
@@ -114,16 +123,61 @@ However, the video did not stem from any reputable news agency, nor&hellip;
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10656-a-viral-list-notes-numerous-good-news-items-relate.html">A viral list notes numerous "good news" items related to the fight against the COVID-19 coronavirus disease pandemic.</a>
+            <a href="/fact_checks/10759-does-vitamin-c-supplementation-prevent-coronavirus.html">Does Vitamin C supplementation prevent coronavirus?</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 18, 2020,
-        <a href="https://www.snopes.com/fact-check/covid-good-news-list-accurate/">snopes.com</a>
+        Apr 01, 2020,
+        <a href="https://metafact.io/factchecks/1525-does-vitamin-c-supplementation-prevent-coronavirus">metafact.io</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
-            Mostly-true
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10762-is-the-risk-of-catching-coronavirus-from-food-and.html">Is the risk of catching coronavirus from food and cooking significant?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 01, 2020,
+        <a href="https://metafact.io/factchecks/1524-is-the-risk-of-catching-coronavirus-from-food-and-cooking-significant">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10579-do-travel-bans-work-for-slowing-pandemics-like-cor.html">Do travel bans work for slowing pandemics like coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://metafact.io/factchecks/1487-do-travel-bans-work-for-slowing-pandemics-like-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10525-drinking-boiled-garlic-water-will-cure-covid-19.html">Drinking boiled garlic water will cure COVID-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 09, 2020,
+        <a href="https://www.snopes.com/fact-check/garlic-cure-coronavirus/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
         </div>
     </div>
     
@@ -144,6 +198,81 @@ However, the video did not stem from any reputable news agency, nor&hellip;
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10656-a-viral-list-notes-numerous-good-news-items-relate.html">A viral list notes numerous "good news" items related to the fight against the COVID-19 coronavirus disease pandemic.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 18, 2020,
+        <a href="https://www.snopes.com/fact-check/covid-good-news-list-accurate/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Mostly-true
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10601-the-coronavirus-outbreak-is-not-actually-caused-by.html">The coronavirus outbreak is not actually caused by a virus, but by 5G technology</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 22, 2020,
+        <a href="https://healthfeedback.org/claimreview/viral-claim-falsely-asserts-that-covid-19-is-due-to-5g-technology-rollout-not-a-virus/#d2d31121158b124360082baaeec45227">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Incorrect
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10729-drinking-hot-water-with-lemons-will-cure-or-preven.html">Drinking hot water with lemons will cure or prevent COVID-19; drinking hot water with lemons and sodium bicarbonate will “alkalize the immune system” and cure or prevent COVID-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 25, 2020,
+        <a href="https://www.snopes.com/fact-check/lemons-coronavirus/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10162-the-new-fad-disease-called-the-coronavirus-is-swee.html">“The new fad disease called the ‘coronavirus’ is sweeping headlines. Funny enough, there was a patent for the coronavirus was filed in 2015 and granted in 2018.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 21, 2020,
+        <a href="https://www.factcheck.org/2020/01/social-media-posts-spread-bogus-coronavirus-conspiracy-theory/#fb1fb7a85e0a818c39a84546cb30d3e0">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10612-people-who-have-survived-the-covid-19-coronavirus.html">People who have survived the COVID-19 coronavirus disease can become reinfected by the virus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 14, 2020,
+        <a href="https://www.snopes.com/fact-check/covid-19-reinfection/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Unproven
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10169-wuhan-coronavirus-outbreak-linked-to-eating-bats.html">Wuhan Coronavirus outbreak linked to eating bats</a>
         </h6>
     </div>
@@ -154,6 +283,36 @@ However, the video did not stem from any reputable news agency, nor&hellip;
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">
             Unsupported
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10619-is-covid-19-more-dangerous-the-seasonal-flu.html">Is COVID-19 more dangerous the seasonal flu?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1495-is-covid-19-more-dangerous-the-seasonal-flu">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10174-is-the-novel-wuhan-coronavirus-more-dangerous-than.html">Is the novel Wuhan coronavirus more dangerous than SARS? </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1419-is-the-novel-wuhan-coronavirus-more-dangerous-than-sars">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
         </div>
     </div>
     

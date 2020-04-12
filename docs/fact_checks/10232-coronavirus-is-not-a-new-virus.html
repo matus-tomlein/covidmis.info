@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -77,6 +86,21 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10500-rashes-are-a-symptom-of-the-new-coronavirus.html">Rashes are a symptom of the new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 06, 2020,
+        <a href="https://fullfact.org/health/coronavirus-rash/#6870c9db92e529b6a3dd4f9ae41c0692">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            No official advice list rashes as a symptom of the new coronavirus.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10632-the-new-coronavirus-is-the-least-deadly-virus-and.html">The new coronavirus is the “least deadly virus” and has a death rate lower than the 2009 H1N1 outbreak.</a>
         </h6>
     </div>
@@ -87,6 +111,216 @@
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">
             False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10510-every-election-year-has-a-disease-coronavirus-has.html">Every election year has a disease; coronavirus has a contagion factor of 2</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 02, 2020,
+        <a href="https://healthfeedback.org/claimreview/no-not-every-u-s-election-year-has-had-a-disease-outbreak-and-covid-19-transmissibility-is-unconfirmed/#dcd07795fb941690a36220ed7c793334">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Inaccurate
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10190-a-vaccine-for-the-coronavirus-was-being-trialled-i.html">A vaccine for the coronavirus was being trialled in January 2020 days before the outbreak.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://fullfact.org/online/coronavirus-vaccine/#7151208a938f6b37cf0a2751eff60fd3">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Incorrect. The trial referenced was for a different type of coronavirus—Middle East respiratory syndrome (MERS).
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10513-dr-abdu-sharkawy-an-infectious-diseases-specialist.html">Dr. Abdu Sharkawy, an infectious diseases specialist, penned a viral Facebook post warning about the loss of reason in the face of panic over the new coronavirus in 2020.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 08, 2020,
+        <a href="https://www.snopes.com/fact-check/abdu-sharkawy-coronavirus/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Correct-attribution
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10449-a-bovine-coronavirus-vaccine-for-cattle-is-proof-t.html">A bovine coronavirus vaccine, for cattle, is proof that the novel coronavirus isn't "new" and is evidence of "how much the media controls people."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 01, 2020,
+        <a href="https://www.factcheck.org/2020/03/cattle-vaccine-not-related-to-2019-novel-coronavirus/#d5caec6f2577df455b2a609159417105">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10582-take-a-few-sips-of-water-every-15-minutes-at-least.html">"Take a few sips of water every 15 minutes at least ... drinking water or other liquids will wash" the coronavirus "down through your throat and into the stomach. Once there, your stomach acid will kill all the virus."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://www.factcheck.org/2020/03/viral-social-media-posts-offer-false-coronavirus-tips/#efd62558c43510a07bc13c66fadf86f0">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10199-are-face-masks-effective-in-preventing-transmissio.html">Are face masks effective in preventing transmission of viruses like coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1415-are-face-masks-effective-in-preventing-transmission-of-viruses-like-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10394-a-video-demonstrates-there-have-been-exponentially.html">A video demonstrates there have been exponentially more cases of new coronavirus than other diseases such as SARS, MERS, Ebola, and swine flu.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 25, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-graph-spreading-faster/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Mixture
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10586-if-the-new-coronavirus-gets-into-your-mouth-drinki.html">If the new coronavirus gets into your mouth, drinking water or other liquids will wash them down through the oesophagus. Once they’re in the stomach, the acid will kill the virus. If you don't drink enough water more regularly, the virus can enter your windpipes and into the lungs.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://fullfact.org/online/coronavirus-water-breath-test-bad-advice/#1c8fa9bbf611be0edf4d64ec8f6c5153">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is incorrect. Drinking water does not prevent an infection and there have been cases where the virus has survived in the stomach and affected people’s intestines.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10590-donating-blood-requires-that-you-be-administered-a.html">Donating blood requires that you be administered a free test for the COVID-19, a disease caused by the coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-test-donate-blood/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10656-a-viral-list-notes-numerous-good-news-items-relate.html">A viral list notes numerous "good news" items related to the fight against the COVID-19 coronavirus disease pandemic.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 18, 2020,
+        <a href="https://www.snopes.com/fact-check/covid-good-news-list-accurate/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Mostly-true
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10529-hand-sanitizer-will-do-nothing-for-the-coronavirus.html">Hand "sanitizer will do nothing for the coronavirus."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 03, 2020,
+        <a href="https://www.factcheck.org/2020/03/contrary-to-false-posts-sanitizer-helpful-against-coronavirus/#70d0388e70d68dc651d87b8c56ffcf01">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10211-t-he-label-of-the-popular-lysol-already-show-that.html">"[T]he label of the popular Lysol already show that the product Kill the Coronavirus, so that means that this Virus is nothing new.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 29, 2020,
+        <a href="https://www.factcheck.org/2020/01/no-clorox-and-lysol-didnt-already-know-about-new-coronavirus/#ef8de3852f051928c366fbd02d9b4676">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10723-there-is-no-coronavirus.html">There is no ‘coronavirus’</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 01, 2020,
+        <a href="https://healthfeedback.org/claimreview/the-coronavirus-that-causes-covid-19-is-real-the-story-that-claims-otherwise-is-a-work-of-fiction/#7271e5ab38e3750d13df65ebe18149a3">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Inaccurate
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10597-bill-gates-created-the-new-coronavirus-and-a-vacci.html">Bill Gates created the new coronavirus and a vaccine for it.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://fullfact.org/online/coronavirus-5G/#a328076f1c919dcfc6841ecbc0292f09">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is incorrect. The Bill Gates and Melinda Gates Foundation has funded a research institute that has a patent to a different coronavirus.  Coronavirus is a large category of viruses that includes the common cold, SARS and the new virus that causes Covid-19.
         </div>
     </div>
     
@@ -107,21 +341,6 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10481-children-cant-get-the-new-coronavirus.html">Children can’t get the new coronavirus.</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Mar 05, 2020,
-        <a href="https://fullfact.org/health/children-can-get-coronavirus/#21f835763784f04fb3ecdc7a6bc64c71">fullfact.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-warning">
-            Children can get Covid-19 but there have been relatively few cases in children and in general, their symptoms tend to be milder.
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
             <a href="/fact_checks/10601-the-coronavirus-outbreak-is-not-actually-caused-by.html">The coronavirus outbreak is not actually caused by a virus, but by 5G technology</a>
         </h6>
     </div>
@@ -137,16 +356,151 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10211-t-he-label-of-the-popular-lysol-already-show-that.html">"[T]he label of the popular Lysol already show that the product Kill the Coronavirus, so that means that this Virus is nothing new.”</a>
+            <a href="/fact_checks/10479-coronavirus-pneumonia-is-a-dry-cough-with-no-runny.html">Coronavirus pneumonia is a dry cough with no runny nose.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Jan 29, 2020,
-        <a href="https://www.factcheck.org/2020/01/no-clorox-and-lysol-didnt-already-know-about-new-coronavirus/#ef8de3852f051928c366fbd02d9b4676">factcheck.org</a>
+        Mar 05, 2020,
+        <a href="https://fullfact.org/online/coronavirus-claims-symptoms-viral/#1f0d9401e23838f042b8ddb6ab3f3c6d">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Some Covid-19 patients do get pneumonia, and one of the symptoms is a dry cough. A runny nose doesn’t rule out Covid-19.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10481-children-cant-get-the-new-coronavirus.html">Children can’t get the new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 05, 2020,
+        <a href="https://fullfact.org/health/children-can-get-coronavirus/#21f835763784f04fb3ecdc7a6bc64c71">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Children can get Covid-19 but there have been relatively few cases in children and in general, their symptoms tend to be milder.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10162-the-new-fad-disease-called-the-coronavirus-is-swee.html">“The new fad disease called the ‘coronavirus’ is sweeping headlines. Funny enough, there was a patent for the coronavirus was filed in 2015 and granted in 2018.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 21, 2020,
+        <a href="https://www.factcheck.org/2020/01/social-media-posts-spread-bogus-coronavirus-conspiracy-theory/#fb1fb7a85e0a818c39a84546cb30d3e0">factcheck.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">
             False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10354-scientists-knew-about-the-new-coronavirus-long-ago.html">Scientists knew about the new coronavirus long ago and called it “Disease X”.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 18, 2020,
+        <a href="https://fullfact.org/health/coronavirus-covid-disease-x-express/#3717d252eccd81fb607453b16e2c6fc0">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            They didn’t. This is a misunderstanding about the phrase “Disease X”, which the WHO used to denote an unknown serious new disease that might cause a pandemic.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10609-are-children-more-at-risk-to-coronavirus.html">Are children more at risk to coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1493-are-children-more-at-risk-to-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10677-the-world-health-organization-test-for-the-new-cor.html">The World Health Organization test for the new coronavirus "was a bad test."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 20, 2020,
+        <a href="https://www.factcheck.org/2020/03/biden-trump-wrong-about-who-coronavirus-tests/#ea69a9ee045e8928ea9030a01c0ad440">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10610-before-a-vaccine-can-coronavirus-be-treated.html">Before a vaccine, can coronavirus be treated?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1494-before-a-vaccine-can-coronavirus-be-treated">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10612-people-who-have-survived-the-covid-19-coronavirus.html">People who have survived the COVID-19 coronavirus disease can become reinfected by the virus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 14, 2020,
+        <a href="https://www.snopes.com/fact-check/covid-19-reinfection/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Unproven
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10738-a-vaccine-for-the-new-coronavirus-has-been-created.html">A vaccine for the new coronavirus has been created by US scientists and will be ready to use from next Sunday.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 26, 2020,
+        <a href="https://fullfact.org/online/coronavirus-vaccine-not-ready/#5c10dfe3e0bf937873c5f1f6cda25e62">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Whilst there are vaccines in development, it will likely be more than 18 months before they are ready to use. The image and videos accompanying the post are related to Covid-19 diagnostic tests, not vaccines.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10173-will-a-vaccine-be-discovered-for-the-novel-coronav.html">Will a vaccine be discovered for the novel coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1418-will-a-vaccine-be-discovered-for-the-novel-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-success">
+            Affirmative
         </div>
     </div>
     

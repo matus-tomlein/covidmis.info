@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -126,6 +135,51 @@ Actor James Woods posted the video to his Twitter account, as&hellip;
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10179-coronavirus-reports-of-10000-dead-in-wuhan-china.html">“CORONAVIRUS: Reports of 10,000 DEAD in Wuhan, China.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 24, 2020,
+        <a href="https://www.factcheck.org/2020/01/misinformation-on-coronavirus-death-toll/#56df950955998fd09dbfb3d3d6a03515">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10180-a-uthorities-have-identified-that-the-internationa.html">“[A]uthorities have identified that the international chemical-warfare terrorist ‘Samuel Whitcomb Hyde’ is behind the deadly China ‘coronavirus.'”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 23, 2020,
+        <a href="https://www.factcheck.org/2020/01/comedian-sam-hyde-not-behind-spread-of-coronavirus/#35985183e07037e728ff5d763d4eccc8">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10339-scientists-believe-that-coronavirus-may-have-come.html">Scientists believe that coronavirus may have come from bats in a Chinese research facility.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 17, 2020,
+        <a href="https://fullfact.org/health/coronavirus-government-laboratory/#f1e1f6da129a8627cd1706aa3d9d348d">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Two Chinese scientists have published an article suggesting that the 2019 coronavirus outbreak could have originated from bats in a laboratory in Wuhan. However, apart from maps showing the proximity of laboratories, they offer no evidence to prove this.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10218-the-chinese-government-is-building-a-hospital-in-1.html">The Chinese government is building a hospital in 10 days to deal with the new coronavirus.</a>
         </h6>
     </div>
@@ -141,16 +195,31 @@ Actor James Woods posted the video to his Twitter account, as&hellip;
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10179-coronavirus-reports-of-10000-dead-in-wuhan-china.html">“CORONAVIRUS: Reports of 10,000 DEAD in Wuhan, China.”</a>
+            <a href="/fact_checks/10316-satellite-images-showing-high-levels-of-sulphur-di.html">Satellite images showing high levels of sulphur dioxide above China are possible evidence of mass cremations of people who have died from coronavirus.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Jan 24, 2020,
-        <a href="https://www.factcheck.org/2020/01/misinformation-on-coronavirus-death-toll/#56df950955998fd09dbfb3d3d6a03515">factcheck.org</a>
+        Feb 13, 2020,
+        <a href="https://fullfact.org/health/satellites-wuhan-sulphur-dioxide-coronavirus/#f0e93dc5354d6216b3e1af6a1548593a">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            False. The maps are not satellite images, and do not show actual levels of sulphur dioxide. They are simply forecasts based on historical data and weather patterns.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10169-wuhan-coronavirus-outbreak-linked-to-eating-bats.html">Wuhan Coronavirus outbreak linked to eating bats</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 22, 2020,
+        <a href="https://healthfeedback.org/claimreview/no-conclusive-evidence-to-link-consumption-of-bats-with-the-wuhan-coronavirus-outbreak/#c5abace4879f8823d9a6663f29712e2e">healthfeedback.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">
-            False
+            Unsupported
         </div>
     </div>
     

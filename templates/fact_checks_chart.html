@@ -6,64 +6,68 @@
     let backgroundColor = '#b4bbc7';
     let textColor = '#343b47';
 
-    window.onload = function () {
-        function newDate(days) {
-            return moment().add(days, 'd');
-        }
-        var config = {
-            type: 'line',
-            data: {
-                labels: [
-                    {% for date in fact_check_counts.index %}moment('{{ date }}'), {% endfor %}
+    function newDate(days) {
+        return moment().add(days, 'd');
+    }
+    var config = {
+        type: 'line',
+        data: {
+            labels: [
+                {% for date in fact_check_counts.index %}moment('{{ date }}'), {% endfor %}
+            ],
+            datasets: [{
+                data: [
+                    {% for value in fact_check_counts.values %}{{ value }}, {% endfor %}
                 ],
-                datasets: [{
-                    data: [
-                        {% for value in fact_check_counts.values %}{{ value }}, {% endfor %}
-                    ],
-                    fill: 'start',
-                    backgroundColor: backgroundColor,
-                    borderColor: textColor
+                fill: 'start',
+                backgroundColor: backgroundColor,
+                borderColor: textColor
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scaleFontColor: textColor,
+            plugins: {
+                colorschemes: {
+                    scheme: 'brewer.Greys3'
+                }
+            },
+            legend: { display: false },
+            scales: {
+                xAxes: [{
+                    type: 'time',
+                    gridLines: { display: false },
+                    time: {
+                        unit: 'month',
+                        // displayFormats: {
+                        //     'millisecond': ' MMM DD ',
+                        //     'second': ' MMM DD ',
+                        //     'minute': ' MMM DD ',
+                        //     'hour': ' MMM DD ',
+                        //     'day': ' MMM DD ',
+                        //     'week': ' MMM DD ',
+                        //     'month': ' MMM DD ',
+                        //     'quarter': ' MMM DD ',
+                        //     'year': ' MMM DD ',
+                        // }
+                    },
+                    ticks: {
+                        autoSkip: true,
+                        maxRotation: 0,
+                        minRotation: 0
+                    }
+                }],
+                yAxes: [{
+                    gridLines: { display: false },
+                    // scaleLabel: {
+                    //     display: true,
+                    //     labelString: '{% if language == 'sk' %}počet preverených tvrdení{% else %}number of fact-checks{% endif %}'
+                    // }
                 }]
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scaleFontColor: textColor,
-                legend: { display: false },
-                scales: {
-                    xAxes: [{
-                        type: 'time',
-                        gridLines: { display: false },
-                        time: {
-                            displayFormats: {
-                                'millisecond': ' MMM DD ',
-                                'second': ' MMM DD ',
-                                'minute': ' MMM DD ',
-                                'hour': ' MMM DD ',
-                                'day': ' MMM DD ',
-                                'week': ' MMM DD ',
-                                'month': ' MMM DD ',
-                                'quarter': ' MMM DD ',
-                                'year': ' MMM DD ',
-                            }
-                        },
-                        ticks: {
-                            autoSkip: true,
-                            maxRotation: 0,
-                            minRotation: 0
-                        }
-                    }],
-                    yAxes: [{
-                        gridLines: { display: false },
-                        scaleLabel: {
-                            display: true,
-                            labelString: '{% if language == 'sk' %}počet preverených tvrdení{% else %}number of fact-checks{% endif %}'
-                        }
-                    }]
-                },
-            }
-        };
-        var ctx = document.getElementById("fact_checks_chart").getContext("2d");
-        new Chart(ctx, config);
-    }
+        }
+    };
+    var ctx = document.getElementById("fact_checks_chart").getContext("2d");
+    new Chart(ctx, config);
 </script>

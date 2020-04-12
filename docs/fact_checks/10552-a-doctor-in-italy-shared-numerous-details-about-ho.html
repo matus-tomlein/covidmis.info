@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -80,6 +89,21 @@ Silvia Stringhini, an epidemiologist, shared a translated version of this post o
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10629-italy-has-stopped-treating-elderly-coronavirus-pat.html">Italy has stopped treating elderly coronavirus patients due to "socialized medicine."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 15, 2020,
+        <a href="https://www.snopes.com/fact-check/italy-elderly-coronavirus/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Mixture
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10760-an-uninsured-17-year-old-boy-died-of-covid-19-symp.html">An uninsured 17-year-old boy died of COVID-19 symptoms after being refused care due to a lack of medical insurance.</a>
         </h6>
     </div>
@@ -95,31 +119,46 @@ Silvia Stringhini, an epidemiologist, shared a translated version of this post o
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10647-there-are-four-young-people-with-no-underlying-ill.html">There are four young people with no underlying illnesses in an intensive care unit in Cork due to Covid-19, who had all been taking anti-inflammatory drugs.</a>
+            <a href="/fact_checks/10442-a-letter-providing-tips-on-how-to-protect-against.html">A letter providing tips on how to protect against the new coronavirus was authored by pathologist James Robb.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 17, 2020,
-        <a href="https://fullfact.org/health/young-people-severe-coronavirus-cork/#a53c9a8837c61461f84a8d36aa969a77">fullfact.org</a>
+        Mar 01, 2020,
+        <a href="https://www.snopes.com/fact-check/zinc-lozenges-coronavirus/">snopes.com</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
-            This is not true. It has been denied by the clinical lead of Ireland’s public health service and the whole message branded ‘misinformation’.
+            Correct-attribution
         </div>
     </div>
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10629-italy-has-stopped-treating-elderly-coronavirus-pat.html">Italy has stopped treating elderly coronavirus patients due to "socialized medicine."</a>
+            <a href="/fact_checks/10768-seven-children-in-senegal-died-after-being-adminis.html">Seven children in Senegal died after being administered a COVID-19 coronavirus disease vaccine in April 2020.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 15, 2020,
-        <a href="https://www.snopes.com/fact-check/italy-elderly-coronavirus/">snopes.com</a>
+        Apr 09, 2020,
+        <a href="https://www.snopes.com/fact-check/7-senegal-kids-die-covid-vax/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10513-dr-abdu-sharkawy-an-infectious-diseases-specialist.html">Dr. Abdu Sharkawy, an infectious diseases specialist, penned a viral Facebook post warning about the loss of reason in the face of panic over the new coronavirus in 2020.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 08, 2020,
+        <a href="https://www.snopes.com/fact-check/abdu-sharkawy-coronavirus/">snopes.com</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
-            Mixture
+            Correct-attribution
         </div>
     </div>
     
@@ -140,6 +179,171 @@ Silvia Stringhini, an epidemiologist, shared a translated version of this post o
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10581-cristina-higgins-authored-a-personal-account-about.html">Cristina Higgins authored a personal account about the spread of COVID-19 in Italy.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://www.snopes.com/fact-check/cristina-higgins-coronavirus-post/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Correct-attribution
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10647-there-are-four-young-people-with-no-underlying-ill.html">There are four young people with no underlying illnesses in an intensive care unit in Cork due to Covid-19, who had all been taking anti-inflammatory drugs.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 17, 2020,
+        <a href="https://fullfact.org/health/young-people-severe-coronavirus-cork/#a53c9a8837c61461f84a8d36aa969a77">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is not true. It has been denied by the clinical lead of Ireland’s public health service and the whole message branded ‘misinformation’.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10394-a-video-demonstrates-there-have-been-exponentially.html">A video demonstrates there have been exponentially more cases of new coronavirus than other diseases such as SARS, MERS, Ebola, and swine flu.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 25, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-graph-spreading-faster/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Mixture
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10205-a-viral-social-media-post-in-january-2020-represen.html">A viral social media post in January 2020 represented an authentic, accurate "health bulletin" about the new coronavirus outbreak from an official public health authority.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 30, 2020,
+        <a href="https://www.snopes.com/fact-check/nwllab-moh-bulletin-coronavirus/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10590-donating-blood-requires-that-you-be-administered-a.html">Donating blood requires that you be administered a free test for the COVID-19, a disease caused by the coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-test-donate-blood/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10206-health-experts-predicted-the-new-coronavirus-could.html">Health experts predicted the new coronavirus could kill 65 million people.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 30, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-65-million-people/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10656-a-viral-list-notes-numerous-good-news-items-relate.html">A viral list notes numerous "good news" items related to the fight against the COVID-19 coronavirus disease pandemic.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 18, 2020,
+        <a href="https://www.snopes.com/fact-check/covid-good-news-list-accurate/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Mostly-true
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10337-chinese-doctors-confirmed-that-african-people-are.html">Chinese doctors confirmed that African people are "genetically resistant" to new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 16, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-cameroonian-student/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10218-the-chinese-government-is-building-a-hospital-in-1.html">The Chinese government is building a hospital in 10 days to deal with the new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 02, 2020,
+        <a href="https://www.snopes.com/fact-check/china-hospital-10-days/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-success">
+            True
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10539-are-healthcare-systems-prepared-for-the-coronaviru.html">Are healthcare systems prepared for the coronavirus pandemic?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://metafact.io/factchecks/1464-are-healthcare-systems-prepared-for-the-coronavirus-pandemic">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10162-the-new-fad-disease-called-the-coronavirus-is-swee.html">“The new fad disease called the ‘coronavirus’ is sweeping headlines. Funny enough, there was a patent for the coronavirus was filed in 2015 and granted in 2018.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 21, 2020,
+        <a href="https://www.factcheck.org/2020/01/social-media-posts-spread-bogus-coronavirus-conspiracy-theory/#fb1fb7a85e0a818c39a84546cb30d3e0">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10354-scientists-knew-about-the-new-coronavirus-long-ago.html">Scientists knew about the new coronavirus long ago and called it “Disease X”.</a>
         </h6>
     </div>
@@ -150,6 +354,51 @@ Silvia Stringhini, an epidemiologist, shared a translated version of this post o
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
             They didn’t. This is a misunderstanding about the phrase “Disease X”, which the WHO used to denote an unknown serious new disease that might cause a pandemic.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10612-people-who-have-survived-the-covid-19-coronavirus.html">People who have survived the COVID-19 coronavirus disease can become reinfected by the virus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 14, 2020,
+        <a href="https://www.snopes.com/fact-check/covid-19-reinfection/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Unproven
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10677-the-world-health-organization-test-for-the-new-cor.html">The World Health Organization test for the new coronavirus "was a bad test."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 20, 2020,
+        <a href="https://www.factcheck.org/2020/03/biden-trump-wrong-about-who-coronavirus-tests/#ea69a9ee045e8928ea9030a01c0ad440">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10426-u-s-vice-president-mike-pence-introduced-a-program.html">U.S. Vice President Mike Pence introduced a program to cure new coronavirus carriers with the discredited practice of conversion therapy.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 27, 2020,
+        <a href="https://www.snopes.com/fact-check/pence-conversation-coronavirus/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Labeled-satire
         </div>
     </div>
     

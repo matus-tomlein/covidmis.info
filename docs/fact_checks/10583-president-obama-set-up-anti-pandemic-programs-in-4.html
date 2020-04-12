@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -77,31 +86,16 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10713-the-italian-prime-minister-has-said-his-country-ha.html">The Italian Prime Minister has said his country has exhausted all options to fight against the coronavirus pandemic and pleads to God to “rescue your people.”</a>
+            <a href="/fact_checks/10657-nancy-pelosi-wouldnt-release-8-5-billion-for-coron.html">"Nancy Pelosi wouldn’t release 8.5 billion for Coronavirus without abortion funding, so Trump went around her to declare a National Emergency and got 50 billion."</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 24, 2020,
-        <a href="https://fullfact.org/online/conte-bolsonaro-covid-coronavirus/#eee37b65549d5084be7b78acf3070bc7">fullfact.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-warning">
-            This quote is made up.
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="/fact_checks/10704-starting-the-next-day-dr-nancy-messonnier-no-longe.html">"Starting the next day, Dr. [Nancy] Messonnier no longer appeared at public briefings of the White House coronavirus task force. The president and the White House sent a clear message to scientists in the government -- there would be a price for speaking out and speaking up."</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Mar 21, 2020,
-        <a href="https://www.factcheck.org/2020/03/biden-video-on-trump-silencing-expert/#71cad90e609388bd4ccb7566bbe328c1">factcheck.org</a>
+        Mar 13, 2020,
+        <a href="https://www.factcheck.org/2020/03/false-claim-that-pelosi-withheld-coronavirus-funds-over-abortion/#2293a00b06d272849480231d62fb00d1">factcheck.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">
-            Misleading
+            False
         </div>
     </div>
     
@@ -122,6 +116,21 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10704-starting-the-next-day-dr-nancy-messonnier-no-longe.html">"Starting the next day, Dr. [Nancy] Messonnier no longer appeared at public briefings of the White House coronavirus task force. The president and the White House sent a clear message to scientists in the government -- there would be a price for speaking out and speaking up."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 21, 2020,
+        <a href="https://www.factcheck.org/2020/03/biden-video-on-trump-silencing-expert/#71cad90e609388bd4ccb7566bbe328c1">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Misleading
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10608-are-governments-doing-enough-to-limit-the-coronavi.html">Are governments doing enough to limit the coronavirus pandemic?</a>
         </h6>
     </div>
@@ -137,6 +146,36 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10709-about-500-lions-have-been-released-on-the-streets.html">About 500 lions have been released on the streets of Russia to stop people going out during the coronavirus pandemic.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 24, 2020,
+        <a href="https://fullfact.org/online/Russia-unleashed-500-lions/#ef874161e4f02d20140aceecfb485c3f">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is not true. The Russian government has yet to announce a widespread lockdown of any kind in Russia. The image of the lion is from South Africa in 2016.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10206-health-experts-predicted-the-new-coronavirus-could.html">Health experts predicted the new coronavirus could kill 65 million people.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 30, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-65-million-people/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10199-are-face-masks-effective-in-preventing-transmissio.html">Are face masks effective in preventing transmission of viruses like coronavirus?</a>
         </h6>
     </div>
@@ -147,6 +186,36 @@
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
             Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10713-the-italian-prime-minister-has-said-his-country-ha.html">The Italian Prime Minister has said his country has exhausted all options to fight against the coronavirus pandemic and pleads to God to “rescue your people.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 24, 2020,
+        <a href="https://fullfact.org/online/conte-bolsonaro-covid-coronavirus/#eee37b65549d5084be7b78acf3070bc7">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This quote is made up.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10426-u-s-vice-president-mike-pence-introduced-a-program.html">U.S. Vice President Mike Pence introduced a program to cure new coronavirus carriers with the discredited practice of conversion therapy.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 27, 2020,
+        <a href="https://www.snopes.com/fact-check/pence-conversation-coronavirus/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Labeled-satire
         </div>
     </div>
     

@@ -1,6 +1,8 @@
 from slugify import slugify
+from html.parser import HTMLParser
 import pandas as pd
-from translate import translate
+from helpers.translate import translate
+import re
 
 
 class FactCheck:
@@ -34,9 +36,14 @@ class FactCheck:
 
     def get_description(self):
         if self.language == 'sk':
-            return translate(self.get_original_description(), self.language)
+            description = translate(self.get_original_description(), self.language)
         else:
-            return self.get_original_description()
+            description = self.get_original_description()
+
+        description = re.sub('<[^<]+?>', '', description)
+        parser = HTMLParser()
+        description = parser.unescape(description)
+        return description
 
     def get_rating(self):
         if self.language == 'sk':
@@ -89,6 +96,20 @@ class FactCheck:
         if 'answers' in self.other_info:
             return [Answer(answer) for answer in self.other_info['answers']]
         return []
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'statement': self.get_statement(),
+            'description': self.get_description(),
+            'published_at': self.published_at.isoformat(),
+            'url': self.url,
+            'domain': self.domain(),
+            'rating': self.get_rating(),
+            'rating_style': self.rating_style(),
+            'article_mappings': [a.to_dict(self.language) for a in self.article_mappings],
+            'path': self.path()
+        }
 
 class Answer:
 

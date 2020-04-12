@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -92,6 +101,21 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10768-seven-children-in-senegal-died-after-being-adminis.html">Seven children in Senegal died after being administered a COVID-19 coronavirus disease vaccine in April 2020.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 09, 2020,
+        <a href="https://www.snopes.com/fact-check/7-senegal-kids-die-covid-vax/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10612-people-who-have-survived-the-covid-19-coronavirus.html">People who have survived the COVID-19 coronavirus disease can become reinfected by the virus.</a>
         </h6>
     </div>
@@ -132,21 +156,6 @@
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
             Correct-attribution
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="/fact_checks/10159-the-coronavirus-is-new-yet-it-was-lab-created-and.html">[The coronavirus is] “new” yet it was lab-created and patented in 2015</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Jan 23, 2020,
-        <a href="https://healthfeedback.org/claimreview/contrary-to-claims-in-viral-social-media-posts-wuhan-coronavirus-was-not-lab-created-nor-was-it-patented-years-before-outbreak/#669eb1759e85c596637aa75ee416d486">healthfeedback.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-error">
-            Inaccurate
         </div>
     </div>
     

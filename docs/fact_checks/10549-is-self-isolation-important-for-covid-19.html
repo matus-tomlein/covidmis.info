@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -49,7 +58,7 @@
         </h4>
 
         <p>
-            <p>With flu-like symptoms (sore throat, runny nose etc) my partner was told not to get a test for coronavirus as she was low risk. She has been in self-isolation for 6 days and getting better while working remotely. When is it safe to return to office? </p>
+            With flu-like symptoms (sore throat, runny nose etc) my partner was told not to get a test for coronavirus as she was low risk. She has been in self-isolation for 6 days and getting better while working remotely. When is it safe to return to office? 
         </p>
 
         <div class="text-center text-warning text-large m-2 p-2">
@@ -73,6 +82,21 @@
         <h4>
             Similar Fact Checks
         </h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10757-is-the-risk-of-catching-coronavirus-from-food-or-c.html">Is the risk of catching coronavirus from food or cooking significant?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 01, 2020,
+        <a href="https://metafact.io/factchecks/1524-is-the-risk-of-catching-coronavirus-from-food-or-cooking-significant">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
     </div>
     
     <div class="column col-12 mt-2">
@@ -107,6 +131,66 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10762-is-the-risk-of-catching-coronavirus-from-food-and.html">Is the risk of catching coronavirus from food and cooking significant?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 01, 2020,
+        <a href="https://metafact.io/factchecks/1524-is-the-risk-of-catching-coronavirus-from-food-and-cooking-significant">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10764-is-there-evidence-hydroxychloroquine-works-on-covi.html">Is there evidence hydroxychloroquine works on COVID-19?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 08, 2020,
+        <a href="https://metafact.io/factchecks/1528-is-there-evidence-hydroxychloroquine-works-on-covid-19">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10765-are-men-at-greater-risk-from-covid-19.html">Are men at greater risk from COVID-19?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 08, 2020,
+        <a href="https://metafact.io/factchecks/1529-are-men-at-greater-risk-from-covid-19">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10191-is-the-novel-wuhan-coronavirus-more-dangerous-than.html">Is the novel Wuhan coronavirus more dangerous than MERS? </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 29, 2020,
+        <a href="https://metafact.io/factchecks/1425-is-the-novel-wuhan-coronavirus-more-dangerous-than-mers">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10609-are-children-more-at-risk-to-coronavirus.html">Are children more at risk to coronavirus?</a>
         </h6>
     </div>
@@ -128,21 +212,6 @@
     <div class="column col-6 mb-2 pb-2">
         Mar 12, 2020,
         <a href="https://metafact.io/factchecks/1486-are-coronaviruses-easily-spread">metafact.io</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-warning">
-            Not Enough Experts
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="/fact_checks/10191-is-the-novel-wuhan-coronavirus-more-dangerous-than.html">Is the novel Wuhan coronavirus more dangerous than MERS? </a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Jan 29, 2020,
-        <a href="https://metafact.io/factchecks/1425-is-the-novel-wuhan-coronavirus-more-dangerous-than-mers">metafact.io</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">

@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -77,12 +86,42 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10728-a-vaccine-meant-for-cattle-can-be-used-to-fight-co.html">A vaccine meant for cattle can be used to fight COVID-19.</a>
+            <a href="/fact_checks/10759-does-vitamin-c-supplementation-prevent-coronavirus.html">Does Vitamin C supplementation prevent coronavirus?</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 25, 2020,
-        <a href="https://www.snopes.com/fact-check/cattle-vaccine-covid-19/">snopes.com</a>
+        Apr 01, 2020,
+        <a href="https://metafact.io/factchecks/1525-does-vitamin-c-supplementation-prevent-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10190-a-vaccine-for-the-coronavirus-was-being-trialled-i.html">A vaccine for the coronavirus was being trialled in January 2020 days before the outbreak.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://fullfact.org/online/coronavirus-vaccine/#7151208a938f6b37cf0a2751eff60fd3">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Incorrect. The trial referenced was for a different type of coronavirus—Middle East respiratory syndrome (MERS).
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10582-take-a-few-sips-of-water-every-15-minutes-at-least.html">"Take a few sips of water every 15 minutes at least ... drinking water or other liquids will wash" the coronavirus "down through your throat and into the stomach. Once there, your stomach acid will kill all the virus."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://www.factcheck.org/2020/03/viral-social-media-posts-offer-false-coronavirus-tips/#efd62558c43510a07bc13c66fadf86f0">factcheck.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">
@@ -92,16 +131,76 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10612-people-who-have-survived-the-covid-19-coronavirus.html">People who have survived the COVID-19 coronavirus disease can become reinfected by the virus.</a>
+            <a href="/fact_checks/10199-are-face-masks-effective-in-preventing-transmissio.html">Are face masks effective in preventing transmission of viruses like coronavirus?</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 14, 2020,
-        <a href="https://www.snopes.com/fact-check/covid-19-reinfection/">snopes.com</a>
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1415-are-face-masks-effective-in-preventing-transmission-of-viruses-like-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10586-if-the-new-coronavirus-gets-into-your-mouth-drinki.html">If the new coronavirus gets into your mouth, drinking water or other liquids will wash them down through the oesophagus. Once they’re in the stomach, the acid will kill the virus. If you don't drink enough water more regularly, the virus can enter your windpipes and into the lungs.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://fullfact.org/online/coronavirus-water-breath-test-bad-advice/#1c8fa9bbf611be0edf4d64ec8f6c5153">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is incorrect. Drinking water does not prevent an infection and there have been cases where the virus has survived in the stomach and affected people’s intestines.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10525-drinking-boiled-garlic-water-will-cure-covid-19.html">Drinking boiled garlic water will cure COVID-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 09, 2020,
+        <a href="https://www.snopes.com/fact-check/garlic-cure-coronavirus/">snopes.com</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">
-            Unproven
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10526-t-hey-don-t-even-have-a-test-kit-for-covid-19-a-te.html">"[T]hey don't even have a test kit [for COVID-19]. A test kit to determine whether or not someone has the disease."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://www.factcheck.org/2020/03/the-facts-on-coronavirus-testing/#3eb370e361c50c947ee351f2d4087141">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10597-bill-gates-created-the-new-coronavirus-and-a-vacci.html">Bill Gates created the new coronavirus and a vaccine for it.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://fullfact.org/online/coronavirus-5G/#a328076f1c919dcfc6841ecbc0292f09">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is incorrect. The Bill Gates and Melinda Gates Foundation has funded a research institute that has a patent to a different coronavirus.  Coronavirus is a large category of viruses that includes the common cold, SARS and the new virus that causes Covid-19.
         </div>
     </div>
     
@@ -122,6 +221,171 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10728-a-vaccine-meant-for-cattle-can-be-used-to-fight-co.html">A vaccine meant for cattle can be used to fight COVID-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 25, 2020,
+        <a href="https://www.snopes.com/fact-check/cattle-vaccine-covid-19/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10539-are-healthcare-systems-prepared-for-the-coronaviru.html">Are healthcare systems prepared for the coronavirus pandemic?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://metafact.io/factchecks/1464-are-healthcare-systems-prepared-for-the-coronavirus-pandemic">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10541-are-there-ways-for-individuals-to-prepare-for-the.html">Are there ways for individuals to prepare for the coronavirus pandemic? </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://metafact.io/factchecks/1466-are-there-ways-for-individuals-to-prepare-for-the-coronavirus-pandemic">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10542-for-covid-19-are-there-any-lessons-learned-from-pr.html">For COVID-19, are there any lessons learned from previous flu pandemics?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://metafact.io/factchecks/1467-for-covid-19-are-there-any-lessons-learned-from-previous-flu-pandemics">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10608-are-governments-doing-enough-to-limit-the-coronavi.html">Are governments doing enough to limit the coronavirus pandemic?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1492-are-governments-doing-enough-to-limit-the-coronavirus-pandemic">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10301-mms-chlorine-dioxide-can-be-very-effective-in-both.html">"MMS (chlorine dioxide), can be very effective in both preventing and eradicating the coronavirus."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 27, 2020,
+        <a href="https://www.factcheck.org/2020/02/fake-coronavirus-cures-part-1-mms-is-industrial-bleach/#3ba45ed9a3e7aa7f3a5cc80d9d98045f">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10738-a-vaccine-for-the-new-coronavirus-has-been-created.html">A vaccine for the new coronavirus has been created by US scientists and will be ready to use from next Sunday.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 26, 2020,
+        <a href="https://fullfact.org/online/coronavirus-vaccine-not-ready/#5c10dfe3e0bf937873c5f1f6cda25e62">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Whilst there are vaccines in development, it will likely be more than 18 months before they are ready to use. The image and videos accompanying the post are related to Covid-19 diagnostic tests, not vaccines.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10612-people-who-have-survived-the-covid-19-coronavirus.html">People who have survived the COVID-19 coronavirus disease can become reinfected by the virus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 14, 2020,
+        <a href="https://www.snopes.com/fact-check/covid-19-reinfection/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Unproven
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10232-coronavirus-is-not-a-new-virus.html">Coronavirus is not a new virus</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 24, 2020,
+        <a href="https://healthfeedback.org/claimreview/the-2019-coronavirus-outbreak-is-caused-by-a-novel-virus-past-mentions-of-coronaviruses-refer-to-different-strains/#3c6aa5972374b9b774008ad45343e067">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Inaccurate
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10171-are-alcohol-sanitizers-effective-against-viruses-l.html">Are alcohol sanitizers effective against viruses like SARS/coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1416-are-alcohol-sanitizers-effective-against-viruses-like-sars-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10300-wuhans-corona-virus-can-be-cured-by-one-bowl-of-fr.html">"Wuhan’s corona virus can be cured by one bowl of freshly boiled garlic water."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 01, 2020,
+        <a href="https://www.factcheck.org/2020/02/fake-coronavirus-cures-part-2-garlic-isnt-a-cure/#a28cad424707688c4cf03673eb392a70">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10173-will-a-vaccine-be-discovered-for-the-novel-coronav.html">Will a vaccine be discovered for the novel coronavirus?</a>
         </h6>
     </div>
@@ -132,21 +396,6 @@
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-success">
             Affirmative
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="/fact_checks/10190-a-vaccine-for-the-coronavirus-was-being-trialled-i.html">A vaccine for the coronavirus was being trialled in January 2020 days before the outbreak.</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Jan 28, 2020,
-        <a href="https://fullfact.org/online/coronavirus-vaccine/#7151208a938f6b37cf0a2751eff60fd3">fullfact.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-warning">
-            Incorrect. The trial referenced was for a different type of coronavirus—Middle East respiratory syndrome (MERS).
         </div>
     </div>
     

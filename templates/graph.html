@@ -1,55 +1,16 @@
 {% extends "pure_layout.html" %}
 {% block body_content %}
 
-<div id="graph"></div>
+<header class="navbar">
+    <section class="navbar-section"></section>
+    <section class="navbar-center">
+        <a href="/" class="navbar-brand mr-2">
+            {% if language == 'sk' %}CovidDez.info{% else %}CovidMis.info{% endif %}
+        </a>
+    </section>
+    <section class="navbar-section"></section>
+</header>
 
-<script>
-    let data = {{ data }};
-    let elem = document.getElementById('graph');
-
-    const Graph = ForceGraph()
-        (elem)
-        .graphData(data)
-        .nodeLabel('label')
-        .nodeColor('group')
-        .nodeRelSize(5)
-        .linkWidth(1)
-        .linkColor('color')
-        .nodeCanvasObject((node, ctx, globalScale) => {
-            if (node.type == 'group') {
-                const label = node.label.substring(0, 100);
-                // const fontSize = 12 / globalScale;
-                const fontSize = 12;
-                ctx.font = `${fontSize}px Sans-Serif`;
-                const textWidth = ctx.measureText(label).width;
-                const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.2); // some padding
-
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
-                ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions);
-
-                ctx.textAlign = 'center';
-                ctx.textBaseline = 'middle';
-                ctx.fillStyle = node.group;
-                ctx.fillText(label, node.x, node.y);
-            }
-            else if (node.type == 'fact_check') {
-                ctx.fillStyle = node.group;
-                ctx.beginPath(); ctx.arc(node.x, node.y, 7, 0, 2 * Math.PI, false);
-                ctx.fill();
-            } else {
-                ctx.fillStyle = node.group;
-                ctx.fillRect(node.x - 6, node.y - 4, 12, 12);
-            }
-        })
-        .d3AlphaDecay(0.01)
-        .onNodeHover(node => elem.style.cursor = node ? 'pointer' : null)
-        .onNodeClick(node => {
-            window.open(node.path, '_blank');
-        })
-        .onNodeDragEnd(node => {
-            node.fx = node.x;
-            node.fy = node.y;
-        });
-</script>
+{% include '_graph.html' %}
 
 {% endblock %}

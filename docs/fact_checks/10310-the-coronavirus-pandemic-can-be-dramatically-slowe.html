@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -77,6 +86,36 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10656-a-viral-list-notes-numerous-good-news-items-relate.html">A viral list notes numerous "good news" items related to the fight against the COVID-19 coronavirus disease pandemic.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 18, 2020,
+        <a href="https://www.snopes.com/fact-check/covid-good-news-list-accurate/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Mostly-true
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10755-dr-vladimir-zelenko-s-669-covid-19-patients-that-w.html">Dr. Vladimir Zelenko's 669 COVID-19 patients that were treated with a combination of hydroxychloroquine, azithromycin, and zinc have seen zero hospitalizations, complications, or deaths.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 29, 2020,
+        <a href="https://www.snopes.com/fact-check/zelenko-669-coronavirus-patients/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Unproven
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10759-does-vitamin-c-supplementation-prevent-coronavirus.html">Does Vitamin C supplementation prevent coronavirus?</a>
         </h6>
     </div>
@@ -107,21 +146,6 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10394-a-video-demonstrates-there-have-been-exponentially.html">A video demonstrates there have been exponentially more cases of new coronavirus than other diseases such as SARS, MERS, Ebola, and swine flu.</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Feb 25, 2020,
-        <a href="https://www.snopes.com/fact-check/coronavirus-graph-spreading-faster/">snopes.com</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-warning">
-            Mixture
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
             <a href="/fact_checks/10601-the-coronavirus-outbreak-is-not-actually-caused-by.html">The coronavirus outbreak is not actually caused by a virus, but by 5G technology</a>
         </h6>
     </div>
@@ -137,6 +161,36 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10574-are-zinc-lozenges-effective-for-coronavirus.html">Are zinc lozenges effective for coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://metafact.io/factchecks/1482-are-zinc-lozenges-effective-for-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10675-the-government-of-shanghai-china-has-announced-its.html">The government of Shanghai, China has announced its official recommendation that COVID-19 should be treated with high amounts of intravenous vitamin C</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 03, 2020,
+        <a href="https://healthfeedback.org/claimreview/no-the-shanghai-government-has-not-recommended-intravenous-vitamin-c-as-a-treatment-for-covid-19/#8cfd85e1226033678145c88fa895d97c">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Misleading
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10361-the-coronavirus-pandemic-can-be-dramatically-slowe.html">The coronavirus pandemic can be dramatically slowed, or stopped, with the immediate widespread use of high doses of vitamin C</a>
         </h6>
     </div>
@@ -147,6 +201,66 @@
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">
             Unsupported
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10394-a-video-demonstrates-there-have-been-exponentially.html">A video demonstrates there have been exponentially more cases of new coronavirus than other diseases such as SARS, MERS, Ebola, and swine flu.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 25, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-graph-spreading-faster/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Mixture
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10619-is-covid-19-more-dangerous-the-seasonal-flu.html">Is COVID-19 more dangerous the seasonal flu?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1495-is-covid-19-more-dangerous-the-seasonal-flu">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10301-mms-chlorine-dioxide-can-be-very-effective-in-both.html">"MMS (chlorine dioxide), can be very effective in both preventing and eradicating the coronavirus."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 27, 2020,
+        <a href="https://www.factcheck.org/2020/02/fake-coronavirus-cures-part-1-mms-is-industrial-bleach/#3ba45ed9a3e7aa7f3a5cc80d9d98045f">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10622-will-people-get-coronavirus-pandemic-fatigue.html">Will people get Coronavirus pandemic fatigue?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1498-will-people-get-coronavirus-pandemic-fatigue">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
         </div>
     </div>
     

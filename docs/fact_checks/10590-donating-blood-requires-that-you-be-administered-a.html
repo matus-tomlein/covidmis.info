@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -81,6 +90,36 @@ In early March 2020, as the availability and cost of testing members of the publ
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10552-a-doctor-in-italy-shared-numerous-details-about-ho.html">A doctor in Italy shared numerous details about how hospitals in the country are dealing with COVID-19, a disease caused by the new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://www.snopes.com/fact-check/italy-doctor-cornona-not-flu/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Correct-attribution
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10527-anybody-that-wants-a-test-for-covid-19-can-get-a-t.html">"Anybody that wants a test [for COVID-19] can get a test. That’s what the bottom line is. ... Anybody right now and yesterday — anybody that needs a test gets a test. We — they’re there. They have the tests. And the tests are beautiful. Anybody that needs a test gets a test."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://www.factcheck.org/2020/03/the-facts-on-coronavirus-testing/#7092596e2039e6a49599737e1cfc8c0b">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Exaggerates
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10694-eating-bananas-is-a-preventative-against-the-covid.html">Eating bananas is a preventative against the COVID-19 coronavirus disease.</a>
         </h6>
     </div>
@@ -96,16 +135,91 @@ In early March 2020, as the availability and cost of testing members of the publ
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10677-the-world-health-organization-test-for-the-new-cor.html">The World Health Organization test for the new coronavirus "was a bad test."</a>
+            <a href="/fact_checks/10760-an-uninsured-17-year-old-boy-died-of-covid-19-symp.html">An uninsured 17-year-old boy died of COVID-19 symptoms after being refused care due to a lack of medical insurance.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 20, 2020,
-        <a href="https://www.factcheck.org/2020/03/biden-trump-wrong-about-who-coronavirus-tests/#ea69a9ee045e8928ea9030a01c0ad440">factcheck.org</a>
+        Apr 02, 2020,
+        <a href="https://www.snopes.com/fact-check/teen-insurance-coronavirus/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Mixture
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10728-a-vaccine-meant-for-cattle-can-be-used-to-fight-co.html">A vaccine meant for cattle can be used to fight COVID-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 25, 2020,
+        <a href="https://www.snopes.com/fact-check/cattle-vaccine-covid-19/">snopes.com</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">
             False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10510-every-election-year-has-a-disease-coronavirus-has.html">Every election year has a disease; coronavirus has a contagion factor of 2</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 02, 2020,
+        <a href="https://healthfeedback.org/claimreview/no-not-every-u-s-election-year-has-had-a-disease-outbreak-and-covid-19-transmissibility-is-unconfirmed/#dcd07795fb941690a36220ed7c793334">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Inaccurate
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10768-seven-children-in-senegal-died-after-being-adminis.html">Seven children in Senegal died after being administered a COVID-19 coronavirus disease vaccine in April 2020.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 09, 2020,
+        <a href="https://www.snopes.com/fact-check/7-senegal-kids-die-covid-vax/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10450-the-us-is-charging-over-3000-per-test-for-patients.html">“The US is charging over $3,000 per test” for patients who may have COVID-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 29, 2020,
+        <a href="https://www.factcheck.org/2020/03/covid-19-tests-dont-cost-over-3000/#27483881812a448fde354f5a9bdd5540">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10612-people-who-have-survived-the-covid-19-coronavirus.html">People who have survived the COVID-19 coronavirus disease can become reinfected by the virus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 14, 2020,
+        <a href="https://www.snopes.com/fact-check/covid-19-reinfection/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Unproven
         </div>
     </div>
     
@@ -126,6 +240,36 @@ In early March 2020, as the availability and cost of testing members of the publ
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10677-the-world-health-organization-test-for-the-new-cor.html">The World Health Organization test for the new coronavirus "was a bad test."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 20, 2020,
+        <a href="https://www.factcheck.org/2020/03/biden-trump-wrong-about-who-coronavirus-tests/#ea69a9ee045e8928ea9030a01c0ad440">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10232-coronavirus-is-not-a-new-virus.html">Coronavirus is not a new virus</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 24, 2020,
+        <a href="https://healthfeedback.org/claimreview/the-2019-coronavirus-outbreak-is-caused-by-a-novel-virus-past-mentions-of-coronaviruses-refer-to-different-strains/#3c6aa5972374b9b774008ad45343e067">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Inaccurate
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10526-t-hey-don-t-even-have-a-test-kit-for-covid-19-a-te.html">"[T]hey don't even have a test kit [for COVID-19]. A test kit to determine whether or not someone has the disease."</a>
         </h6>
     </div>
@@ -136,21 +280,6 @@ In early March 2020, as the availability and cost of testing members of the publ
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">
             False
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="/fact_checks/10527-anybody-that-wants-a-test-for-covid-19-can-get-a-t.html">"Anybody that wants a test [for COVID-19] can get a test. That’s what the bottom line is. ... Anybody right now and yesterday — anybody that needs a test gets a test. We — they’re there. They have the tests. And the tests are beautiful. Anybody that needs a test gets a test."</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Mar 10, 2020,
-        <a href="https://www.factcheck.org/2020/03/the-facts-on-coronavirus-testing/#7092596e2039e6a49599737e1cfc8c0b">factcheck.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-warning">
-            Exaggerates
         </div>
     </div>
     

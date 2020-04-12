@@ -7,7 +7,7 @@ import psycopg2
 from sshtunnel import SSHTunnelForwarder
 import os
 from nltk.tokenize import sent_tokenize
-from sentence_embedder import SentenceEmbedder
+from helpers.sentence_embedder import SentenceEmbedder
 from sklearn.metrics.pairwise import cosine_similarity
 
 
@@ -49,8 +49,10 @@ def process_mappings():
 
 
 def save_articles():
-    columns = ['id', 'title', 'url', 'published_at']
-    cur.execute(f"""SELECT {', '.join(columns)} FROM articles""")
+    mappings = pd.read_pickle('cache/mappings.p')
+    article_ids = ','.join(str(i) for i in mappings['source_entity_id'].unique())
+    columns = ['id', 'title', 'url', 'body', 'perex', 'published_at']
+    cur.execute(f"""SELECT {', '.join(columns)} FROM articles WHERE id IN ({article_ids})""")
     rows = cur.fetchall()
 
     articles = pd.DataFrame(rows, columns=columns)
@@ -115,11 +117,20 @@ def process_fact_checks():
     fact_checks.to_pickle('cache/fact_checks.p')
     print('Processed fact checks')
 
+
 def process_articles():
     mappings = pd.read_pickle('cache/mappings.p')
     article_ids = set(mappings['source_entity_id'])
     articles = pd.read_pickle('cache/articles.p')
     articles = articles.loc[articles['id'].isin(article_ids)]
+    articles['is_relevant'] = articles.apply(
+        lambda article: any(
+            keyword in (article['title'] or '').lower() or
+            keyword in (article['perex'] or '').lower() or
+            keyword in (article['body'] or '').lower()
+            for keyword in ['covid', 'corona']
+        ), axis=1
+    )
     articles.to_pickle('cache/articles.p')
     print('Processed articles')
 
@@ -219,12 +230,12 @@ with SSHTunnelForwarder(
     try:
         save_fact_checks()
         save_mappings()
-        save_articles()
         save_claims()
         save_fact_check_claim_transformations()
         create_claim_to_articles()
         process_fact_checks()
         process_mappings()
+        save_articles()
         process_articles()
         find_similar_fact_checks()
     except Exception as inst:

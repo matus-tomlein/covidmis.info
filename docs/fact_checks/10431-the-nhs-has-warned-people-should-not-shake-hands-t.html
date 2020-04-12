@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -77,46 +86,16 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10599-the-world-health-organisation-who-have-advised-peo.html">The World Health Organisation (WHO) have advised people to use contactless payments instead of cash to reduce the risk of Covid-19 transmission.</a>
+            <a href="/fact_checks/10496-108-people-died-from-covid-19-in-china-on-february.html">108 people died from Covid-19 in China on February 10th, one of the worst days so far.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 13, 2020,
-        <a href="https://fullfact.org/health/coronavirus-WHO-cash-comments/#a2294a05e439fbe220b41483fdc5c2f6">fullfact.org</a>
+        Mar 06, 2020,
+        <a href="https://fullfact.org/online/coronavirus-daily-deaths/#9a2a7fd09f0196e2b2df81f84ff32afc">fullfact.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
-            The WHO advises the public to wash their hands after handling money, especially if handling or eating food. But they haven’t issued a warning about using banknotes.
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="/fact_checks/10453-the-nhs-recommends-washing-your-underwear-and-towe.html">The NHS recommends washing your underwear and towels at 60C or 40C with a bleach-based laundry product to prevent the spread of the new coronavirus.</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Mar 03, 2020,
-        <a href="https://fullfact.org/health/coronavirus-claims-debunked/#57ec15e037ab06bf52f8d2049e867e45">fullfact.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-warning">
-            This is not NHS advice on limiting the spread of the new coronavirus. It comes from advice on stopping the spread of germs generally.
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="/fact_checks/10458-to-minimise-the-risk-of-catching-the-new-coronavir.html">To minimise the risk of catching the new coronavirus, you should use public transport only when necessary, avoid kissing and shaking hands, and make visitors wash their hands as soon as they enter your house.</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Mar 03, 2020,
-        <a href="https://fullfact.org/health/coronavirus-claims-debunked/#1c075d515f9be2480bc28a8ae846e0db">fullfact.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-warning">
-            Official Public Health England advice does not recommend any of these things.
+            It is true that 108 people died in China from Covid-19 on 10 February, however, this death toll has since been surpassed.
         </div>
     </div>
     
@@ -137,6 +116,36 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10179-coronavirus-reports-of-10000-dead-in-wuhan-china.html">“CORONAVIRUS: Reports of 10,000 DEAD in Wuhan, China.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 24, 2020,
+        <a href="https://www.factcheck.org/2020/01/misinformation-on-coronavirus-death-toll/#56df950955998fd09dbfb3d3d6a03515">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10453-the-nhs-recommends-washing-your-underwear-and-towe.html">The NHS recommends washing your underwear and towels at 60C or 40C with a bleach-based laundry product to prevent the spread of the new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 03, 2020,
+        <a href="https://fullfact.org/health/coronavirus-claims-debunked/#57ec15e037ab06bf52f8d2049e867e45">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is not NHS advice on limiting the spread of the new coronavirus. It comes from advice on stopping the spread of germs generally.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10198-the-wuhan-coronavirus-is-a-more-virulent-version-o.html">The Wuhan coronavirus is a more virulent version of the normal cold.</a>
         </h6>
     </div>
@@ -147,6 +156,171 @@
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
             The new coronavirus observed in Wuhan is a virus in the same family of viruses as the common cold, but is a different illness.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10458-to-minimise-the-risk-of-catching-the-new-coronavir.html">To minimise the risk of catching the new coronavirus, you should use public transport only when necessary, avoid kissing and shaking hands, and make visitors wash their hands as soon as they enter your house.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 03, 2020,
+        <a href="https://fullfact.org/health/coronavirus-claims-debunked/#1c075d515f9be2480bc28a8ae846e0db">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Official Public Health England advice does not recommend any of these things.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10529-hand-sanitizer-will-do-nothing-for-the-coronavirus.html">Hand "sanitizer will do nothing for the coronavirus."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 03, 2020,
+        <a href="https://www.factcheck.org/2020/03/contrary-to-false-posts-sanitizer-helpful-against-coronavirus/#70d0388e70d68dc651d87b8c56ffcf01">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10467-the-government-have-announced-measures-that-all-wo.html">“The Government have announced measures that all workplaces with 10 employees or more are to have paid mandatory leave to avoid the spread of the COVID-19 coronavirus starting from March 6, 2020."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 06, 2020,
+        <a href="https://www.factcheck.org/2020/03/coronavirus-prank-falsely-tells-of-workplace-school-closings/#b2162f2c7cb0d1b459ccd053f105a091">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10534-prime-minister-boris-johnson-advocated-for-the-uk.html">Prime Minister Boris Johnson advocated for the UK to take Covid-19 “on the chin” and allow the disease to spread through the population.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://fullfact.org/health/boris-johnson-coronavirus-this-morning/#ad2f3ef03401e20b78e2026db0ba580b">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            The Prime Minister said this was a theory on how to deal with the virus, but said it would be better if we take all the measures we can to reduce the burden on the NHS during the peak of the disease.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10535-a-coronavirus-vaccine-for-cows-shows-that-the-viru.html">A coronavirus vaccine for cows shows that the virus behind the current outbreak is not new.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://fullfact.org/online/coronavirus-cows/#0783ab22d7a8fd4f9037c811d8879fab">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is a different coronavirus from SARS-CoV-2, the virus that causes Covid-19. Coronaviruses are a large family of viruses that can affect a range of species.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10599-the-world-health-organisation-who-have-advised-peo.html">The World Health Organisation (WHO) have advised people to use contactless payments instead of cash to reduce the risk of Covid-19 transmission.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://fullfact.org/health/coronavirus-WHO-cash-comments/#a2294a05e439fbe220b41483fdc5c2f6">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            The WHO advises the public to wash their hands after handling money, especially if handling or eating food. But they haven’t issued a warning about using banknotes.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10601-the-coronavirus-outbreak-is-not-actually-caused-by.html">The coronavirus outbreak is not actually caused by a virus, but by 5G technology</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 22, 2020,
+        <a href="https://healthfeedback.org/claimreview/viral-claim-falsely-asserts-that-covid-19-is-due-to-5g-technology-rollout-not-a-virus/#d2d31121158b124360082baaeec45227">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Incorrect
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10218-the-chinese-government-is-building-a-hospital-in-1.html">The Chinese government is building a hospital in 10 days to deal with the new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 02, 2020,
+        <a href="https://www.snopes.com/fact-check/china-hospital-10-days/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-success">
+            True
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10675-the-government-of-shanghai-china-has-announced-its.html">The government of Shanghai, China has announced its official recommendation that COVID-19 should be treated with high amounts of intravenous vitamin C</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 03, 2020,
+        <a href="https://healthfeedback.org/claimreview/no-the-shanghai-government-has-not-recommended-intravenous-vitamin-c-as-a-treatment-for-covid-19/#8cfd85e1226033678145c88fa895d97c">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Misleading
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10556-coronavirus-lives-on-the-hands-for-10-minutes-but.html">Coronavirus lives on the hands for 10 minutes, but can be prevented with alcohol hand sanitiser.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://fullfact.org/health/coronavirus-graphics-unicef/#2c6763d010c1787d1d7151704f55387d">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            It’s not clear how long the virus can ‘survive’ on hands, but hand sanitiser with at least 60% alcohol is a good second choice to washing your hands with soap and water.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10174-is-the-novel-wuhan-coronavirus-more-dangerous-than.html">Is the novel Wuhan coronavirus more dangerous than SARS? </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1419-is-the-novel-wuhan-coronavirus-more-dangerous-than-sars">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
         </div>
     </div>
     

@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -77,21 +86,6 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10704-starting-the-next-day-dr-nancy-messonnier-no-longe.html">"Starting the next day, Dr. [Nancy] Messonnier no longer appeared at public briefings of the White House coronavirus task force. The president and the White House sent a clear message to scientists in the government -- there would be a price for speaking out and speaking up."</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Mar 21, 2020,
-        <a href="https://www.factcheck.org/2020/03/biden-video-on-trump-silencing-expert/#71cad90e609388bd4ccb7566bbe328c1">factcheck.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-error">
-            Misleading
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
             <a href="/fact_checks/10658-a-screenshot-purports-to-show-a-tweet-from-preside.html">A screenshot purports to show a tweet from President Donald Trump that says, before the U.S. issues financial assistance to individuals to deal with the coronavirus pandemic, "we will go through your social media history from the last 4 years and search for any post with #NotMyPresident in it."</a>
         </h6>
     </div>
@@ -107,16 +101,16 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10513-dr-abdu-sharkawy-an-infectious-diseases-specialist.html">Dr. Abdu Sharkawy, an infectious diseases specialist, penned a viral Facebook post warning about the loss of reason in the face of panic over the new coronavirus in 2020.</a>
+            <a href="/fact_checks/10596-the-new-coronavirus-is-actually-the-impact-of-5g-e.html">The new coronavirus is actually the impact of 5G exposure.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 08, 2020,
-        <a href="https://www.snopes.com/fact-check/abdu-sharkawy-coronavirus/">snopes.com</a>
+        Mar 13, 2020,
+        <a href="https://fullfact.org/online/coronavirus-5G/#8372da843876f953c960a4f2ee3c2a76">fullfact.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
-            Correct-attribution
+            This is incorrect, the new coronavirus is a virus and there is no evidence that 5G is harmful to people’s health.
         </div>
     </div>
     
@@ -147,6 +141,36 @@
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">
             False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10704-starting-the-next-day-dr-nancy-messonnier-no-longe.html">"Starting the next day, Dr. [Nancy] Messonnier no longer appeared at public briefings of the White House coronavirus task force. The president and the White House sent a clear message to scientists in the government -- there would be a price for speaking out and speaking up."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 21, 2020,
+        <a href="https://www.factcheck.org/2020/03/biden-video-on-trump-silencing-expert/#71cad90e609388bd4ccb7566bbe328c1">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Misleading
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10513-dr-abdu-sharkawy-an-infectious-diseases-specialist.html">Dr. Abdu Sharkawy, an infectious diseases specialist, penned a viral Facebook post warning about the loss of reason in the face of panic over the new coronavirus in 2020.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 08, 2020,
+        <a href="https://www.snopes.com/fact-check/abdu-sharkawy-coronavirus/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Correct-attribution
         </div>
     </div>
     

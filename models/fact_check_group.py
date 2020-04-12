@@ -14,6 +14,9 @@ class FactCheckGroup:
     def path(self):
         return '/' + self.file_name()
 
+    def unpromoted_fact_checks(self):
+        return [f for f in self.fact_checks if f.id != self.promoted_fact_check.id]
+
     def get_article_mappings(self):
         article_ids = {m.article.id for fact_check in self.fact_checks for m in fact_check.article_mappings}
         article_mappings = [
@@ -32,3 +35,12 @@ class FactCheckGroup:
 
     def num_articles(self):
         return len(self.get_article_mappings())
+
+    def to_dict(self, graph):
+        return {
+            'id': self.id,
+            'promoted_fact_check': self.promoted_fact_check.to_dict(),
+            'fact_checks': [f.to_dict() for f in self.fact_checks],
+            'path': self.path(),
+            'graph_data': graph.get_component_data_for_factcheck(self.promoted_fact_check)
+        }

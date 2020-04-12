@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -81,46 +90,31 @@ In March 2020, a rumor started to circulate on social media claiming that the wo
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10738-a-vaccine-for-the-new-coronavirus-has-been-created.html">A vaccine for the new coronavirus has been created by US scientists and will be ready to use from next Sunday.</a>
+            <a href="/fact_checks/10190-a-vaccine-for-the-coronavirus-was-being-trialled-i.html">A vaccine for the coronavirus was being trialled in January 2020 days before the outbreak.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 26, 2020,
-        <a href="https://fullfact.org/online/coronavirus-vaccine-not-ready/#5c10dfe3e0bf937873c5f1f6cda25e62">fullfact.org</a>
+        Jan 28, 2020,
+        <a href="https://fullfact.org/online/coronavirus-vaccine/#7151208a938f6b37cf0a2751eff60fd3">fullfact.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
-            Whilst there are vaccines in development, it will likely be more than 18 months before they are ready to use. The image and videos accompanying the post are related to Covid-19 diagnostic tests, not vaccines.
+            Incorrect. The trial referenced was for a different type of coronavirus—Middle East respiratory syndrome (MERS).
         </div>
     </div>
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10610-before-a-vaccine-can-coronavirus-be-treated.html">Before a vaccine, can coronavirus be treated?</a>
+            <a href="/fact_checks/10768-seven-children-in-senegal-died-after-being-adminis.html">Seven children in Senegal died after being administered a COVID-19 coronavirus disease vaccine in April 2020.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 16, 2020,
-        <a href="https://metafact.io/factchecks/1494-before-a-vaccine-can-coronavirus-be-treated">metafact.io</a>
+        Apr 09, 2020,
+        <a href="https://www.snopes.com/fact-check/7-senegal-kids-die-covid-vax/">snopes.com</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-warning">
-            Not Enough Experts
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="/fact_checks/10535-a-coronavirus-vaccine-for-cows-shows-that-the-viru.html">A coronavirus vaccine for cows shows that the virus behind the current outbreak is not new.</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Mar 10, 2020,
-        <a href="https://fullfact.org/online/coronavirus-cows/#0783ab22d7a8fd4f9037c811d8879fab">fullfact.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-warning">
-            This is a different coronavirus from SARS-CoV-2, the virus that causes Covid-19. Coronaviruses are a large family of viruses that can affect a range of species.
+        <div class="text-error">
+            False
         </div>
     </div>
     
@@ -141,6 +135,276 @@ In March 2020, a rumor started to circulate on social media claiming that the wo
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10709-about-500-lions-have-been-released-on-the-streets.html">About 500 lions have been released on the streets of Russia to stop people going out during the coronavirus pandemic.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 24, 2020,
+        <a href="https://fullfact.org/online/Russia-unleashed-500-lions/#ef874161e4f02d20140aceecfb485c3f">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is not true. The Russian government has yet to announce a widespread lockdown of any kind in Russia. The image of the lion is from South Africa in 2016.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10199-are-face-masks-effective-in-preventing-transmissio.html">Are face masks effective in preventing transmission of viruses like coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1415-are-face-masks-effective-in-preventing-transmission-of-viruses-like-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10586-if-the-new-coronavirus-gets-into-your-mouth-drinki.html">If the new coronavirus gets into your mouth, drinking water or other liquids will wash them down through the oesophagus. Once they’re in the stomach, the acid will kill the virus. If you don't drink enough water more regularly, the virus can enter your windpipes and into the lungs.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://fullfact.org/online/coronavirus-water-breath-test-bad-advice/#1c8fa9bbf611be0edf4d64ec8f6c5153">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is incorrect. Drinking water does not prevent an infection and there have been cases where the virus has survived in the stomach and affected people’s intestines.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10203-dettol-antiseptic-spray-says-it-kills-human-corona.html">Dettol antiseptic spray says it kills human coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 30, 2020,
+        <a href="https://fullfact.org/online/dettol-coronavirus/#72db3fc397e3e88964f28652eb945978">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            That is correct but that doesn’t mean that Dettol spray can kill the new coronavirus identified in Wuhan. Coronavirus is a category of viruses that includes the common cold, and it is likely this the label is referring to.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10590-donating-blood-requires-that-you-be-administered-a.html">Donating blood requires that you be administered a free test for the COVID-19, a disease caused by the coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-test-donate-blood/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10465-a-homemade-hand-sanitizer-made-with-tito-s-vodka-c.html">A homemade hand sanitizer made with Tito's Vodka can be used to fight the new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 04, 2020,
+        <a href="https://www.snopes.com/fact-check/hand-sanitizer-titos-vodka/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10533-hand-sanitiser-is-effective-against-covid-19.html">Hand sanitiser is effective against Covid-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://fullfact.org/health/coronavirus-hand-sanitiser/#d8ace6692d8307d80816e65dcebbfa1b">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Hand sanitisers with 60% alcohol content and above are effective against viruses, such as the new coronavirus, but soap and water is the best option.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10534-prime-minister-boris-johnson-advocated-for-the-uk.html">Prime Minister Boris Johnson advocated for the UK to take Covid-19 “on the chin” and allow the disease to spread through the population.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://fullfact.org/health/boris-johnson-coronavirus-this-morning/#ad2f3ef03401e20b78e2026db0ba580b">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            The Prime Minister said this was a theory on how to deal with the virus, but said it would be better if we take all the measures we can to reduce the burden on the NHS during the peak of the disease.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10535-a-coronavirus-vaccine-for-cows-shows-that-the-viru.html">A coronavirus vaccine for cows shows that the virus behind the current outbreak is not new.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://fullfact.org/online/coronavirus-cows/#0783ab22d7a8fd4f9037c811d8879fab">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is a different coronavirus from SARS-CoV-2, the virus that causes Covid-19. Coronaviruses are a large family of viruses that can affect a range of species.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10597-bill-gates-created-the-new-coronavirus-and-a-vacci.html">Bill Gates created the new coronavirus and a vaccine for it.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://fullfact.org/online/coronavirus-5G/#a328076f1c919dcfc6841ecbc0292f09">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is incorrect. The Bill Gates and Melinda Gates Foundation has funded a research institute that has a patent to a different coronavirus.  Coronavirus is a large category of viruses that includes the common cold, SARS and the new virus that causes Covid-19.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10342-dettol-antiseptic-spray-says-it-kills-coronavirus.html">Dettol antiseptic spray says it kills coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 17, 2020,
+        <a href="https://fullfact.org/online/coronavirus-dettol/#9d26261e42480d67a7a87d8a998510b3">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            That is correct but that doesn’t refer to the new coronavirus (Covid-19) identified in Wuhan. Coronavirus is a large category of viruses that includes the common cold. Dettol has said its products haven’t been tested against the new virus yet.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10541-are-there-ways-for-individuals-to-prepare-for-the.html">Are there ways for individuals to prepare for the coronavirus pandemic? </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://metafact.io/factchecks/1466-are-there-ways-for-individuals-to-prepare-for-the-coronavirus-pandemic">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10542-for-covid-19-are-there-any-lessons-learned-from-pr.html">For COVID-19, are there any lessons learned from previous flu pandemics?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://metafact.io/factchecks/1467-for-covid-19-are-there-any-lessons-learned-from-previous-flu-pandemics">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10608-are-governments-doing-enough-to-limit-the-coronavi.html">Are governments doing enough to limit the coronavirus pandemic?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1492-are-governments-doing-enough-to-limit-the-coronavirus-pandemic">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10610-before-a-vaccine-can-coronavirus-be-treated.html">Before a vaccine, can coronavirus be treated?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1494-before-a-vaccine-can-coronavirus-be-treated">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10738-a-vaccine-for-the-new-coronavirus-has-been-created.html">A vaccine for the new coronavirus has been created by US scientists and will be ready to use from next Sunday.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 26, 2020,
+        <a href="https://fullfact.org/online/coronavirus-vaccine-not-ready/#5c10dfe3e0bf937873c5f1f6cda25e62">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Whilst there are vaccines in development, it will likely be more than 18 months before they are ready to use. The image and videos accompanying the post are related to Covid-19 diagnostic tests, not vaccines.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10612-people-who-have-survived-the-covid-19-coronavirus.html">People who have survived the COVID-19 coronavirus disease can become reinfected by the virus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 14, 2020,
+        <a href="https://www.snopes.com/fact-check/covid-19-reinfection/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Unproven
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10171-are-alcohol-sanitizers-effective-against-viruses-l.html">Are alcohol sanitizers effective against viruses like SARS/coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1416-are-alcohol-sanitizers-effective-against-viruses-like-sars-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10173-will-a-vaccine-be-discovered-for-the-novel-coronav.html">Will a vaccine be discovered for the novel coronavirus?</a>
         </h6>
     </div>
@@ -151,6 +415,21 @@ In March 2020, a rumor started to circulate on social media claiming that the wo
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-success">
             Affirmative
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10559-coronavirus-may-have-been-genetically-engineered-f.html">Coronavirus may have been genetically engineered for “efficient spreading in the human population,” a bombshell new study has claimed.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://fullfact.org/health/new-coronavirus-not-genetically-engineered/#4bb2192291c5b92e4fa59d466cbfac5c">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is wrong and the study does not claim the new coronavirus has been genetically engineered. It simply compares the genome sequence of SARS-CoV-2 with other coronaviruses, and suggests a reason why it might be spreading relatively efficiently.
         </div>
     </div>
     

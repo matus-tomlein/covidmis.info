@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -77,12 +86,102 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10177-are-there-ways-to-lower-your-risk-of-getting-coron.html">Are there ways to lower your risk of getting coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1422-are-there-ways-to-lower-your-risk-of-getting-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-success">
+            Affirmative
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10242-chinese-officials-are-seeking-approval-to-start-th.html">Chinese officials are seeking approval to start the mass killing of 20,000 people in order to stop the spread of new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 05, 2020,
+        <a href="https://www.snopes.com/fact-check/china-kill-coronavirus-patients/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10563-the-new-coronavirus-is-400-500-micro-and-for-this.html">The new coronavirus is 400-500 micro and for this reason wide enough to be stopped by masks.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://fullfact.org/health/coronavirus-graphics-unicef/#77e3627e917d99c833f3c76ae8bfbaa4">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            The virus is 50-200 nanometres wide, and a mask, although sometimes necessary, won’t guarantee that you don’t get Covid-19.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10622-will-people-get-coronavirus-pandemic-fatigue.html">Will people get Coronavirus pandemic fatigue?</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
         Mar 16, 2020,
         <a href="https://metafact.io/factchecks/1498-will-people-get-coronavirus-pandemic-fatigue">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10630-parents-can-receive-a-case-of-baby-formula-during.html">Parents can receive a case of baby formula during the COVID-19 pandemic by calling the number on the back of the company's product.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 15, 2020,
+        <a href="https://www.snopes.com/fact-check/free-case-of-baby-formula/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10632-the-new-coronavirus-is-the-least-deadly-virus-and.html">The new coronavirus is the “least deadly virus” and has a death rate lower than the 2009 H1N1 outbreak.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://www.factcheck.org/2020/03/infographic-on-facebook-distorts-comparative-facts-on-viruses/#754910be73d2ca9877af693b2602c5c8">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10575-is-africa-the-most-vulnerable-continent-for-corona.html">Is Africa the most vulnerable continent for coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://metafact.io/factchecks/1483-is-africa-the-most-vulnerable-continent-for-coronavirus">metafact.io</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
@@ -107,12 +206,162 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10542-for-covid-19-are-there-any-lessons-learned-from-pr.html">For COVID-19, are there any lessons learned from previous flu pandemics?</a>
+            <a href="/fact_checks/10709-about-500-lions-have-been-released-on-the-streets.html">About 500 lions have been released on the streets of Russia to stop people going out during the coronavirus pandemic.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 12, 2020,
-        <a href="https://metafact.io/factchecks/1467-for-covid-19-are-there-any-lessons-learned-from-previous-flu-pandemics">metafact.io</a>
+        Mar 24, 2020,
+        <a href="https://fullfact.org/online/Russia-unleashed-500-lions/#ef874161e4f02d20140aceecfb485c3f">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is not true. The Russian government has yet to announce a widespread lockdown of any kind in Russia. The image of the lion is from South Africa in 2016.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10583-president-obama-set-up-anti-pandemic-programs-in-4.html">“President Obama set up anti-pandemic programs in 47 vulnerable countries, as a way to protect against something just like Coronavirus breaking out across the world. Experts begged Trump to keep them open. He closed 37 of them."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 27, 2020,
+        <a href="https://www.factcheck.org/2020/03/false-claim-about-cdcs-global-anti-pandemic-work/#da8a2a9a8c8917d8e2cba90c76370791">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10199-are-face-masks-effective-in-preventing-transmissio.html">Are face masks effective in preventing transmission of viruses like coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1415-are-face-masks-effective-in-preventing-transmission-of-viruses-like-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10713-the-italian-prime-minister-has-said-his-country-ha.html">The Italian Prime Minister has said his country has exhausted all options to fight against the coronavirus pandemic and pleads to God to “rescue your people.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 24, 2020,
+        <a href="https://fullfact.org/online/conte-bolsonaro-covid-coronavirus/#eee37b65549d5084be7b78acf3070bc7">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This quote is made up.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10656-a-viral-list-notes-numerous-good-news-items-relate.html">A viral list notes numerous "good news" items related to the fight against the COVID-19 coronavirus disease pandemic.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 18, 2020,
+        <a href="https://www.snopes.com/fact-check/covid-good-news-list-accurate/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Mostly-true
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10406-the-number-of-covid-19-cases-in-the-united-states.html">The number of COVID-19 cases in the United States "are going very substantially down, not up.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 27, 2020,
+        <a href="https://www.factcheck.org/2020/02/factchecking-trumps-coronavirus-press-conference/#d8f2d3a328721c56323ee7ee8f1c6d66">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Spins the Facts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10534-prime-minister-boris-johnson-advocated-for-the-uk.html">Prime Minister Boris Johnson advocated for the UK to take Covid-19 “on the chin” and allow the disease to spread through the population.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://fullfact.org/health/boris-johnson-coronavirus-this-morning/#ad2f3ef03401e20b78e2026db0ba580b">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            The Prime Minister said this was a theory on how to deal with the virus, but said it would be better if we take all the measures we can to reduce the burden on the NHS during the peak of the disease.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10728-a-vaccine-meant-for-cattle-can-be-used-to-fight-co.html">A vaccine meant for cattle can be used to fight COVID-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 25, 2020,
+        <a href="https://www.snopes.com/fact-check/cattle-vaccine-covid-19/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10601-the-coronavirus-outbreak-is-not-actually-caused-by.html">The coronavirus outbreak is not actually caused by a virus, but by 5G technology</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 22, 2020,
+        <a href="https://healthfeedback.org/claimreview/viral-claim-falsely-asserts-that-covid-19-is-due-to-5g-technology-rollout-not-a-virus/#d2d31121158b124360082baaeec45227">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Incorrect
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10539-are-healthcare-systems-prepared-for-the-coronaviru.html">Are healthcare systems prepared for the coronavirus pandemic?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://metafact.io/factchecks/1464-are-healthcare-systems-prepared-for-the-coronavirus-pandemic">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10540-are-lock-downs-the-best-option-to-slow-the-spread.html">Are lock-downs the best option to slow the spread of coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://metafact.io/factchecks/1465-are-lock-downs-the-best-option-to-slow-the-spread-of-coronavirus">metafact.io</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
@@ -137,16 +386,106 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10539-are-healthcare-systems-prepared-for-the-coronaviru.html">Are healthcare systems prepared for the coronavirus pandemic?</a>
+            <a href="/fact_checks/10542-for-covid-19-are-there-any-lessons-learned-from-pr.html">For COVID-19, are there any lessons learned from previous flu pandemics?</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 11, 2020,
-        <a href="https://metafact.io/factchecks/1464-are-healthcare-systems-prepared-for-the-coronavirus-pandemic">metafact.io</a>
+        Mar 12, 2020,
+        <a href="https://metafact.io/factchecks/1467-for-covid-19-are-there-any-lessons-learned-from-previous-flu-pandemics">metafact.io</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
             Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10609-are-children-more-at-risk-to-coronavirus.html">Are children more at risk to coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1493-are-children-more-at-risk-to-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10610-before-a-vaccine-can-coronavirus-be-treated.html">Before a vaccine, can coronavirus be treated?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1494-before-a-vaccine-can-coronavirus-be-treated">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10619-is-covid-19-more-dangerous-the-seasonal-flu.html">Is COVID-19 more dangerous the seasonal flu?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1495-is-covid-19-more-dangerous-the-seasonal-flu">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10301-mms-chlorine-dioxide-can-be-very-effective-in-both.html">"MMS (chlorine dioxide), can be very effective in both preventing and eradicating the coronavirus."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 27, 2020,
+        <a href="https://www.factcheck.org/2020/02/fake-coronavirus-cures-part-1-mms-is-industrial-bleach/#3ba45ed9a3e7aa7f3a5cc80d9d98045f">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10174-is-the-novel-wuhan-coronavirus-more-dangerous-than.html">Is the novel Wuhan coronavirus more dangerous than SARS? </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1419-is-the-novel-wuhan-coronavirus-more-dangerous-than-sars">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10559-coronavirus-may-have-been-genetically-engineered-f.html">Coronavirus may have been genetically engineered for “efficient spreading in the human population,” a bombshell new study has claimed.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://fullfact.org/health/new-coronavirus-not-genetically-engineered/#4bb2192291c5b92e4fa59d466cbfac5c">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is wrong and the study does not claim the new coronavirus has been genetically engineered. It simply compares the genome sequence of SARS-CoV-2 with other coronaviruses, and suggests a reason why it might be spreading relatively efficiently.
         </div>
     </div>
     
@@ -171,6 +510,22 @@
     </div>
     <div class="column col-6 mb-2 pb-2">
         naturalnews.com
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-warning">
+            Might contain claim
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="https://www.medicaldaily.com/new-cases-every-hour-can-end-covid-19-pandemic-450892" rel="nofollow">
+                With New Cases Every Hour, Can We End COVID-19 Pandemic?
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        medicaldaily.com
     </div>
     <div class="column col-6 mb-2 pb-2 text-right">
         <div class="text-warning">
@@ -212,6 +567,22 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="https://neurosciencenews.com/covid-19-us-preparation-15992/" rel="nofollow">
+                Why the U.S. wasn’t more prepared for COVID-19
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        neurosciencenews.com
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-warning">
+            Might contain claim
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="http://feeds.foxnews.com/~r/foxnews/health/~3/G05Win5U5fY/experts-worry-about-pandemic-coronavirus-numbers-increase" rel="nofollow">
                 Experts worry about pandemic as coronavirus numbers increase: report
             </a>
@@ -244,6 +615,38 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="https://www.naturalnews.com/2020-01-27-food-sanitizers-mask-supplies-wiped-out-quarantines-wuhan-coronavirus.html" rel="nofollow">
+                Food, Sanitizers and Mask Supplies Getting WIPED OUT Across America as Fears Rise of Coronavirus Quarantines in the USA
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        naturalnews.com
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-warning">
+            Might contain claim
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="https://www.naturalnews.com/2020-03-08-who-cares-more-not-offending-than-protecting-public-pandemic.html" rel="nofollow">
+                WHO cares more about not offending people than protecting the public against the coronavirus pandemic
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        naturalnews.com
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-warning">
+            Might contain claim
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="https://www.statnews.com/2020/03/03/who-coronavirus-different-than-influenza-can-be-contained/?utm_campaign=rss" rel="nofollow">
                 WHO: Coronavirus is different from influenza and can be contained
             </a>
@@ -251,70 +654,6 @@
     </div>
     <div class="column col-6 mb-2 pb-2">
         statnews.com
-    </div>
-    <div class="column col-6 mb-2 pb-2 text-right">
-        <div class="text-warning">
-            Might contain claim
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="https://www.medicaldaily.com/coronavirus-outbreak-not-pandemic-who-says-449219" rel="nofollow">
-                Coronavirus Outbreak Not A Pandemic, WHO Says
-            </a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        medicaldaily.com
-    </div>
-    <div class="column col-6 mb-2 pb-2 text-right">
-        <div class="text-warning">
-            Might contain claim
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="https://www.statnews.com/2020/02/24/who-tells-countries-prepare-coronavirus-pandemic-too-soon-to-make-call/?utm_campaign=rss" rel="nofollow">
-                WHO tells countries to prepare for possibility of a coronavirus pandemic
-            </a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        statnews.com
-    </div>
-    <div class="column col-6 mb-2 pb-2 text-right">
-        <div class="text-warning">
-            Might contain claim
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="http://www.medicinenet.com/script/main/art.asp?articlekey=228794" rel="nofollow">
-                Coronavirus Is a Pandemic: What That Means
-            </a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        medicinenet.com
-    </div>
-    <div class="column col-6 mb-2 pb-2 text-right">
-        <div class="text-warning">
-            Might contain claim
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="https://www.dailymail.co.uk/health/article-8056361/Coronavirus-strike-country-planet-teeters-edge-pandemic-warns-WHO.html?ns_mchannel=rss&ns_campaign=1490&ito=1490" rel="nofollow">
-                Coronavirus could strike every country on planet as it teeters on the edge of a pandemic, warns WHO
-            </a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        dailymail.co.uk
     </div>
     <div class="column col-6 mb-2 pb-2 text-right">
         <div class="text-warning">

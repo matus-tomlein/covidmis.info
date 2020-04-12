@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -77,16 +86,16 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10527-anybody-that-wants-a-test-for-covid-19-can-get-a-t.html">"Anybody that wants a test [for COVID-19] can get a test. That’s what the bottom line is. ... Anybody right now and yesterday — anybody that needs a test gets a test. We — they’re there. They have the tests. And the tests are beautiful. Anybody that needs a test gets a test."</a>
+            <a href="/fact_checks/10337-chinese-doctors-confirmed-that-african-people-are.html">Chinese doctors confirmed that African people are "genetically resistant" to new coronavirus.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 10, 2020,
-        <a href="https://www.factcheck.org/2020/03/the-facts-on-coronavirus-testing/#7092596e2039e6a49599737e1cfc8c0b">factcheck.org</a>
+        Feb 16, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-cameroonian-student/">snopes.com</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-warning">
-            Exaggerates
+        <div class="text-error">
+            False
         </div>
     </div>
     
@@ -107,16 +116,31 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10337-chinese-doctors-confirmed-that-african-people-are.html">Chinese doctors confirmed that African people are "genetically resistant" to new coronavirus.</a>
+            <a href="/fact_checks/10179-coronavirus-reports-of-10000-dead-in-wuhan-china.html">“CORONAVIRUS: Reports of 10,000 DEAD in Wuhan, China.”</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Feb 16, 2020,
-        <a href="https://www.snopes.com/fact-check/coronavirus-cameroonian-student/">snopes.com</a>
+        Jan 24, 2020,
+        <a href="https://www.factcheck.org/2020/01/misinformation-on-coronavirus-death-toll/#56df950955998fd09dbfb3d3d6a03515">factcheck.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">
             False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10316-satellite-images-showing-high-levels-of-sulphur-di.html">Satellite images showing high levels of sulphur dioxide above China are possible evidence of mass cremations of people who have died from coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 13, 2020,
+        <a href="https://fullfact.org/health/satellites-wuhan-sulphur-dioxide-coronavirus/#f0e93dc5354d6216b3e1af6a1548593a">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            False. The maps are not satellite images, and do not show actual levels of sulphur dioxide. They are simply forecasts based on historical data and weather patterns.
         </div>
     </div>
     
@@ -137,16 +161,16 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10179-coronavirus-reports-of-10000-dead-in-wuhan-china.html">“CORONAVIRUS: Reports of 10,000 DEAD in Wuhan, China.”</a>
+            <a href="/fact_checks/10527-anybody-that-wants-a-test-for-covid-19-can-get-a-t.html">"Anybody that wants a test [for COVID-19] can get a test. That’s what the bottom line is. ... Anybody right now and yesterday — anybody that needs a test gets a test. We — they’re there. They have the tests. And the tests are beautiful. Anybody that needs a test gets a test."</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Jan 24, 2020,
-        <a href="https://www.factcheck.org/2020/01/misinformation-on-coronavirus-death-toll/#56df950955998fd09dbfb3d3d6a03515">factcheck.org</a>
+        Mar 10, 2020,
+        <a href="https://www.factcheck.org/2020/03/the-facts-on-coronavirus-testing/#7092596e2039e6a49599737e1cfc8c0b">factcheck.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-error">
-            False
+        <div class="text-warning">
+            Exaggerates
         </div>
     </div>
     

@@ -1,62 +1,68 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<div class="hero hero-sm">
-    <div class="hero-body">
-        <h3 class="text-center">
+<div class="columns" style="cursor: pointer" onclick="window.location = '/graph'">
+    <div class="column col-12">
+        {% with graph_height=350, freeze=true, zoom_out=true %}
+            {% include '_graph.html' %}
+        {% endwith %}
+
+        <h3 class="text-center" style="margin-bottom: 70px">
             {% if language == 'sk' %}Preverené tvrdenia o ochorení Covid-19.{% else %}Fact checks related to Covid-19.{% endif %}
         </h3>
 
-        {% include 'fact_checks_chart.html' %}
-
-        <div class="text-center">
-            <a href="/graph" class="btn btn-lg btn-primary">
-                {% if language == 'sk' %}Zobraziť tvrdenia v grafe{% else %}Show fact checks in a graph{% endif %}
-            </a>
-        </div>
     </div>
 </div>
 
-<div class="columns">
+<div id="carousel" class="columns bg-gray"></div>
 
-    {% for fact_check_group in fact_check_groups %}
-    <div class="column col-12 mt-2 pt-2">
-        <h5>
-            <a href="{{ fact_check_group.path() }}">{{ fact_check_group.promoted_fact_check.get_statement() }}</a>
-        </h5>
-    </div>
-    <div class="column col-6">
-        {{ fact_check_group.promoted_fact_check.published_at.strftime("%b %d, %Y") }},
-        <a href="{{ fact_check_group.promoted_fact_check.url }}">{{ fact_check_group.promoted_fact_check.domain() }}</a>
-    </div>
-    <div class="column col-6 text-right">
-        <div class="{{ fact_check_group.promoted_fact_check.rating_style() }}">{{ fact_check_group.promoted_fact_check.get_rating() }}</div>
-    </div>
-    <div class="column col-12">&nbsp;</div>
-    {% endfor %}
+<script>
+    let factCheckGroups = {{ fact_check_groups_json }};
+    renderCarousel('carousel', factCheckGroups);
+</script>
 
-    <div class="column col-12">&nbsp;</div>
+<h4 style="margin-top: 70px" class="text-center">
+    {% if language == 'sk' %}Najnovšie{% else %}Latest{% endif %}
+</h4>
 
-    <div class="column col-12 mt-2 pt-2">
-        <h4>
-            {% if language == 'sk' %}Najnovšie{% else %}Latest{% endif %}
-        </h4>
+<div class="timeline">
+    {% for period in domain.get_periods() %}
+
+    <div class="timeline-item" id="timeline-example-1">
+        <div class="timeline-left">
+            <a class="timeline-icon icon-lg tooltip" name="{{ period.id() }}" href="#{{ period.id() }}" data-tooltip="{{ period.format() }}"><i class="icon icon-check"></i></a>
+        </div>
+        <div class="timeline-content">
+            <div class="tile">
+                <div class="tile-content">
+                    <p class="tile-subtitle">{{ period.format() }}</p>
+                    <dl>
+                    {% for group in period.groups %}
+                        <dt>
+                            <a href="{{ group.promoted_fact_check.path() }}">{{ group.promoted_fact_check.get_statement() }}</a>
+                        </dt>
+                        <dd>
+                            <a href="{{ group.promoted_fact_check.url }}">{{ group.promoted_fact_check.domain() }}</a>,
+                            <span class="{{ group.promoted_fact_check.rating_style() }}">{{ group.promoted_fact_check.get_rating() }}</span>
+                        </dd>
+                        <ul>
+                            {% for fact_check in group.unpromoted_fact_checks() %}
+                            <dt>
+                                <a href="{{ fact_check.path() }}">{{ fact_check.get_statement() }}</a>
+                            </dt>
+                            <dd>
+                                <a href="{{ fact_check.url }}">{{ fact_check.domain() }}</a>,
+                                <span class="{{ fact_check.rating_style() }}">{{ fact_check.get_rating() }}</span>
+                            </dd>
+                            {% endfor %}
+                        </ul>
+                    {% endfor %}
+                    </dl>
+                </div>
+            </div>
+        </div>
     </div>
 
-    {% for fact_check in fact_checks %}
-    <div class="column col-12 mt-2 pt-2">
-        <h5>
-            <a href="{{ fact_check.path() }}">{{ fact_check.get_statement() }}</a>
-        </h5>
-    </div>
-    <div class="column col-6">
-        {{ fact_check.published_at.strftime("%b %d, %Y") }},
-        <a href="{{ fact_check.url }}">{{ fact_check.domain() }}</a>
-    </div>
-    <div class="column col-6 text-right">
-        <div class="{{ fact_check.rating_style() }}">{{ fact_check.get_rating() }}</div>
-    </div>
-    <div class="column col-12">&nbsp;</div>
     {% endfor %}
 </div>
 

@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h3 class="text-center">
+            {% if language == 'sk' %}Preverené tvrdenia o ochorení Covid-19.{% else %}Fact checks related to Covid-19.{% endif %}
+        </h3>
+        <p>
+            {% if language == 'sk' %}
+            <a href="/">CovidDez.info</a> agreguje tvrdenia o ochorení Covid-19 z viacerých stránok zaoberujúcich sa overovaním takýchto tvrdení.
+            Poskytuje štatistiky, prepojenia medzi tvrdeniami a prepojenia s článkami nájdenými na Webe.
+            {% else %}
+            <a href="/">CovidMis.info</a> aggregates fact checks related to Covid-19 from multiple fact checking sites.
+            It provides statistics, links between fact checks and links of fact checks to articles found on the Web.
+            {% endif %}
+        </p>
+        <p>
+            {% if language == 'sk' %}
+            Anglická verzia je dostupná na <a href="https://covidmis.info">CovidMis.info</a>.
+            {% else %}
+            Slovak version is available at <a href="https://coviddez.info">CovidDez.info</a>.
+            {% endif %}
+        </p>
+    </div>
+</div>
+
+<div class="columns">
+
+    <div class="column col-4 col-md-6 col-sm-12">
+        <h5 class="text-center">
+            {% if language == 'sk' %}
+            {{ fact_checks|length }} tvrdení
+            {% else %}
+            {{ fact_checks|length }} fact checks
+            {% endif %}
+        </h5>
+        {% include 'fact_checks_chart.html' %}
+    </div>
+
+    <div class="column col-4 col-md-6 col-sm-12">
+        <h5 class="text-center">
+            {% if language == 'sk' %}
+            {{ domain.fact_check_sources|length }} zdrojov tvrdení
+            {% else %}
+            {{ domain.fact_check_sources|length }} sources of fact checks
+            {% endif %}
+        </h5>
+        {% include 'fact_check_sources_chart.html' %}
+    </div>
+
+    <div class="column col-4 col-md-6 col-sm-12">
+        <h5 class="text-center">
+            {% if language == 'sk' %}
+            {{ domain.articles|length }} súvisiacich článkov
+            {% else %}
+            {{ domain.articles|length }} mapped articles
+            {% endif %}
+        </h5>
+        {% include 'article_counts_chart.html' %}
+    </div>
+
+</div>
+
+{% endblock %}

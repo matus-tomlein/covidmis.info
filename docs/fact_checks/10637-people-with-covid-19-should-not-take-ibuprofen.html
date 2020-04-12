@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -77,12 +86,12 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10676-people-with-type-a-blood-are-more-susceptible-to-c.html">People with Type-A blood are more susceptible to COVID-19.</a>
+            <a href="/fact_checks/10611-patients-should-avoid-taking-ibuprofen-to-relieve.html">Patients should avoid taking ibuprofen to relieve pain and fever associated with COVID-19 infections.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 19, 2020,
-        <a href="https://www.snopes.com/fact-check/blood-type-covid-19/">snopes.com</a>
+        Mar 15, 2020,
+        <a href="https://www.snopes.com/fact-check/covid-19-nsaids-ibuprofen/">snopes.com</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">
@@ -92,12 +101,12 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10611-patients-should-avoid-taking-ibuprofen-to-relieve.html">Patients should avoid taking ibuprofen to relieve pain and fever associated with COVID-19 infections.</a>
+            <a href="/fact_checks/10676-people-with-type-a-blood-are-more-susceptible-to-c.html">People with Type-A blood are more susceptible to COVID-19.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 15, 2020,
-        <a href="https://www.snopes.com/fact-check/covid-19-nsaids-ibuprofen/">snopes.com</a>
+        Mar 19, 2020,
+        <a href="https://www.snopes.com/fact-check/blood-type-covid-19/">snopes.com</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">
@@ -120,36 +129,6 @@
         </div>
     </div>
     
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="/fact_checks/10159-the-coronavirus-is-new-yet-it-was-lab-created-and.html">[The coronavirus is] “new” yet it was lab-created and patented in 2015</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Jan 23, 2020,
-        <a href="https://healthfeedback.org/claimreview/contrary-to-claims-in-viral-social-media-posts-wuhan-coronavirus-was-not-lab-created-nor-was-it-patented-years-before-outbreak/#669eb1759e85c596637aa75ee416d486">healthfeedback.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-error">
-            Inaccurate
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="/fact_checks/10162-the-new-fad-disease-called-the-coronavirus-is-swee.html">“The new fad disease called the ‘coronavirus’ is sweeping headlines. Funny enough, there was a patent for the coronavirus was filed in 2015 and granted in 2018.”</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Jan 21, 2020,
-        <a href="https://www.factcheck.org/2020/01/social-media-posts-spread-bogus-coronavirus-conspiracy-theory/#fb1fb7a85e0a818c39a84546cb30d3e0">factcheck.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-error">
-            False
-        </div>
-    </div>
-    
 </div>
 
 
@@ -160,6 +139,22 @@
         <h4>
             Articles Found on the Web
         </h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="http://thenewsdoctors.com/why-you-dont-want-to-take-aspirin-or-motrin-for-covid-19/" rel="nofollow">
+                Why You Don’t Want to Take Aspirin or Motrin for COVID-19
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        thenewsdoctors.com
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-error">
+            Likely contains claim
+        </div>
     </div>
     
     <div class="column col-12 mt-2">
@@ -203,6 +198,38 @@
     </div>
     <div class="column col-6 mb-2 pb-2">
         emedicinehealth.com
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-warning">
+            Might contain claim
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="https://www.healthy-holistic-living.com/ibuprofen-and-covid-19-symptoms-heres-what-you-need-to-know/" rel="nofollow">
+                Ibuprofen And COVID-19 Symptoms: Here&#8217;s What You Need to Know
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        healthy-holistic-living.com
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-warning">
+            Might contain claim
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="https://www.dailymail.co.uk/health/article-8169059/Is-safe-send-card-spread-infection.html?ns_mchannel=rss&ns_campaign=1490&ito=1490" rel="nofollow">
+                Is it safe for me to send a card or will it spread infection?
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        dailymail.co.uk
     </div>
     <div class="column col-6 mb-2 pb-2 text-right">
         <div class="text-warning">
@@ -267,54 +294,6 @@
     </div>
     <div class="column col-6 mb-2 pb-2">
         allianceforadvancedhealth.com
-    </div>
-    <div class="column col-6 mb-2 pb-2 text-right">
-        <div class="text-warning">
-            Might contain claim
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="https://www.infowars.com/study-many-people-take-dangerously-high-amounts-of-ibuprofen/" rel="nofollow">
-                Study: Many People Take Dangerously High Amounts of Ibuprofen
-            </a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        infowars.com
-    </div>
-    <div class="column col-6 mb-2 pb-2 text-right">
-        <div class="text-warning">
-            Might contain claim
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="https://www.healthnutnews.com/daily-aspirin-healthy-or-harmful/" rel="nofollow">
-                Daily Aspirin — Healthy or Harmful?
-            </a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        healthnutnews.com
-    </div>
-    <div class="column col-6 mb-2 pb-2 text-right">
-        <div class="text-warning">
-            Might contain claim
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="https://www.dailymail.co.uk/news/article-8116349/Taking-ibuprofen-anti-inflammatories-worsen-coronavirus-French-doctor-warns.html?ns_mchannel=rss&ns_campaign=1490&ito=1490" rel="nofollow">
-                Taking ibuprofen and other anti-inflammatories 'may worsen' coronavirus, French doctor warns
-            </a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        dailymail.co.uk
     </div>
     <div class="column col-6 mb-2 pb-2 text-right">
         <div class="text-warning">

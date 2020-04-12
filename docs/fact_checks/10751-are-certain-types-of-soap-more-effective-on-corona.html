@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -49,7 +58,7 @@
         </h4>
 
         <p>
-            <p>Do you know which soap I should look out for? I bought handwash in the supermarket but am not sure which ingredients to look out for to be effective against coronavirus and if there are certain types to look out for. Thanks.</p>
+            Do you know which soap I should look out for? I bought handwash in the supermarket but am not sure which ingredients to look out for to be effective against coronavirus and if there are certain types to look out for. Thanks.
         </p>
 
         <div class="text-center text-warning text-large m-2 p-2">
@@ -77,12 +86,27 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10727-do-household-cleaning-products-work-on-coronavirus.html">Do household cleaning products work on coronavirus?</a>
+            <a href="/fact_checks/10500-rashes-are-a-symptom-of-the-new-coronavirus.html">Rashes are a symptom of the new coronavirus.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 27, 2020,
-        <a href="https://metafact.io/factchecks/1513-do-household-cleaning-products-work-on-coronavirus">metafact.io</a>
+        Mar 06, 2020,
+        <a href="https://fullfact.org/health/coronavirus-rash/#6870c9db92e529b6a3dd4f9ae41c0692">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            No official advice list rashes as a symptom of the new coronavirus.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10764-is-there-evidence-hydroxychloroquine-works-on-covi.html">Is there evidence hydroxychloroquine works on COVID-19?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 08, 2020,
+        <a href="https://metafact.io/factchecks/1528-is-there-evidence-hydroxychloroquine-works-on-covid-19">metafact.io</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
@@ -107,6 +131,36 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10199-are-face-masks-effective-in-preventing-transmissio.html">Are face masks effective in preventing transmission of viruses like coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1415-are-face-masks-effective-in-preventing-transmission-of-viruses-like-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10203-dettol-antiseptic-spray-says-it-kills-human-corona.html">Dettol antiseptic spray says it kills human coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 30, 2020,
+        <a href="https://fullfact.org/online/dettol-coronavirus/#72db3fc397e3e88964f28652eb945978">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            That is correct but that doesn’t mean that Dettol spray can kill the new coronavirus identified in Wuhan. Coronavirus is a category of viruses that includes the common cold, and it is likely this the label is referring to.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10524-does-soap-work-on-coronavirus.html">Does soap work on coronavirus?</a>
         </h6>
     </div>
@@ -122,6 +176,36 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10465-a-homemade-hand-sanitizer-made-with-tito-s-vodka-c.html">A homemade hand sanitizer made with Tito's Vodka can be used to fight the new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 04, 2020,
+        <a href="https://www.snopes.com/fact-check/hand-sanitizer-titos-vodka/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10533-hand-sanitiser-is-effective-against-covid-19.html">Hand sanitiser is effective against Covid-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://fullfact.org/health/coronavirus-hand-sanitiser/#d8ace6692d8307d80816e65dcebbfa1b">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Hand sanitisers with 60% alcohol content and above are effective against viruses, such as the new coronavirus, but soap and water is the best option.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10342-dettol-antiseptic-spray-says-it-kills-coronavirus.html">Dettol antiseptic spray says it kills coronavirus.</a>
         </h6>
     </div>
@@ -132,6 +216,96 @@
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
             That is correct but that doesn’t refer to the new coronavirus (Covid-19) identified in Wuhan. Coronavirus is a large category of viruses that includes the common cold. Dettol has said its products haven’t been tested against the new virus yet.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10726-does-chloroquine-work-for-treating-covid-19.html">Does Chloroquine work for treating COVID-19?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 26, 2020,
+        <a href="https://metafact.io/factchecks/1511-does-chloroquine-work-for-treating-covid-19">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10727-do-household-cleaning-products-work-on-coronavirus.html">Do household cleaning products work on coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 27, 2020,
+        <a href="https://metafact.io/factchecks/1513-do-household-cleaning-products-work-on-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10540-are-lock-downs-the-best-option-to-slow-the-spread.html">Are lock-downs the best option to slow the spread of coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://metafact.io/factchecks/1465-are-lock-downs-the-best-option-to-slow-the-spread-of-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10541-are-there-ways-for-individuals-to-prepare-for-the.html">Are there ways for individuals to prepare for the coronavirus pandemic? </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://metafact.io/factchecks/1466-are-there-ways-for-individuals-to-prepare-for-the-coronavirus-pandemic">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10542-for-covid-19-are-there-any-lessons-learned-from-pr.html">For COVID-19, are there any lessons learned from previous flu pandemics?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://metafact.io/factchecks/1467-for-covid-19-are-there-any-lessons-learned-from-previous-flu-pandemics">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10609-are-children-more-at-risk-to-coronavirus.html">Are children more at risk to coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1493-are-children-more-at-risk-to-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
         </div>
     </div>
     

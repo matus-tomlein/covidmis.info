@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -81,16 +90,16 @@ Clearly some people did not read past the headline. While the humorous nature of
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10696-the-first-cases-of-covid-19-were-reported-in-the-u.html">The first cases of COVID-19 were reported in the United States and South Korea on the same day.</a>
+            <a href="/fact_checks/10368-social-media-posts-imply-that-harvard-professor-ch.html">Social media posts imply that Harvard professor Charles Lieber was arrested in connection with the new coronavirus.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 22, 2020,
-        <a href="https://www.snopes.com/fact-check/covid-19-discovered-us-south-korea/">snopes.com</a>
+        Jan 29, 2020,
+        <a href="https://www.factcheck.org/2020/02/no-link-between-harvard-scientist-charles-lieber-and-coronavirus/#eff58b9014703a32aa81bce8392d45d4">factcheck.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-success">
-            True
+        <div class="text-error">
+            False
         </div>
     </div>
     
@@ -126,16 +135,16 @@ Clearly some people did not read past the headline. While the humorous nature of
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10368-social-media-posts-imply-that-harvard-professor-ch.html">Social media posts imply that Harvard professor Charles Lieber was arrested in connection with the new coronavirus.</a>
+            <a href="/fact_checks/10696-the-first-cases-of-covid-19-were-reported-in-the-u.html">The first cases of COVID-19 were reported in the United States and South Korea on the same day.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Jan 29, 2020,
-        <a href="https://www.factcheck.org/2020/02/no-link-between-harvard-scientist-charles-lieber-and-coronavirus/#eff58b9014703a32aa81bce8392d45d4">factcheck.org</a>
+        Mar 22, 2020,
+        <a href="https://www.snopes.com/fact-check/covid-19-discovered-us-south-korea/">snopes.com</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-error">
-            False
+        <div class="text-success">
+            True
         </div>
     </div>
     

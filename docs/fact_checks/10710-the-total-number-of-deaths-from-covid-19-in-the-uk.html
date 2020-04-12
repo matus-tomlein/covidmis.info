@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -77,6 +86,111 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10496-108-people-died-from-covid-19-in-china-on-february.html">108 people died from Covid-19 in China on February 10th, one of the worst days so far.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 06, 2020,
+        <a href="https://fullfact.org/online/coronavirus-daily-deaths/#9a2a7fd09f0196e2b2df81f84ff32afc">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            It is true that 108 people died in China from Covid-19 on 10 February, however, this death toll has since been surpassed.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10466-i-think-the-3-4-is-really-a-false-number-referring.html">"I think the 3.4% is really a false number," referring to the World Health Organization saying 3.4% of reported COVID-19 patients worldwide have died.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 05, 2020,
+        <a href="https://www.factcheck.org/2020/03/trump-and-the-coronavirus-death-rate/#34de685237d05265501721635e02e7f2">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            We Explain the Number
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10406-the-number-of-covid-19-cases-in-the-united-states.html">The number of COVID-19 cases in the United States "are going very substantially down, not up.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 27, 2020,
+        <a href="https://www.factcheck.org/2020/02/factchecking-trumps-coronavirus-press-conference/#d8f2d3a328721c56323ee7ee8f1c6d66">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Spins the Facts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10632-the-new-coronavirus-is-the-least-deadly-virus-and.html">The new coronavirus is the “least deadly virus” and has a death rate lower than the 2009 H1N1 outbreak.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://www.factcheck.org/2020/03/infographic-on-facebook-distorts-comparative-facts-on-viruses/#754910be73d2ca9877af693b2602c5c8">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10580-almost-200-people-in-italy-died-from-the-coronavir.html">Almost 200 people in Italy died from the coronavirus in 24 hours.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://www.snopes.com/fact-check/italy-200-deaths-24-hours/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-success">
+            True
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10709-about-500-lions-have-been-released-on-the-streets.html">About 500 lions have been released on the streets of Russia to stop people going out during the coronavirus pandemic.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 24, 2020,
+        <a href="https://fullfact.org/online/Russia-unleashed-500-lions/#ef874161e4f02d20140aceecfb485c3f">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is not true. The Russian government has yet to announce a widespread lockdown of any kind in Russia. The image of the lion is from South Africa in 2016.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10206-health-experts-predicted-the-new-coronavirus-could.html">Health experts predicted the new coronavirus could kill 65 million people.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 30, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-65-million-people/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10712-the-total-number-of-deaths-from-covid-19-in-italy.html">The total number of deaths from Covid-19 in Italy rose from 233 to 4,032 over about two weeks.</a>
         </h6>
     </div>
@@ -102,51 +216,6 @@
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
             This is incorrect. As at 13 March, the latest data available when this claim was made, the UK ranked fifth (behind China, South Korea, Italy and Russia) for the number of Covid-19 tests carried out. These statistics only included the 38 countries and regions with official data on Covid-19 tests at that time.
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="/fact_checks/10580-almost-200-people-in-italy-died-from-the-coronavir.html">Almost 200 people in Italy died from the coronavirus in 24 hours.</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Mar 12, 2020,
-        <a href="https://www.snopes.com/fact-check/italy-200-deaths-24-hours/">snopes.com</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-success">
-            True
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="/fact_checks/10496-108-people-died-from-covid-19-in-china-on-february.html">108 people died from Covid-19 in China on February 10th, one of the worst days so far.</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Mar 06, 2020,
-        <a href="https://fullfact.org/online/coronavirus-daily-deaths/#9a2a7fd09f0196e2b2df81f84ff32afc">fullfact.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-warning">
-            It is true that 108 people died in China from Covid-19 on 10 February, however, this death toll has since been surpassed.
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="/fact_checks/10406-the-number-of-covid-19-cases-in-the-united-states.html">The number of COVID-19 cases in the United States "are going very substantially down, not up.”</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Feb 27, 2020,
-        <a href="https://www.factcheck.org/2020/02/factchecking-trumps-coronavirus-press-conference/#d8f2d3a328721c56323ee7ee8f1c6d66">factcheck.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-warning">
-            Spins the Facts
         </div>
     </div>
     

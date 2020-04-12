@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CovidMis.info</title>
+    <meta name="description" content="Fact checks related to Covid-19.">
+    <meta name="author" content="Matúš Tomlein">
+
+    <link rel="icon" href="/images/icon.png">
+
+    <link rel="stylesheet" href="/assets/stylesheets/spectre.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
+</head>
+
+<body>
+
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
+    <header class="navbar">
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                CovidMis.info
+            </a>
+        </section>
+        <section class="navbar-section">
+            <a href="/about" class="btn btn-link">
+                About
+            </a>
+        </section>
+    </header>
+
+    
+
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h3 class="text-center">
+            Fact checks related to Covid-19.
+        </h3>
+        <p>
+            
+            <a href="/">CovidMis.info</a> aggregates fact checks related to Covid-19 from multiple fact checking sites.
+            It provides statistics, links between fact checks and links of fact checks to articles found on the Web.
+            
+        </p>
+        <p>
+            
+            Slovak version is available at <a href="https://coviddez.info">CovidDez.info</a>.
+            
+        </p>
+    </div>
+</div>
+
+<div class="columns">
+
+    <div class="column col-4 col-md-6 col-sm-12">
+        <h5 class="text-center">
+            
+            191 fact checks
+            
+        </h5>
+        <div style="height: 220px; margin-bottom: 30px">
+    <canvas id="fact_checks_chart"></canvas>
+</div>
+
+<script>
+    let backgroundColor = '#b4bbc7';
+    let textColor = '#343b47';
+
+    function newDate(days) {
+        return moment().add(days, 'd');
+    }
+    var config = {
+        type: 'line',
+        data: {
+            labels: [
+                moment('2020-01-20'), moment('2020-01-27'), moment('2020-02-03'), moment('2020-02-10'), moment('2020-02-17'), moment('2020-02-24'), moment('2020-03-02'), moment('2020-03-09'), moment('2020-03-16'), moment('2020-03-23'), moment('2020-03-30'), moment('2020-04-06'), 
+            ],
+            datasets: [{
+                data: [
+                    10, 32, 34, 38, 45, 56, 74, 128, 158, 181, 187, 191, 
+                ],
+                fill: 'start',
+                backgroundColor: backgroundColor,
+                borderColor: textColor
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scaleFontColor: textColor,
+            plugins: {
+                colorschemes: {
+                    scheme: 'brewer.Greys3'
+                }
+            },
+            legend: { display: false },
+            scales: {
+                xAxes: [{
+                    type: 'time',
+                    gridLines: { display: false },
+                    time: {
+                        unit: 'month',
+                        // displayFormats: {
+                        //     'millisecond': ' MMM DD ',
+                        //     'second': ' MMM DD ',
+                        //     'minute': ' MMM DD ',
+                        //     'hour': ' MMM DD ',
+                        //     'day': ' MMM DD ',
+                        //     'week': ' MMM DD ',
+                        //     'month': ' MMM DD ',
+                        //     'quarter': ' MMM DD ',
+                        //     'year': ' MMM DD ',
+                        // }
+                    },
+                    ticks: {
+                        autoSkip: true,
+                        maxRotation: 0,
+                        minRotation: 0
+                    }
+                }],
+                yAxes: [{
+                    gridLines: { display: false },
+                    // scaleLabel: {
+                    //     display: true,
+                    //     labelString: 'number of fact-checks'
+                    // }
+                }]
+            },
+        }
+    };
+    var ctx = document.getElementById("fact_checks_chart").getContext("2d");
+    new Chart(ctx, config);
+</script>
+    </div>
+
+    <div class="column col-4 col-md-6 col-sm-12">
+        <h5 class="text-center">
+            
+            5 sources of fact checks
+            
+        </h5>
+        <div style="height: 220px; margin-bottom: 30px">
+    <canvas id="fact_check_sources_chart"></canvas>
+</div>
+
+<script>
+    function newDate(days) {
+        return moment().add(days, 'd');
+    }
+    var config = {
+        type: 'doughnut',
+        data: {
+            labels: [
+                'fullfact.org', 'metafact.io', 'factcheck.org', 'snopes.com', 'healthfeedback.org', 
+            ],
+            datasets: [{
+                data: [
+                    58, 45, 40, 38, 10, 
+                ]
+            }]
+        },
+        options: Object.assign({
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                colorschemes: {
+                    scheme: 'brewer.Greys5'
+                }
+            }
+        }, Chart.defaults.doughnut)
+    };
+    var ctx = document.getElementById("fact_check_sources_chart").getContext("2d");
+    new Chart(ctx, config);
+</script>
+    </div>
+
+    <div class="column col-4 col-md-6 col-sm-12">
+        <h5 class="text-center">
+            
+            706 mapped articles
+            
+        </h5>
+        <div style="height: 220px; margin-bottom: 30px">
+    <canvas id="articles_chart"></canvas>
+</div>
+
+<script>
+    backgroundColor = '#b4bbc7';
+    textColor = '#343b47';
+
+    function newDate(days) {
+        return moment().add(days, 'd');
+    }
+    var config = {
+        type: 'line',
+        data: {
+            labels: [
+                moment('2019-11-28'), moment('2019-12-05'), moment('2019-12-12'), moment('2020-01-09'), moment('2020-01-16'), moment('2020-01-23'), moment('2020-01-30'), moment('2020-02-06'), moment('2020-02-13'), moment('2020-02-20'), moment('2020-02-27'), moment('2020-03-05'), moment('2020-03-12'), moment('2020-03-19'), moment('2020-03-26'), moment('2020-04-02'), moment('2020-04-09'), 
+            ],
+            datasets: [{
+                data: [
+                    112, 113, 115, 121, 143, 197, 251, 287, 323, 346, 401, 451, 537, 595, 648, 681, 692, 
+                ],
+                fill: 'start',
+                backgroundColor: backgroundColor,
+                borderColor: textColor
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scaleFontColor: textColor,
+            plugins: {
+                colorschemes: {
+                    scheme: 'brewer.Greys3'
+                }
+            },
+            legend: { display: false },
+            scales: {
+                xAxes: [{
+                    type: 'time',
+                    gridLines: { display: false },
+                    time: {
+                        unit: 'month',
+                    },
+                    ticks: {
+                        autoSkip: true,
+                        maxRotation: 0,
+                        minRotation: 0
+                    }
+                }],
+                yAxes: [{
+                    gridLines: { display: false },
+                    ticks: {
+                        beginAtZero: true,
+                        min: 0
+                    }
+                }]
+            },
+        }
+    };
+    var ctx = document.getElementById("articles_chart").getContext("2d");
+    new Chart(ctx, config);
+</script>
+    </div>
+
+</div>
+
+
+</div>
+
+<div class="text-center text-gray" style="font-size: small; margin-top: 50px; margin-bottom: 50px">
+    
+    Part of the <a href="https://misdeed.fiit.stuba.sk">MISDEED</a> project at <a href="https://www.fiit.stuba.sk">FIIT STU</a>.
+    Powered by the <a href="https://documenter.getpostman.com/view/8615295/SVtPWq1j?version=latest">MonAnt</a> platform.
+    Put together by <a href="https://matus.tomlein.org">Matúš Tomlein</a>.
+    
+</div>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6380950-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-6380950-6');
+    </script>
+
+</body>
+</html>

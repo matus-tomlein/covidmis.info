@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -80,46 +89,16 @@ Sadly it is true that between March 10 and March 11, 2020, 196 people died in It
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10710-the-total-number-of-deaths-from-covid-19-in-the-uk.html">The total number of deaths from Covid-19 in the UK is now at 233, the same number of deaths reported in Italy about two weeks ago.</a>
+            <a href="/fact_checks/10496-108-people-died-from-covid-19-in-china-on-february.html">108 people died from Covid-19 in China on February 10th, one of the worst days so far.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 24, 2020,
-        <a href="https://fullfact.org/online/deaths-covid-19-uk-italy/#0d146d3d8bfb6e43019bd5120ea1eb13">fullfact.org</a>
+        Mar 06, 2020,
+        <a href="https://fullfact.org/online/coronavirus-daily-deaths/#9a2a7fd09f0196e2b2df81f84ff32afc">fullfact.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
-            Correct. On 21 March, Public Health England reported a total of 233 deaths in the UK from Covid-19. However, not enough is known to say whether the number of deaths will grow at the same rate in the UK as in Italy.
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="/fact_checks/10712-the-total-number-of-deaths-from-covid-19-in-italy.html">The total number of deaths from Covid-19 in Italy rose from 233 to 4,032 over about two weeks.</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Mar 24, 2020,
-        <a href="https://fullfact.org/online/deaths-covid-19-uk-italy/#9f9ee849c934179a39ddd9043bb3ceef">fullfact.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-warning">
-            Correct. As reported by the Italian government, the number of deaths from Covid-19 rose from 233 on 7 March to 4,032 on 20 March.
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="/fact_checks/10709-about-500-lions-have-been-released-on-the-streets.html">About 500 lions have been released on the streets of Russia to stop people going out during the coronavirus pandemic.</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Mar 24, 2020,
-        <a href="https://fullfact.org/online/Russia-unleashed-500-lions/#ef874161e4f02d20140aceecfb485c3f">fullfact.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-warning">
-            This is not true. The Russian government has yet to announce a widespread lockdown of any kind in Russia. The image of the lion is from South Africa in 2016.
+            It is true that 108 people died in China from Covid-19 on 10 February, however, this death toll has since been surpassed.
         </div>
     </div>
     
@@ -140,16 +119,121 @@ Sadly it is true that between March 10 and March 11, 2020, 196 people died in It
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10496-108-people-died-from-covid-19-in-china-on-february.html">108 people died from Covid-19 in China on February 10th, one of the worst days so far.</a>
+            <a href="/fact_checks/10629-italy-has-stopped-treating-elderly-coronavirus-pat.html">Italy has stopped treating elderly coronavirus patients due to "socialized medicine."</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 06, 2020,
-        <a href="https://fullfact.org/online/coronavirus-daily-deaths/#9a2a7fd09f0196e2b2df81f84ff32afc">fullfact.org</a>
+        Mar 15, 2020,
+        <a href="https://www.snopes.com/fact-check/italy-elderly-coronavirus/">snopes.com</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
-            It is true that 108 people died in China from Covid-19 on 10 February, however, this death toll has since been surpassed.
+            Mixture
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10768-seven-children-in-senegal-died-after-being-adminis.html">Seven children in Senegal died after being administered a COVID-19 coronavirus disease vaccine in April 2020.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 09, 2020,
+        <a href="https://www.snopes.com/fact-check/7-senegal-kids-die-covid-vax/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10709-about-500-lions-have-been-released-on-the-streets.html">About 500 lions have been released on the streets of Russia to stop people going out during the coronavirus pandemic.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 24, 2020,
+        <a href="https://fullfact.org/online/Russia-unleashed-500-lions/#ef874161e4f02d20140aceecfb485c3f">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is not true. The Russian government has yet to announce a widespread lockdown of any kind in Russia. The image of the lion is from South Africa in 2016.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10710-the-total-number-of-deaths-from-covid-19-in-the-uk.html">The total number of deaths from Covid-19 in the UK is now at 233, the same number of deaths reported in Italy about two weeks ago.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 24, 2020,
+        <a href="https://fullfact.org/online/deaths-covid-19-uk-italy/#0d146d3d8bfb6e43019bd5120ea1eb13">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Correct. On 21 March, Public Health England reported a total of 233 deaths in the UK from Covid-19. However, not enough is known to say whether the number of deaths will grow at the same rate in the UK as in Italy.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10647-there-are-four-young-people-with-no-underlying-ill.html">There are four young people with no underlying illnesses in an intensive care unit in Cork due to Covid-19, who had all been taking anti-inflammatory drugs.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 17, 2020,
+        <a href="https://fullfact.org/health/young-people-severe-coronavirus-cork/#a53c9a8837c61461f84a8d36aa969a77">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is not true. It has been denied by the clinical lead of Ireland’s public health service and the whole message branded ‘misinformation’.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10712-the-total-number-of-deaths-from-covid-19-in-italy.html">The total number of deaths from Covid-19 in Italy rose from 233 to 4,032 over about two weeks.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 24, 2020,
+        <a href="https://fullfact.org/online/deaths-covid-19-uk-italy/#9f9ee849c934179a39ddd9043bb3ceef">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Correct. As reported by the Italian government, the number of deaths from Covid-19 rose from 233 on 7 March to 4,032 on 20 March.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10612-people-who-have-survived-the-covid-19-coronavirus.html">People who have survived the COVID-19 coronavirus disease can become reinfected by the virus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 14, 2020,
+        <a href="https://www.snopes.com/fact-check/covid-19-reinfection/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Unproven
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10206-health-experts-predicted-the-new-coronavirus-could.html">Health experts predicted the new coronavirus could kill 65 million people.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 30, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-65-million-people/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
         </div>
     </div>
     

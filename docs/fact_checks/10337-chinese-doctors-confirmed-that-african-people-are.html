@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -80,6 +89,66 @@ For example, on Feb. 17, 2020, the website Cityscrollz.com falsely reported that
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10242-chinese-officials-are-seeking-approval-to-start-th.html">Chinese officials are seeking approval to start the mass killing of 20,000 people in order to stop the spread of new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 05, 2020,
+        <a href="https://www.snopes.com/fact-check/china-kill-coronavirus-patients/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10179-coronavirus-reports-of-10000-dead-in-wuhan-china.html">“CORONAVIRUS: Reports of 10,000 DEAD in Wuhan, China.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 24, 2020,
+        <a href="https://www.factcheck.org/2020/01/misinformation-on-coronavirus-death-toll/#56df950955998fd09dbfb3d3d6a03515">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10180-a-uthorities-have-identified-that-the-internationa.html">“[A]uthorities have identified that the international chemical-warfare terrorist ‘Samuel Whitcomb Hyde’ is behind the deadly China ‘coronavirus.'”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 23, 2020,
+        <a href="https://www.factcheck.org/2020/01/comedian-sam-hyde-not-behind-spread-of-coronavirus/#35985183e07037e728ff5d763d4eccc8">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10622-will-people-get-coronavirus-pandemic-fatigue.html">Will people get Coronavirus pandemic fatigue?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1498-will-people-get-coronavirus-pandemic-fatigue">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10702-i-wish-they-china-told-us-three-months-sooner-that.html">"I wish they [China] told us three months sooner that this [the coronavirus] was a problem. We didn’t know about it. They knew about it and they should have told us."</a>
         </h6>
     </div>
@@ -95,16 +164,61 @@ For example, on Feb. 17, 2020, the website Cityscrollz.com falsely reported that
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10354-scientists-knew-about-the-new-coronavirus-long-ago.html">Scientists knew about the new coronavirus long ago and called it “Disease X”.</a>
+            <a href="/fact_checks/10768-seven-children-in-senegal-died-after-being-adminis.html">Seven children in Senegal died after being administered a COVID-19 coronavirus disease vaccine in April 2020.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Feb 18, 2020,
-        <a href="https://fullfact.org/health/coronavirus-covid-disease-x-express/#3717d252eccd81fb607453b16e2c6fc0">fullfact.org</a>
+        Apr 09, 2020,
+        <a href="https://www.snopes.com/fact-check/7-senegal-kids-die-covid-vax/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10320-a-video-shows-a-chaotic-scene-in-wuhan-china-invol.html">A video shows a chaotic scene in Wuhan, China, involving doctors armed with weapons, gunshots to deter people from leaving a new coronavirus quarantine, and a woman who was shot dead after she attempted to break through a roadblock.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 13, 2020,
+        <a href="https://www.snopes.com/fact-check/violent-aftermath-of-coronavirus/">snopes.com</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
-            They didn’t. This is a misunderstanding about the phrase “Disease X”, which the WHO used to denote an unknown serious new disease that might cause a pandemic.
+            Miscaptioned
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10206-health-experts-predicted-the-new-coronavirus-could.html">Health experts predicted the new coronavirus could kill 65 million people.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 30, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-65-million-people/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10720-theres-been-some-tremendous-signs-that-this-could.html">"There’s been some tremendous signs that this could work. Now, again, you know, some doctors think it should go for years in testing. But, you know, this has been something that’s been around for many years. It’s been phenomenal — a strong, powerful drug for malaria. But we think it might work on this [COVID-19], based on evidence — based on very strong evidence."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 22, 2020,
+        <a href="https://www.factcheck.org/2020/03/trump-hypes-potential-covid-19-drugs-but-evidence-so-far-is-slim/#047fd8164fa6a7d847def4ad9e8e90c8">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Evidence Is Slim
         </div>
     </div>
     
@@ -125,6 +239,21 @@ For example, on Feb. 17, 2020, the website Cityscrollz.com falsely reported that
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10535-a-coronavirus-vaccine-for-cows-shows-that-the-viru.html">A coronavirus vaccine for cows shows that the virus behind the current outbreak is not new.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://fullfact.org/online/coronavirus-cows/#0783ab22d7a8fd4f9037c811d8879fab">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is a different coronavirus from SARS-CoV-2, the virus that causes Covid-19. Coronaviruses are a large family of viruses that can affect a range of species.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10218-the-chinese-government-is-building-a-hospital-in-1.html">The Chinese government is building a hospital in 10 days to deal with the new coronavirus.</a>
         </h6>
     </div>
@@ -140,16 +269,136 @@ For example, on Feb. 17, 2020, the website Cityscrollz.com falsely reported that
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10180-a-uthorities-have-identified-that-the-internationa.html">“[A]uthorities have identified that the international chemical-warfare terrorist ‘Samuel Whitcomb Hyde’ is behind the deadly China ‘coronavirus.'”</a>
+            <a href="/fact_checks/10354-scientists-knew-about-the-new-coronavirus-long-ago.html">Scientists knew about the new coronavirus long ago and called it “Disease X”.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Jan 23, 2020,
-        <a href="https://www.factcheck.org/2020/01/comedian-sam-hyde-not-behind-spread-of-coronavirus/#35985183e07037e728ff5d763d4eccc8">factcheck.org</a>
+        Feb 18, 2020,
+        <a href="https://fullfact.org/health/coronavirus-covid-disease-x-express/#3717d252eccd81fb607453b16e2c6fc0">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            They didn’t. This is a misunderstanding about the phrase “Disease X”, which the WHO used to denote an unknown serious new disease that might cause a pandemic.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10676-people-with-type-a-blood-are-more-susceptible-to-c.html">People with Type-A blood are more susceptible to COVID-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 19, 2020,
+        <a href="https://www.snopes.com/fact-check/blood-type-covid-19/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Unproven
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10677-the-world-health-organization-test-for-the-new-cor.html">The World Health Organization test for the new coronavirus "was a bad test."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 20, 2020,
+        <a href="https://www.factcheck.org/2020/03/biden-trump-wrong-about-who-coronavirus-tests/#ea69a9ee045e8928ea9030a01c0ad440">factcheck.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">
             False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10678-the-world-health-organization-offered-the-coronavi.html">The World Health Organization “offered the [coronavirus] testing kits that they have available” but “we refused them.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 20, 2020,
+        <a href="https://www.factcheck.org/2020/03/biden-trump-wrong-about-who-coronavirus-tests/#b246582dc1db2731327c8ce696635ba5">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10612-people-who-have-survived-the-covid-19-coronavirus.html">People who have survived the COVID-19 coronavirus disease can become reinfected by the virus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 14, 2020,
+        <a href="https://www.snopes.com/fact-check/covid-19-reinfection/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Unproven
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10552-a-doctor-in-italy-shared-numerous-details-about-ho.html">A doctor in Italy shared numerous details about how hospitals in the country are dealing with COVID-19, a disease caused by the new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://www.snopes.com/fact-check/italy-doctor-cornona-not-flu/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Correct-attribution
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10169-wuhan-coronavirus-outbreak-linked-to-eating-bats.html">Wuhan Coronavirus outbreak linked to eating bats</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 22, 2020,
+        <a href="https://healthfeedback.org/claimreview/no-conclusive-evidence-to-link-consumption-of-bats-with-the-wuhan-coronavirus-outbreak/#c5abace4879f8823d9a6663f29712e2e">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Unsupported
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10174-is-the-novel-wuhan-coronavirus-more-dangerous-than.html">Is the novel Wuhan coronavirus more dangerous than SARS? </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1419-is-the-novel-wuhan-coronavirus-more-dangerous-than-sars">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10559-coronavirus-may-have-been-genetically-engineered-f.html">Coronavirus may have been genetically engineered for “efficient spreading in the human population,” a bombshell new study has claimed.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://fullfact.org/health/new-coronavirus-not-genetically-engineered/#4bb2192291c5b92e4fa59d466cbfac5c">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is wrong and the study does not claim the new coronavirus has been genetically engineered. It simply compares the genome sequence of SARS-CoV-2 with other coronaviruses, and suggests a reason why it might be spreading relatively efficiently.
         </div>
     </div>
     

@@ -6,3 +6,11 @@ class Article:
 
     def domain(self):
         return self.url.split('/')[2].replace('www.', '')
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'title': self.title,
+            'url': self.url,
+            'domain': self.domain()
+        }

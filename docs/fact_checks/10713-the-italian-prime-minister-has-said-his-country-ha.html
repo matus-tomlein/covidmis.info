@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -77,16 +86,16 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10608-are-governments-doing-enough-to-limit-the-coronavi.html">Are governments doing enough to limit the coronavirus pandemic?</a>
+            <a href="/fact_checks/10658-a-screenshot-purports-to-show-a-tweet-from-preside.html">A screenshot purports to show a tweet from President Donald Trump that says, before the U.S. issues financial assistance to individuals to deal with the coronavirus pandemic, "we will go through your social media history from the last 4 years and search for any post with #NotMyPresident in it."</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 16, 2020,
-        <a href="https://metafact.io/factchecks/1492-are-governments-doing-enough-to-limit-the-coronavirus-pandemic">metafact.io</a>
+        Mar 19, 2020,
+        <a href="https://www.factcheck.org/2020/03/trump-didnt-tweet-threat-to-withhold-relief-from-critics/#42b73ffa302f633bb19d6e53973b0685">factcheck.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-warning">
-            Not Enough Experts
+        <div class="text-error">
+            False
         </div>
     </div>
     
@@ -107,6 +116,21 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10534-prime-minister-boris-johnson-advocated-for-the-uk.html">Prime Minister Boris Johnson advocated for the UK to take Covid-19 “on the chin” and allow the disease to spread through the population.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://fullfact.org/health/boris-johnson-coronavirus-this-morning/#ad2f3ef03401e20b78e2026db0ba580b">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            The Prime Minister said this was a theory on how to deal with the virus, but said it would be better if we take all the measures we can to reduce the burden on the NHS during the peak of the disease.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10541-are-there-ways-for-individuals-to-prepare-for-the.html">Are there ways for individuals to prepare for the coronavirus pandemic? </a>
         </h6>
     </div>
@@ -122,16 +146,31 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10534-prime-minister-boris-johnson-advocated-for-the-uk.html">Prime Minister Boris Johnson advocated for the UK to take Covid-19 “on the chin” and allow the disease to spread through the population.</a>
+            <a href="/fact_checks/10608-are-governments-doing-enough-to-limit-the-coronavi.html">Are governments doing enough to limit the coronavirus pandemic?</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 10, 2020,
-        <a href="https://fullfact.org/health/boris-johnson-coronavirus-this-morning/#ad2f3ef03401e20b78e2026db0ba580b">fullfact.org</a>
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1492-are-governments-doing-enough-to-limit-the-coronavirus-pandemic">metafact.io</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
-            The Prime Minister said this was a theory on how to deal with the virus, but said it would be better if we take all the measures we can to reduce the burden on the NHS during the peak of the disease.
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10709-about-500-lions-have-been-released-on-the-streets.html">About 500 lions have been released on the streets of Russia to stop people going out during the coronavirus pandemic.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 24, 2020,
+        <a href="https://fullfact.org/online/Russia-unleashed-500-lions/#ef874161e4f02d20140aceecfb485c3f">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is not true. The Russian government has yet to announce a widespread lockdown of any kind in Russia. The image of the lion is from South Africa in 2016.
         </div>
     </div>
     

@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -77,12 +86,42 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10719-speaker-pelosi-democrats-are-attempting-to-give-th.html">"Speaker Pelosi & Democrats are attempting to give themselves a $25 million raise" through the coronavirus stimulus package.</a>
+            <a href="/fact_checks/10368-social-media-posts-imply-that-harvard-professor-ch.html">Social media posts imply that Harvard professor Charles Lieber was arrested in connection with the new coronavirus.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 25, 2020,
-        <a href="https://www.factcheck.org/2020/03/false-claim-of-congressional-pay-raises-in-stimulus-bill/#ebe29d4e1e32e2cca19fbe40cbeeb5a1">factcheck.org</a>
+        Jan 29, 2020,
+        <a href="https://www.factcheck.org/2020/02/no-link-between-harvard-scientist-charles-lieber-and-coronavirus/#eff58b9014703a32aa81bce8392d45d4">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10657-nancy-pelosi-wouldnt-release-8-5-billion-for-coron.html">"Nancy Pelosi wouldn’t release 8.5 billion for Coronavirus without abortion funding, so Trump went around her to declare a National Emergency and got 50 billion."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://www.factcheck.org/2020/03/false-claim-that-pelosi-withheld-coronavirus-funds-over-abortion/#2293a00b06d272849480231d62fb00d1">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10658-a-screenshot-purports-to-show-a-tweet-from-preside.html">A screenshot purports to show a tweet from President Donald Trump that says, before the U.S. issues financial assistance to individuals to deal with the coronavirus pandemic, "we will go through your social media history from the last 4 years and search for any post with #NotMyPresident in it."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 19, 2020,
+        <a href="https://www.factcheck.org/2020/03/trump-didnt-tweet-threat-to-withhold-relief-from-critics/#42b73ffa302f633bb19d6e53973b0685">factcheck.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">
@@ -107,16 +146,46 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10657-nancy-pelosi-wouldnt-release-8-5-billion-for-coron.html">"Nancy Pelosi wouldn’t release 8.5 billion for Coronavirus without abortion funding, so Trump went around her to declare a National Emergency and got 50 billion."</a>
+            <a href="/fact_checks/10534-prime-minister-boris-johnson-advocated-for-the-uk.html">Prime Minister Boris Johnson advocated for the UK to take Covid-19 “on the chin” and allow the disease to spread through the population.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 13, 2020,
-        <a href="https://www.factcheck.org/2020/03/false-claim-that-pelosi-withheld-coronavirus-funds-over-abortion/#2293a00b06d272849480231d62fb00d1">factcheck.org</a>
+        Mar 10, 2020,
+        <a href="https://fullfact.org/health/boris-johnson-coronavirus-this-morning/#ad2f3ef03401e20b78e2026db0ba580b">fullfact.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-error">
-            False
+        <div class="text-warning">
+            The Prime Minister said this was a theory on how to deal with the virus, but said it would be better if we take all the measures we can to reduce the burden on the NHS during the peak of the disease.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10448-i-find-it-incomprehensible-that-the-president-woul.html">“I find it incomprehensible that the president would do something as inane as calling [the novel coronavirus] a hoax, which he did [Friday] night in South Carolina.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 01, 2020,
+        <a href="https://www.factcheck.org/2020/03/trump-and-the-new-hoax/#190f41c642e762d02c99942218994600">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Lacks Context
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10738-a-vaccine-for-the-new-coronavirus-has-been-created.html">A vaccine for the new coronavirus has been created by US scientists and will be ready to use from next Sunday.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 26, 2020,
+        <a href="https://fullfact.org/online/coronavirus-vaccine-not-ready/#5c10dfe3e0bf937873c5f1f6cda25e62">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Whilst there are vaccines in development, it will likely be more than 18 months before they are ready to use. The image and videos accompanying the post are related to Covid-19 diagnostic tests, not vaccines.
         </div>
     </div>
     
@@ -137,12 +206,12 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10368-social-media-posts-imply-that-harvard-professor-ch.html">Social media posts imply that Harvard professor Charles Lieber was arrested in connection with the new coronavirus.</a>
+            <a href="/fact_checks/10719-speaker-pelosi-democrats-are-attempting-to-give-th.html">"Speaker Pelosi & Democrats are attempting to give themselves a $25 million raise" through the coronavirus stimulus package.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Jan 29, 2020,
-        <a href="https://www.factcheck.org/2020/02/no-link-between-harvard-scientist-charles-lieber-and-coronavirus/#eff58b9014703a32aa81bce8392d45d4">factcheck.org</a>
+        Mar 25, 2020,
+        <a href="https://www.factcheck.org/2020/03/false-claim-of-congressional-pay-raises-in-stimulus-bill/#ebe29d4e1e32e2cca19fbe40cbeeb5a1">factcheck.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">

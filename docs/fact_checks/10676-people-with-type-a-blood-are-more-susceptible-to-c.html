@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -79,12 +88,27 @@ On March 11, 2020, researchers in China released a preliminary draft of a study 
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10609-are-children-more-at-risk-to-coronavirus.html">Are children more at risk to coronavirus?</a>
+            <a href="/fact_checks/10337-chinese-doctors-confirmed-that-african-people-are.html">Chinese doctors confirmed that African people are "genetically resistant" to new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 16, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-cameroonian-student/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10622-will-people-get-coronavirus-pandemic-fatigue.html">Will people get Coronavirus pandemic fatigue?</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
         Mar 16, 2020,
-        <a href="https://metafact.io/factchecks/1493-are-children-more-at-risk-to-coronavirus">metafact.io</a>
+        <a href="https://metafact.io/factchecks/1498-will-people-get-coronavirus-pandemic-fatigue">metafact.io</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
@@ -109,6 +133,66 @@ On March 11, 2020, researchers in China released a preliminary draft of a study 
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10765-are-men-at-greater-risk-from-covid-19.html">Are men at greater risk from COVID-19?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 08, 2020,
+        <a href="https://metafact.io/factchecks/1529-are-men-at-greater-risk-from-covid-19">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10609-are-children-more-at-risk-to-coronavirus.html">Are children more at risk to coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1493-are-children-more-at-risk-to-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10450-the-us-is-charging-over-3000-per-test-for-patients.html">“The US is charging over $3,000 per test” for patients who may have COVID-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 29, 2020,
+        <a href="https://www.factcheck.org/2020/03/covid-19-tests-dont-cost-over-3000/#27483881812a448fde354f5a9bdd5540">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10619-is-covid-19-more-dangerous-the-seasonal-flu.html">Is COVID-19 more dangerous the seasonal flu?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1495-is-covid-19-more-dangerous-the-seasonal-flu">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10612-people-who-have-survived-the-covid-19-coronavirus.html">People who have survived the COVID-19 coronavirus disease can become reinfected by the virus.</a>
         </h6>
     </div>
@@ -124,12 +208,12 @@ On March 11, 2020, researchers in China released a preliminary draft of a study 
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10590-donating-blood-requires-that-you-be-administered-a.html">Donating blood requires that you be administered a free test for the COVID-19, a disease caused by the coronavirus.</a>
+            <a href="/fact_checks/10651-covid-19-is-no-worse-than-other-outbreaks-that-hav.html">COVID-19 is no worse than other outbreaks that have occurred in “every election year."</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 12, 2020,
-        <a href="https://www.snopes.com/fact-check/coronavirus-test-donate-blood/">snopes.com</a>
+        Mar 09, 2020,
+        <a href="https://www.factcheck.org/2020/03/viral-posts-falsely-align-viruses-to-election-years/#59d2439ef39159a1f35554a74b790947">factcheck.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">
@@ -139,12 +223,12 @@ On March 11, 2020, researchers in China released a preliminary draft of a study 
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10337-chinese-doctors-confirmed-that-african-people-are.html">Chinese doctors confirmed that African people are "genetically resistant" to new coronavirus.</a>
+            <a href="/fact_checks/10590-donating-blood-requires-that-you-be-administered-a.html">Donating blood requires that you be administered a free test for the COVID-19, a disease caused by the coronavirus.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Feb 16, 2020,
-        <a href="https://www.snopes.com/fact-check/coronavirus-cameroonian-student/">snopes.com</a>
+        Mar 12, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-test-donate-blood/">snopes.com</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">

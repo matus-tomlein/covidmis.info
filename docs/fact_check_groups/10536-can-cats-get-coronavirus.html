@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 
@@ -50,7 +59,7 @@
         </h4>
 
         <p>
-            <p>The new coronavirus (SARS-CoV-2) is related to the coronavirus that causes&nbsp;<a href="https://www.who.int/csr/sars/en/" target="_blank">SARS</a>&nbsp;(Severe Acute Respiratory Syndrome). During the SARS outbreak in 2002-2003, eight&nbsp;<strong>cats</strong>&nbsp;and one dog were infected. Does that mean that for the new virus, cats can get it? </p>
+            The new coronavirus (SARS-CoV-2) is related to the coronavirus that causes SARS (Severe Acute Respiratory Syndrome). During the SARS outbreak in 2002-2003, eight cats and one dog were infected. Does that mean that for the new virus, cats can get it? 
         </p>
 
         <div class="text-center text-warning text-large m-2 p-2">
@@ -75,7 +84,7 @@
         </h4>
 
         <p>
-            <p>Amid the global outbreak of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), pet owners have been wondering if dogs are at risk of contracting the novel coronavirus and spreading COVID-19. Can they?</p>
+            Amid the global outbreak of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), pet owners have been wondering if dogs are at risk of contracting the novel coronavirus and spreading COVID-19. Can they?
         </p>
 
         <div class="text-center text-warning text-large m-2 p-2">
@@ -173,6 +182,22 @@
         <h6>
             <a href="https://www.medicaldaily.com/pet-cats-dogs-can-spread-coronavirus-heres-what-should-do-451235" rel="nofollow">
                 Pet Cats, Dogs Can Spread Coronavirus: Here’s What You Should Do
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        medicaldaily.com
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-warning">
+            Might contain claim
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="https://www.medicaldaily.com/study-finds-cats-can-catch-coronavirus-451717" rel="nofollow">
+                Study Finds Cats Can Catch The Coronavirus
             </a>
         </h6>
     </div>

@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -77,6 +86,66 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10177-are-there-ways-to-lower-your-risk-of-getting-coron.html">Are there ways to lower your risk of getting coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1422-are-there-ways-to-lower-your-risk-of-getting-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-success">
+            Affirmative
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10561-covid-19-can-be-transmitted-between-humans-and-pet.html">Covid-19 can be transmitted between humans and pets.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://fullfact.org/health/can-animals-catch-coronavirus-from-humans/#d6a22ffa30844d2b71ddf33c571aba0c">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            There is one reported case of a pet dog in Hong Kong testing ‘weak positive’ for Covid-19. However, the dog is showing no symptoms and there is some question to whether the positive test is valid. The WHO and NHS says there is no evidence that pets can become infected or pass the virus to people.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10341-coronavirus-isnt-dangerous-as-it-can-be-killed-by.html">Coronavirus isn’t dangerous as it can be killed by Dettol products.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 17, 2020,
+        <a href="https://fullfact.org/online/coronavirus-dettol/#49c99da44083fbf835e302ca504a14fa">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            How dangerous the novel coronavirus is doesn’t relate to whether disinfectants work against it. Coronavirus is a large category of viruses that includes the common cold. Dettol has said its products haven’t been tested against the new virus yet.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10759-does-vitamin-c-supplementation-prevent-coronavirus.html">Does Vitamin C supplementation prevent coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 01, 2020,
+        <a href="https://metafact.io/factchecks/1525-does-vitamin-c-supplementation-prevent-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10568-can-humans-get-coronavirus-from-dogs.html">Can humans get coronavirus from dogs?</a>
         </h6>
     </div>
@@ -92,12 +161,12 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10537-can-dogs-get-coronavirus.html">Can dogs get coronavirus?</a>
+            <a href="/fact_checks/10727-do-household-cleaning-products-work-on-coronavirus.html">Do household cleaning products work on coronavirus?</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 11, 2020,
-        <a href="https://metafact.io/factchecks/1463-can-dogs-get-coronavirus">metafact.io</a>
+        Mar 27, 2020,
+        <a href="https://metafact.io/factchecks/1513-do-household-cleaning-products-work-on-coronavirus">metafact.io</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
@@ -122,31 +191,46 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10561-covid-19-can-be-transmitted-between-humans-and-pet.html">Covid-19 can be transmitted between humans and pets.</a>
+            <a href="/fact_checks/10537-can-dogs-get-coronavirus.html">Can dogs get coronavirus?</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
         Mar 11, 2020,
-        <a href="https://fullfact.org/health/can-animals-catch-coronavirus-from-humans/#d6a22ffa30844d2b71ddf33c571aba0c">fullfact.org</a>
+        <a href="https://metafact.io/factchecks/1463-can-dogs-get-coronavirus">metafact.io</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
-            There is one reported case of a pet dog in Hong Kong testing ‘weak positive’ for Covid-19. However, the dog is showing no symptoms and there is some question to whether the positive test is valid. The WHO and NHS says there is no evidence that pets can become infected or pass the virus to people.
+            Not Enough Experts
         </div>
     </div>
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10177-are-there-ways-to-lower-your-risk-of-getting-coron.html">Are there ways to lower your risk of getting coronavirus?</a>
+            <a href="/fact_checks/10609-are-children-more-at-risk-to-coronavirus.html">Are children more at risk to coronavirus?</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Jan 28, 2020,
-        <a href="https://metafact.io/factchecks/1422-are-there-ways-to-lower-your-risk-of-getting-coronavirus">metafact.io</a>
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1493-are-children-more-at-risk-to-coronavirus">metafact.io</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-success">
-            Affirmative
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10622-will-people-get-coronavirus-pandemic-fatigue.html">Will people get Coronavirus pandemic fatigue?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1498-will-people-get-coronavirus-pandemic-fatigue">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
         </div>
     </div>
     

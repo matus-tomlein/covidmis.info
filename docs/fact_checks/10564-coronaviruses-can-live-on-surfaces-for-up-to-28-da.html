@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -77,21 +86,6 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10730-in-eight-days-were-doing-more-coronavirus-testing.html">"In eight days, we’re doing more [coronavirus] testing than they’ve done in eight weeks," referring to South Korea.</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Mar 24, 2020,
-        <a href="https://www.factcheck.org/2020/03/trumps-faulty-testing-claims/#729c7f50e139b8781a94743abd123e19">factcheck.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-error">
-            Misleading
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
             <a href="/fact_checks/10496-108-people-died-from-covid-19-in-china-on-february.html">108 people died from Covid-19 in China on February 10th, one of the worst days so far.</a>
         </h6>
     </div>
@@ -102,21 +96,6 @@
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
             It is true that 108 people died in China from Covid-19 on 10 February, however, this death toll has since been surpassed.
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
-            <a href="/fact_checks/10675-the-government-of-shanghai-china-has-announced-its.html">The government of Shanghai, China has announced its official recommendation that COVID-19 should be treated with high amounts of intravenous vitamin C</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Mar 03, 2020,
-        <a href="https://healthfeedback.org/claimreview/no-the-shanghai-government-has-not-recommended-intravenous-vitamin-c-as-a-treatment-for-covid-19/#8cfd85e1226033678145c88fa895d97c">healthfeedback.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-error">
-            Misleading
         </div>
     </div>
     
@@ -137,6 +116,21 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10730-in-eight-days-were-doing-more-coronavirus-testing.html">"In eight days, we’re doing more [coronavirus] testing than they’ve done in eight weeks," referring to South Korea.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 24, 2020,
+        <a href="https://www.factcheck.org/2020/03/trumps-faulty-testing-claims/#729c7f50e139b8781a94743abd123e19">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Misleading
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10218-the-chinese-government-is-building-a-hospital-in-1.html">The Chinese government is building a hospital in 10 days to deal with the new coronavirus.</a>
         </h6>
     </div>
@@ -147,6 +141,21 @@
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-success">
             True
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10675-the-government-of-shanghai-china-has-announced-its.html">The government of Shanghai, China has announced its official recommendation that COVID-19 should be treated with high amounts of intravenous vitamin C</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 03, 2020,
+        <a href="https://healthfeedback.org/claimreview/no-the-shanghai-government-has-not-recommended-intravenous-vitamin-c-as-a-treatment-for-covid-19/#8cfd85e1226033678145c88fa895d97c">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Misleading
         </div>
     </div>
     

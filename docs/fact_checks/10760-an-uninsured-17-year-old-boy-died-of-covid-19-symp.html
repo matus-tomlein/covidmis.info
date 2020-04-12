@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -79,21 +88,6 @@ As governments fight the COVID-19 pandemic, Snopes is fighting an â€œinfodemicâ€
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10613-we-just-passed-a-law-saying-you-do-not-have-to-pay.html">"We just passed a law saying you do not have to pay for any of this, period," referring to health care coverage for COVID-19.</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Mar 16, 2020,
-        <a href="https://www.factcheck.org/2020/03/factchecking-the-march-democratic-debate/#6549d5ea278115c2de742c1f62b5f884">factcheck.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-warning">
-            Covers Tests Not Care
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
             <a href="/fact_checks/10629-italy-has-stopped-treating-elderly-coronavirus-pat.html">Italy has stopped treating elderly coronavirus patients due to "socialized medicine."</a>
         </h6>
     </div>
@@ -109,6 +103,36 @@ As governments fight the COVID-19 pandemic, Snopes is fighting an â€œinfodemicâ€
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10768-seven-children-in-senegal-died-after-being-adminis.html">Seven children in Senegal died after being administered a COVID-19 coronavirus disease vaccine in April 2020.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 09, 2020,
+        <a href="https://www.snopes.com/fact-check/7-senegal-kids-die-covid-vax/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10513-dr-abdu-sharkawy-an-infectious-diseases-specialist.html">Dr. Abdu Sharkawy, an infectious diseases specialist, penned a viral Facebook post warning about the loss of reason in the face of panic over the new coronavirus in 2020.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 08, 2020,
+        <a href="https://www.snopes.com/fact-check/abdu-sharkawy-coronavirus/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Correct-attribution
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10612-people-who-have-survived-the-covid-19-coronavirus.html">People who have survived the COVID-19 coronavirus disease can become reinfected by the virus.</a>
         </h6>
     </div>
@@ -119,6 +143,51 @@ As governments fight the COVID-19 pandemic, Snopes is fighting an â€œinfodemicâ€
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-error">
             Unproven
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10709-about-500-lions-have-been-released-on-the-streets.html">About 500 lions have been released on the streets of Russia to stop people going out during the coronavirus pandemic.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 24, 2020,
+        <a href="https://fullfact.org/online/Russia-unleashed-500-lions/#ef874161e4f02d20140aceecfb485c3f">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is not true. The Russian government has yet to announce a widespread lockdown of any kind in Russia. The image of the lion is from South Africa in 2016.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10613-we-just-passed-a-law-saying-you-do-not-have-to-pay.html">"We just passed a law saying you do not have to pay for any of this, period," referring to health care coverage for COVID-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://www.factcheck.org/2020/03/factchecking-the-march-democratic-debate/#6549d5ea278115c2de742c1f62b5f884">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Covers Tests Not Care
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10647-there-are-four-young-people-with-no-underlying-ill.html">There are four young people with no underlying illnesses in an intensive care unit in Cork due to Covid-19, who had all been taking anti-inflammatory drugs.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 17, 2020,
+        <a href="https://fullfact.org/health/young-people-severe-coronavirus-cork/#a53c9a8837c61461f84a8d36aa969a77">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is not true. It has been denied by the clinical lead of Irelandâ€™s public health service and the whole message branded â€˜misinformationâ€™.
         </div>
     </div>
     
@@ -152,9 +221,50 @@ As governments fight the COVID-19 pandemic, Snopes is fighting an â€œinfodemicâ€
         </div>
     </div>
     
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10590-donating-blood-requires-that-you-be-administered-a.html">Donating blood requires that you be administered a free test for the COVID-19, a disease caused by the coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-test-donate-blood/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
 </div>
 
 
+
+    
+    <div class="columns pt-2 mt-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>
+            Articles Found on the Web
+        </h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="https://iheartintelligence.com/la-teen-whose-death-is-linked-to-coronavirus-was-denied-urgent-care-because-he-didnt-have-insurance/" rel="nofollow">
+                LA teen whose death is linked to Coronavirus was denied urgent care because he didn&#8217;t have insurance
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        iheartintelligence.com
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-warning">
+            Might contain claim
+        </div>
+    </div>
+    
+</div>
 
 
 

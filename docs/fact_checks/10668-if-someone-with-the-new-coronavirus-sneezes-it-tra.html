@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -77,31 +86,76 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10703-covid-19-is-confirmed-as-airborne-and-remain-8-hrs.html">"COVID-19 is confirmed as airborne and remain 8 hrs in air! So everyone is required to wear mask everywhere!"</a>
+            <a href="/fact_checks/10560-if-the-new-coronavirus-is-exposed-to-a-temperature.html">If the new coronavirus is exposed to a temperature of 26-27ºC it will be killed, as it does not live in hot regions. Also drinking hot water and sun exposure will do the trick and staying away from ice cream and cold food is advised.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 22, 2020,
-        <a href="https://www.factcheck.org/2020/03/posts-distort-facts-on-coronavirus-air-transmission-masks/#91bb36eefaca9d1cb264a5ad29cf2671">factcheck.org</a>
+        Mar 11, 2020,
+        <a href="https://fullfact.org/health/coronavirus-graphics-unicef/#e30732d46958571eeb3832f8d6a375ee">fullfact.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
-            Distorts the Facts
+            There have been cases of Covid-19 in areas with warmer temperatures than this, and we don’t know what temperatures the virus can withstand. There’s no evidence that hot water and the sun will cure it or that staying away from cold food can prevent it.
         </div>
     </div>
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10557-the-new-coronavirus-does-not-settle-in-the-air-but.html">The new coronavirus does not settle in the air but is grounded so it is not transmitted by air.</a>
+            <a href="/fact_checks/10688-covid-19-starts-with-a-sore-throat-lasting-3-4-day.html">Covid-19 starts with a sore throat lasting 3-4 days. It then blends into a nasal fluid that enters the trachea and the lungs, causing pneumonia, which takes about 5 or 6 days. With pneumonia comes high fever and difficulty breathing. The nasal congestion makes you feel like you’re drowning.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 11, 2020,
-        <a href="https://fullfact.org/health/coronavirus-graphics-unicef/#fc4346fe0ba3c78d27022e07e9f57982">fullfact.org</a>
+        Mar 20, 2020,
+        <a href="https://fullfact.org/online/viral-posts-sharing-symptoms-and-treatments-covid-19-contain-false-information/#98d6dcae3fde29c5f9836332a94d0858">fullfact.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
-            The virus can spread via sneeze and cough droplets that can move a short distance through the air and into someone else’s system.
+            This is a roughly accurate description of the most common symptoms, although not everyone with Covid-19 gets pneumonia. The symptoms may not come in this order or at these times. There have been no reports of sufferers experiencing nasal congestion that makes them feel they are drowning.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10211-t-he-label-of-the-popular-lysol-already-show-that.html">"[T]he label of the popular Lysol already show that the product Kill the Coronavirus, so that means that this Virus is nothing new.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 29, 2020,
+        <a href="https://www.factcheck.org/2020/01/no-clorox-and-lysol-didnt-already-know-about-new-coronavirus/#ef8de3852f051928c366fbd02d9b4676">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10535-a-coronavirus-vaccine-for-cows-shows-that-the-viru.html">A coronavirus vaccine for cows shows that the virus behind the current outbreak is not new.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://fullfact.org/online/coronavirus-cows/#0783ab22d7a8fd4f9037c811d8879fab">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is a different coronavirus from SARS-CoV-2, the virus that causes Covid-19. Coronaviruses are a large family of viruses that can affect a range of species.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10632-the-new-coronavirus-is-the-least-deadly-virus-and.html">The new coronavirus is the “least deadly virus” and has a death rate lower than the 2009 H1N1 outbreak.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://www.factcheck.org/2020/03/infographic-on-facebook-distorts-comparative-facts-on-viruses/#754910be73d2ca9877af693b2602c5c8">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
         </div>
     </div>
     
@@ -122,6 +176,21 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10703-covid-19-is-confirmed-as-airborne-and-remain-8-hrs.html">"COVID-19 is confirmed as airborne and remain 8 hrs in air! So everyone is required to wear mask everywhere!"</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 22, 2020,
+        <a href="https://www.factcheck.org/2020/03/posts-distort-facts-on-coronavirus-air-transmission-masks/#91bb36eefaca9d1cb264a5ad29cf2671">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Distorts the Facts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10479-coronavirus-pneumonia-is-a-dry-cough-with-no-runny.html">Coronavirus pneumonia is a dry cough with no runny nose.</a>
         </h6>
     </div>
@@ -137,6 +206,21 @@
     
     <div class="column col-12 mt-2">
         <h6>
+            <a href="/fact_checks/10550-taking-a-few-sips-of-water-every-15-mins-will-prev.html">Taking a few sips of water every 15 mins will prevent the new coronavirus from entering your windpipe and lungs.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://www.snopes.com/fact-check/drinking-water-prevent-coronavirus/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
             <a href="/fact_checks/10488-if-you-have-a-runny-nose-and-sputum-you-have-a-com.html">If you have a runny nose and sputum, you have a common cold, not Covid-19.</a>
         </h6>
     </div>
@@ -147,6 +231,21 @@
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
             These are the symptoms for the common cold, but they don’t rule out Covid-19.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10557-the-new-coronavirus-does-not-settle-in-the-air-but.html">The new coronavirus does not settle in the air but is grounded so it is not transmitted by air.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://fullfact.org/health/coronavirus-graphics-unicef/#fc4346fe0ba3c78d27022e07e9f57982">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            The virus can spread via sneeze and cough droplets that can move a short distance through the air and into someone else’s system.
         </div>
     </div>
     

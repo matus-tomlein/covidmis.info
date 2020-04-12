@@ -21,3 +21,11 @@ class ArticleMapping:
                 return 'Pravdepodobne obsahuje výrok'
             else:
                 return 'Likely contains claim'
+
+
+    def to_dict(self, language):
+        return {
+            'article': self.article.to_dict(),
+            'confidence_style': self.confidence_style(),
+            'confidence_text': self.confidence_text(language)
+        }

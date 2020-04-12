@@ -1,7 +1,29 @@
 {% extends "pure_layout.html" %}
 {% block body_content %}
 
+<script>
+    var language = '{{ language }}';
+</script>
+
 <div class="container grid-lg">
+    <header class="navbar">
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                {% if language == 'sk' %}Sieť dezinformácii{% else %}Web of misinfo{% endif %}
+            </a>
+        </section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                {% if language == 'sk' %}CovidDez.info{% else %}CovidMis.info{% endif %}
+            </a>
+        </section>
+        <section class="navbar-section">
+            <a href="/about" class="btn btn-link">
+                {% if language == 'sk' %}O projekte{% else %}About{% endif %}
+            </a>
+        </section>
+    </header>
+
     {% block content %}{% endblock %}
 </div>
 

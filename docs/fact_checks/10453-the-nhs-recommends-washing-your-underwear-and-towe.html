@@ -14,32 +14,41 @@
     <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
-    <script type="text/javascript" src="/assets/javascripts/force-graph.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
 </head>
 
 <body>
 
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
     <header class="navbar">
-        <section class="navbar-section"></section>
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
         <section class="navbar-center">
             <a href="/" class="navbar-brand mr-2">
                 CovidMis.info
             </a>
         </section>
         <section class="navbar-section">
-            
-            <a href="https://coviddez.info">
-                <img src="/images/slovak.png" class="mr-2" style="height: 24px">
+            <a href="/about" class="btn btn-link">
+                About
             </a>
-            
         </section>
     </header>
 
-    
-
-<div class="container grid-lg">
     
 
 <div class="hero hero-sm">
@@ -77,21 +86,6 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10638-gargling-water-mixed-with-salt-or-vinegar-eliminat.html">Gargling water mixed with salt or vinegar eliminates the new coronavirus from your throat.</a>
-        </h6>
-    </div>
-    <div class="column col-6 mb-2 pb-2">
-        Mar 16, 2020,
-        <a href="https://fullfact.org/health/gargle-salt-vinegar-water-coronavirus/#e638fa37e7cef1aed1c822769164c27d">fullfact.org</a>
-    </div>
-    <div class="column col-6 text-right mb-2 pb-2">
-        <div class="text-warning">
-            There is no evidence for this.
-        </div>
-    </div>
-    
-    <div class="column col-12 mt-2">
-        <h6>
             <a href="/fact_checks/10635-gargling-with-warm-water-salt-or-vinegar-eliminate.html">"Gargling with warm water & salt or vinegar eliminates" the coronavirus.</a>
         </h6>
     </div>
@@ -107,16 +101,16 @@
     
     <div class="column col-12 mt-2">
         <h6>
-            <a href="/fact_checks/10558-coronavirus-stays-on-fabric-for-9-hours-so-washing.html">Coronavirus stays on fabric for 9 hours, so washing clothes or being exposed to the sun for two hours meets the purpose of killing it.</a>
+            <a href="/fact_checks/10638-gargling-water-mixed-with-salt-or-vinegar-eliminat.html">Gargling water mixed with salt or vinegar eliminates the new coronavirus from your throat.</a>
         </h6>
     </div>
     <div class="column col-6 mb-2 pb-2">
-        Mar 11, 2020,
-        <a href="https://fullfact.org/health/coronavirus-graphics-unicef/#c26a389a246ef8b635b129b936c6b046">fullfact.org</a>
+        Mar 16, 2020,
+        <a href="https://fullfact.org/health/gargle-salt-vinegar-water-coronavirus/#e638fa37e7cef1aed1c822769164c27d">fullfact.org</a>
     </div>
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
-            We don’t know how long the virus can survive on fabric. There isn’t evidence that it can transmit from fabrics to people, though soiled clothing from Covid-19 patients should be washed normally.
+            There is no evidence for this.
         </div>
     </div>
     
@@ -132,6 +126,21 @@
     <div class="column col-6 text-right mb-2 pb-2">
         <div class="text-warning">
             Official Public Health England advice does not recommend any of these things.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10558-coronavirus-stays-on-fabric-for-9-hours-so-washing.html">Coronavirus stays on fabric for 9 hours, so washing clothes or being exposed to the sun for two hours meets the purpose of killing it.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://fullfact.org/health/coronavirus-graphics-unicef/#c26a389a246ef8b635b129b936c6b046">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            We don’t know how long the virus can survive on fabric. There isn’t evidence that it can transmit from fabrics to people, though soiled clothing from Covid-19 patients should be washed normally.
         </div>
     </div>
     
