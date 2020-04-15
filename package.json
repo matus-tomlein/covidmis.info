@@ -1,7 +1,7 @@
 {
   "name": "covidmis.info",
   "version": "1.0.0",
-  "description": "Fact checks related to Covid-19",
+  "description": "Fact checks related to COVID-19",
   "main": "translate.js",
   "directories": {
     "doc": "docs"
