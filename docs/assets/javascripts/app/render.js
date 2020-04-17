@@ -47,6 +47,7 @@ function renderCarousel(carouselId, factCheckGroups) {
             }
             else {
                 var verdict = (language == 'sk' ? 'Záver: ' : 'Verdict: ') + group.promoted_fact_check.rating;
+                var articles = getGroupArticles(group);
 
                 return [
                     m('div', {'class': 'column col-2', 'style': 'padding-top: 100px'},
@@ -54,21 +55,47 @@ function renderCarousel(carouselId, factCheckGroups) {
 
                     m('div', {'class': 'column col-8 mt-2 pt-2'},
                         m('div', {'class': 'hero hero-sm'}, m('div', {'class': 'hero-body'}, [
-                            m('h4', { class: 'text-center' }, group.promoted_fact_check.statement),
+                            m('h4', { class: 'text-center' },
+                                m('a', { href: group.path },
+                                    group.promoted_fact_check.statement
+                                )
+                            ),
                             m('p', { class: 'text-ellipsis' }, group.promoted_fact_check.description),
-                            m('div', { class: 'text-center text-large m-2 p-2 text-ellipsis ' + group.promoted_fact_check.rating_style }, verdict),
-                            m('div', { class: 'text-center m-2 p-2' },
-                                m('div', { class: 'btn-group' },
+                            m('p', { class: 'text-center text-large text-ellipsis ' + group.promoted_fact_check.rating_style }, verdict),
+                            m('p', { class: 'text-center' },
                                     m('a', { href: group.promoted_fact_check.url, target: '_blank', class: 'btn btn-primary' },
                                         (language == 'sk' ? 'Otvoriť na ' : 'Open at ') + group.promoted_fact_check.domain
                                     ),
-                                    m('a', { href: '#', onclick: function () { showGroupGraph = true; return false; }, class: 'btn' }, [
-                                        m('i', {class: 'icon icon-link'}),
-                                        (language == 'sk' ? ' Preskúmať súvisiace' : ' Explore related')
-                                    ]),
-                                    m('a', { href: group.path, class: 'btn' }, (language == 'sk' ? 'Zobraziť viac' : 'Show more'))
-                                )
-                            )
+                                    m('a', { href: '#', onclick: function () { showGroupGraph = true; return false; }, class: 'btn btn-link' }, [
+                                        (language == 'sk' ? ' Preskúmať súvisiace' : ' Explore in graph')
+                                    ])
+                            ),
+
+                            m('h5', language == 'sk' ? 'Podobné tvrdenia' : 'Similar fact checks'),
+                            m('dl', group.fact_checks.filter(function (factCheck) {
+                                return factCheck.id != group.promoted_fact_check.id;
+                            }).map(function (factCheck) {
+                                return [
+                                    m('dt', {class: 'text-ellipsis'},
+                                        m('a', { href: factCheck.path }, factCheck.statement)
+                                    ),
+                                    m('dd', {class: 'text-ellipsis ' + factCheck.rating_style}, factCheck.rating),
+                                ];
+                            }).slice(0, 3)),
+
+                            articles.length > 0 ? [
+                                m('h5', language == 'sk' ? 'Články na Webe' : 'Articles found on the Web'),
+                                m('dl', articles.map(function (article) {
+                                    return [
+                                        m('dt', {class: 'text-ellipsis'},
+                                            m('a', { href: article.url }, article.title)
+                                        ),
+                                        m('dd', article.domain)
+                                    ];
+                                }).slice(0, 3)),
+
+                            ] : null
+
                         ]))
                     ),
 
@@ -81,6 +108,16 @@ function renderCarousel(carouselId, factCheckGroups) {
     };
 
     m.mount(document.getElementById(carouselId), Carousel);
+}
+
+function getGroupArticles(group) {
+    var articleMappings = [].concat.apply([], group.fact_checks.map(g => g.article_mappings));
+    articleMappings.sort(function (a, b) { return (a.score > b.score) ? -1 : 1; });
+    var articles = articleMappings.map(function (articleMapping) { return articleMapping.article; });
+    var seen = {};
+    return articles.filter(function(item) {
+        return seen.hasOwnProperty(item.id) ? false : (seen[item.id] = true);
+    });
 }
 
 function drawGraph(data, elemId, width, height, zoomOut, freeze) {

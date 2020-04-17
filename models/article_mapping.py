@@ -26,6 +26,7 @@ class ArticleMapping:
     def to_dict(self, language):
         return {
             'article': self.article.to_dict(),
+            'score': self.score,
             'confidence_style': self.confidence_style(),
             'confidence_text': self.confidence_text(language)
         }
