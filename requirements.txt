@@ -4,3 +4,4 @@ psycopg2-binary==2.8.4
 python-slugify==4.0.0
 ratelimit==2.2.1
 networkx==2.4
+pandas==1.0.3
