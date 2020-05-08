@@ -209,7 +209,7 @@ with SSHTunnelForwarder(
     ssh_private_key='/Users/matus/.ssh/id_rsa',
     ssh_username=os.environ['SSH_USERNAME'],
     remote_bind_address=('localhost', 5433),
-    local_bind_address=('localhost', 7543)
+    local_bind_address=('localhost', 8543)
 ) as tunnel:
 
     tunnel.start()
