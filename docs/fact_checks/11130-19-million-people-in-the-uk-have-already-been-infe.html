@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CovidMis.info – 19 million people in the UK have already been infected with the new coronavirus.</title>
+    <meta name="description" content="Fact checks related to COVID-19.">
+    <meta name="author" content="Matúš Tomlein">
+
+    <link rel="icon" href="/images/icon.png">
+
+    <link rel="stylesheet" href="/assets/stylesheets/spectre.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
+</head>
+
+<body>
+
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
+    <header class="navbar">
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                CovidMis.info
+            </a>
+        </section>
+        <section class="navbar-section">
+            <a href="/about" class="btn btn-link">
+                About
+            </a>
+        </section>
+    </header>
+
+    
+
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h4 class="text-center">
+            19 million people in the UK have already been infected with the new coronavirus.
+        </h4>
+
+        <p>
+            It is not clear that 19 million people have already had the new coronavirus
+        </p>
+
+        <div class="text-center text-warning text-large m-2 p-2">
+            Verdict:
+            This is according to a new piece of statistical research, but this research has been challenged by other scientists and is highly uncertain. Other early estimates have estimated the prevalence to be lower, but it’s impossible to tell how accurate these will turn out to be.
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="https://fullfact.org/health/19m-coronavirus-manchester/#4d19db6191ae9f8a070fc5067607ad99" class="btn btn-primary btn-lg">
+                Open at
+                fullfact.org
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="columns pt-2 mt-2 pb-2 mb-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>
+            Similar fact checks
+        </h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10242-chinese-officials-are-seeking-approval-to-start-th.html">Chinese officials are seeking approval to start the mass killing of 20,000 people in order to stop the spread of new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 05, 2020,
+        <a href="https://www.snopes.com/fact-check/china-kill-coronavirus-patients/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10373-two-authors-predicted-the-coronavirus-decades-befo.html">Two authors predicted the coronavirus decades before the outbreak.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 21, 2020,
+        <a href="https://fullfact.org/online/books-supposedly-predict-covid-19/#f3df3f6f03b30379883698ab52aa4997">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            A 1980s sci-fi novel describes a disease called “Wuhan-400” that bears little similarity to the new Wuhan coronavirus. A book of “prophecies about the end of the world” written in 2008 predicted that a pneumonia-like illness would spread across the world in the year 2020.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10632-the-new-coronavirus-is-the-least-deadly-virus-and.html">The new coronavirus is the “least deadly virus” and has a death rate lower than the 2009 H1N1 outbreak.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://www.factcheck.org/2020/03/infographic-on-facebook-distorts-comparative-facts-on-viruses/#754910be73d2ca9877af693b2602c5c8">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11145-the-uk-government-no-longer-considers-covid-19-to.html">The UK government no longer considers Covid-19 to be a “high consequence infectious disease”.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 29, 2020,
+        <a href="https://fullfact.org/health/coronavirus-hcid/#46fcb125de67a7f67eaf1c8d9d2c830c">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is true, because it no longer meets the criteria for an HCID. This doesn’t mean that it is no longer considered dangerous.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11022-just-2-9-of-deaths-were-caused-by-covid-19-in-the.html">Just 2.9% of deaths were caused by Covid-19 in the first three months of 2020.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 12, 2020,
+        <a href="https://fullfact.org/health/ons-2020-covid-first-quarter-deaths/#bd813654c0f89afecf99896da98ab57d">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            In the first 12 weeks of 2020, less than 1% of deaths registered in England and Wales had Covid-19 on the death certificate, but the rate has since risen to more than 30% for some weeks in April.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10768-seven-children-in-senegal-died-after-being-adminis.html">Seven children in Senegal died after being administered a COVID-19 coronavirus disease vaccine in April 2020.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 09, 2020,
+        <a href="https://www.snopes.com/fact-check/7-senegal-kids-die-covid-vax/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10775-so-now-the-fake-news-nytimes-is-tracing-the-corona.html">“So now the Fake News @nytimes is tracing the CoronaVirus origins back to Europe, NOT China."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 11, 2020,
+        <a href="https://www.factcheck.org/2020/04/trump-falsely-distorts-new-york-times-covid-19-science-story/#37ab06fc844a90aad0395d1e9642ce4c">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11164-the-uk-is-doing-more-covid-19-tests-than-virtually.html">The UK is doing more Covid-19 tests than virtually any country in Europe.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jun 02, 2020,
+        <a href="https://fullfact.org/health/coronavirus-testing-europe/#758ab4f75cbe846ef961808be56d2010">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            The UK appears to be testing fewer people than in Russia. But there isn’t enough data on this to determine for sure where the UK places, and the UK’s data isn’t particularly comparable with other countries.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10788-the-trump-administration-started-off-awfully-slow.html">The Trump administration "started off awfully slow" in dealing with the coronavirus. "45 nations had already moved to ... block China's personnel from being able to come to the United States before the president moved."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 06, 2020,
+        <a href="https://www.factcheck.org/2020/04/trump-biden-spin-china-travel-restrictions/#bb9a9e265ad67d955aa802cd0681b6e7">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Spins the Facts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10534-prime-minister-boris-johnson-advocated-for-the-uk.html">Prime Minister Boris Johnson advocated for the UK to take Covid-19 “on the chin” and allow the disease to spread through the population.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://fullfact.org/health/boris-johnson-coronavirus-this-morning/#ad2f3ef03401e20b78e2026db0ba580b">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            The Prime Minister said this was a theory on how to deal with the virus, but said it would be better if we take all the measures we can to reduce the burden on the NHS during the peak of the disease.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10535-a-coronavirus-vaccine-for-cows-shows-that-the-viru.html">A coronavirus vaccine for cows shows that the virus behind the current outbreak is not new.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://fullfact.org/online/coronavirus-cows/#0783ab22d7a8fd4f9037c811d8879fab">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is a different coronavirus from SARS-CoV-2, the virus that causes Covid-19. Coronaviruses are a large family of viruses that can affect a range of species.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10924-dr-elisa-granato-one-of-the-first-participants-in.html">Dr Elisa Granato, one of the first participants in a UK Covid-19 vaccine trial, has died.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 26, 2020,
+        <a href="https://fullfact.org/online/elisa-granato-fake/#6e0361f32557705a28255e6ad665d830">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is false. She is not dead.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10926-it-took-51-days-for-the-uk-to-go-from-announcing-i.html">It took 51 days for the UK to go from announcing its first Covid-19 death to 20,319.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 27, 2020,
+        <a href="https://fullfact.org/online/stadiums-coronavirus-deaths/#80758f4c779cccbc283935afc6fd91ef">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Correct. The first patient who died having tested positive for Covid-19 was announced on 5 March. The total deaths was 20,319 on 24 April.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10927-the-number-of-deaths-in-the-uk-from-covid-19-is-ju.html">The number of deaths in the UK from Covid-19 is just shy of the capacity of the Manchester arena.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 27, 2020,
+        <a href="https://fullfact.org/online/stadiums-coronavirus-deaths/#29cac84fea39238b17631cff88dc58c2">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            The number of people who died in hospital in the UK having tested positive for Covid-19, by 25 April, is around the same as the capacity of Manchester arena: about 21,000.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10801-it-took-president-barack-obama-millions-infected-a.html">"It took [President Barack] Obama ‘millions infected and over 1,000 deaths’ to declare the H1N1 flu a health emergency,” but President Donald Trump “declared a health emergency” before the first coronavirus death.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 30, 2020,
+        <a href="https://www.factcheck.org/2020/03/flawed-comparison-on-coronavirus-h1n1-emergency-timelines/#91f5c8d18a63f4d020d01d93d920e4fd">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Misleading
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10930-a-new-pentagon-study-shows-that-people-who-had-a-f.html">"A new Pentagon study shows that people who had a flu shot are 36% more likely to get COVID-19."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 22, 2020,
+        <a href="https://www.factcheck.org/2020/04/no-evidence-that-flu-shot-increases-risk-of-covid-19/#dedfaf94e396f134c3ad6cdaf6f53988">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10803-said-of-the-coronavirus-outbreak-i-just-want-to-re.html">Said of the coronavirus outbreak: "I just want to reiterate, because a lot of people have been asking, 'Well, what would have happened if we did nothing? Did nothing — we just rode it out.' ... And I think we got our most accurate study today, or certainly most comprehensive. Think of the number: 2.2 — potentially 2.2 million people if we did nothing."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 30, 2020,
+        <a href="https://www.factcheck.org/2020/03/trump-and-the-coronavirus-death-projections/#d7eb28545067963d2c6c85b8ade49e40">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Estimate Known Since March 16
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10677-the-world-health-organization-test-for-the-new-cor.html">The World Health Organization test for the new coronavirus "was a bad test."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 20, 2020,
+        <a href="https://www.factcheck.org/2020/03/biden-trump-wrong-about-who-coronavirus-tests/#ea69a9ee045e8928ea9030a01c0ad440">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10552-a-doctor-in-italy-shared-numerous-details-about-ho.html">A doctor in Italy shared numerous details about how hospitals in the country are dealing with COVID-19, a disease caused by the new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://www.snopes.com/fact-check/italy-doctor-cornona-not-flu/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Correct-attribution
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10554-we-have-a-president-of-the-united-states-who-said.html">"We have a president of the United States, [who said] you know, 'Doesn't matter, go to work,'" even if you think you have symptoms of the new coronavirus infection.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 09, 2020,
+        <a href="https://www.factcheck.org/2020/03/sanders-twists-trumps-words-on-coronavirus-work/#cb3aac3350058015b1c52a3237327c1f">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10940-the-nhs-has-issued-a-letter-saying-that-some-child.html">The NHS has issued a letter saying that some children infected with coronavirus have been exhibiting symptoms similar to toxic shock syndrome.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 30, 2020,
+        <a href="https://fullfact.org/online/letter-coronavirus-children/#d9e8e0ca39eada8c94832701a860cb96">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is a real letter issued to NHS primary care medical professionals. This letter was intended for medical professionals and refers to only a small number of cases.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10559-coronavirus-may-have-been-genetically-engineered-f.html">Coronavirus may have been genetically engineered for “efficient spreading in the human population,” a bombshell new study has claimed.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://fullfact.org/health/new-coronavirus-not-genetically-engineered/#4bb2192291c5b92e4fa59d466cbfac5c">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is wrong and the study does not claim the new coronavirus has been genetically engineered. It simply compares the genome sequence of SARS-CoV-2 with other coronaviruses, and suggests a reason why it might be spreading relatively efficiently.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10563-the-new-coronavirus-is-400-500-micro-and-for-this.html">The new coronavirus is 400-500 micro and for this reason wide enough to be stopped by masks.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://fullfact.org/health/coronavirus-graphics-unicef/#77e3627e917d99c833f3c76ae8bfbaa4">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            The virus is 50-200 nanometres wide, and a mask, although sometimes necessary, won’t guarantee that you don’t get Covid-19.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11086-us-patent-2006257852-is-for-the-new-coronavirus.html">US patent 2006257852 is for the new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 19, 2020,
+        <a href="https://fullfact.org/online/coronavirus-vaccine-patents-bill-melinda-gates/#7ad0f067e8da1a480a2fccfa010a4603">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            It is not. It is an abandoned patent from 2006 for chemical mixtures related to the SARS virus, which is another type of coronavirus.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11088-far-more-people-have-died-of-covid-19-in-the-uk-th.html">Far more people have died of Covid-19 in the UK than in Japan</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 19, 2020,
+        <a href="https://fullfact.org/health/uk-japan-covid-comparison/#05a4e344370c1d670463aa3f48758378">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is correct. At the time this post appeared there had been 31,855 Covid-19 deaths reported in the UK, compared with 628 in Japan.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11089-european-patent-3172319b1-is-a-vaccine-for-the-new.html">European patent 3172319B1 is a vaccine for the new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 19, 2020,
+        <a href="https://fullfact.org/online/coronavirus-vaccine-patents-bill-melinda-gates/#ad3503962bf77f6f011f31a41d2aa86d">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            It is not. The patent relates to a vaccine for a virus which infects birds, which is another type of coronavirus.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10580-almost-200-people-in-italy-died-from-the-coronavir.html">Almost 200 people in Italy died from the coronavirus in 24 hours.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://www.snopes.com/fact-check/italy-200-deaths-24-hours/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-success">
+            True
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10709-about-500-lions-have-been-released-on-the-streets.html">About 500 lions have been released on the streets of Russia to stop people going out during the coronavirus pandemic.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 24, 2020,
+        <a href="https://fullfact.org/online/Russia-unleashed-500-lions/#ef874161e4f02d20140aceecfb485c3f">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is not true. The Russian government has yet to announce a widespread lockdown of any kind in Russia. The image of the lion is from South Africa in 2016.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10710-the-total-number-of-deaths-from-covid-19-in-the-uk.html">The total number of deaths from Covid-19 in the UK is now at 233, the same number of deaths reported in Italy about two weeks ago.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 24, 2020,
+        <a href="https://fullfact.org/online/deaths-covid-19-uk-italy/#0d146d3d8bfb6e43019bd5120ea1eb13">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Correct. On 21 March, Public Health England reported a total of 233 deaths in the UK from Covid-19. However, not enough is known to say whether the number of deaths will grow at the same rate in the UK as in Italy.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10966-the-cares-act-was-introduced-over-a-year-ago-for-a.html">The CARES Act was "introduced over a year ago for a virus that allegedly did not get here until a few months ago," which proves the COVID-19 pandemic was planned.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 27, 2020,
+        <a href="https://www.factcheck.org/2020/05/legislative-history-of-cares-act-doesnt-prove-covid-19-conspiracy/#e70cf24f967493230bfec6bba80b0275">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11101-the-deaths-of-181-nhs-workers-have-involved-covid.html">The deaths of 181 NHS workers have involved Covid-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 22, 2020,
+        <a href="https://fullfact.org/health/we-dont-know-exactly-how-many-nhs-workers-have-died-covid-19/#82184526d757a41ba80b289ff952bcfc">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This figure is correct for England only.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10205-a-viral-social-media-post-in-january-2020-represen.html">A viral social media post in January 2020 represented an authentic, accurate "health bulletin" about the new coronavirus outbreak from an official public health authority.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 30, 2020,
+        <a href="https://www.snopes.com/fact-check/nwllab-moh-bulletin-coronavirus/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10206-health-experts-predicted-the-new-coronavirus-could.html">Health experts predicted the new coronavirus could kill 65 million people.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 30, 2020,
+        <a href="https://www.snopes.com/fact-check/coronavirus-65-million-people/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10211-t-he-label-of-the-popular-lysol-already-show-that.html">"[T]he label of the popular Lysol already show that the product Kill the Coronavirus, so that means that this Virus is nothing new.”</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 29, 2020,
+        <a href="https://www.factcheck.org/2020/01/no-clorox-and-lysol-didnt-already-know-about-new-coronavirus/#ef8de3852f051928c366fbd02d9b4676">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10596-the-new-coronavirus-is-actually-the-impact-of-5g-e.html">The new coronavirus is actually the impact of 5G exposure.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://fullfact.org/online/coronavirus-5G/#8372da843876f953c960a4f2ee3c2a76">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is incorrect, the new coronavirus is a virus and there is no evidence that 5G is harmful to people’s health.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10597-bill-gates-created-the-new-coronavirus-and-a-vacci.html">Bill Gates created the new coronavirus and a vaccine for it.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://fullfact.org/online/coronavirus-5G/#a328076f1c919dcfc6841ecbc0292f09">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is incorrect. The Bill Gates and Melinda Gates Foundation has funded a research institute that has a patent to a different coronavirus.  Coronavirus is a large category of viruses that includes the common cold, SARS and the new virus that causes Covid-19.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10852-data-from-a-new-app-which-tracks-symptoms-of-covid.html">Data from a new app which tracks symptoms of Covid-19 claims that up to 6.6 million people in the UK have the disease.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 27, 2020,
+        <a href="https://fullfact.org/health/kings-app/#5066a5a61c01a95a8c7cbbf886b46465">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This data cannot be extrapolated to the UK population. The number of people with Covid-19 may be higher, lower, or the same as claimed.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11110-an-estimated-0-5-of-people-arriving-into-the-uk-ha.html">An estimated 0.5% of people arriving into the UK have Covid-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 21, 2020,
+        <a href="https://fullfact.org/immigration/coronavirus-lockdown-arrivals-infections/#5f2ffdf77456d9677946cc69a27bf7c6">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            These were remarks by the Home Office’s Chief Scientific Advisor, which were later clarified to be wrong. 0.5% is an estimate for the proportion of reported Covid-19 cases in the UK believed to have been “imported” from abroad as of 23 March.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10601-the-coronavirus-outbreak-is-not-actually-caused-by.html">The coronavirus outbreak is not actually caused by a virus, but by 5G technology</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 22, 2020,
+        <a href="https://healthfeedback.org/claimreview/viral-claim-falsely-asserts-that-covid-19-is-due-to-5g-technology-rollout-not-a-virus/#d2d31121158b124360082baaeec45227">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Incorrect
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10481-children-cant-get-the-new-coronavirus.html">Children can’t get the new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 05, 2020,
+        <a href="https://fullfact.org/health/children-can-get-coronavirus/#21f835763784f04fb3ecdc7a6bc64c71">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Children can get Covid-19 but there have been relatively few cases in children and in general, their symptoms tend to be milder.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10354-scientists-knew-about-the-new-coronavirus-long-ago.html">Scientists knew about the new coronavirus long ago and called it “Disease X”.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 18, 2020,
+        <a href="https://fullfact.org/health/coronavirus-covid-disease-x-express/#3717d252eccd81fb607453b16e2c6fc0">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            They didn’t. This is a misunderstanding about the phrase “Disease X”, which the WHO used to denote an unknown serious new disease that might cause a pandemic.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10738-a-vaccine-for-the-new-coronavirus-has-been-created.html">A vaccine for the new coronavirus has been created by US scientists and will be ready to use from next Sunday.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 26, 2020,
+        <a href="https://fullfact.org/online/coronavirus-vaccine-not-ready/#5c10dfe3e0bf937873c5f1f6cda25e62">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Whilst there are vaccines in development, it will likely be more than 18 months before they are ready to use. The image and videos accompanying the post are related to Covid-19 diagnostic tests, not vaccines.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10993-an-early-poll-shows-80-of-people-on-the-isle-of-wi.html">An early poll shows 80% of people on the Isle of Wight want to download the government’s new coronavirus tracing app.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 07, 2020,
+        <a href="https://fullfact.org/health/coronavirus-app-track-trace-poll/#30fb165d2fa833f85d6d52270a945654">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is based on a Facebook poll which is not representative of Isle of Wight residents.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10232-coronavirus-is-not-a-new-virus.html">Coronavirus is not a new virus</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 24, 2020,
+        <a href="https://healthfeedback.org/claimreview/the-2019-coronavirus-outbreak-is-caused-by-a-novel-virus-past-mentions-of-coronaviruses-refer-to-different-strains/#3c6aa5972374b9b774008ad45343e067">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Inaccurate
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11129-50-schools-in-france-have-closed-since-mass-reopen.html">50 schools in France have closed since mass reopenings last week due to new coronavirus outbreaks.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 27, 2020,
+        <a href="https://fullfact.org/health/france-school-coronavirus/#d847a780ae70b7608518701f5c7e2b58">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is true but it’s unlikely children were infected at schools.
+        </div>
+    </div>
+    
+</div>
+
+
+
+    
+    <div class="columns pt-2 mt-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>
+            Articles found on the Web
+        </h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="https://www.dailymail.co.uk/news/article-8361039/How-UKs-Covid-19-outbreak-barely-changed-seven-days.html?ns_mchannel=rss&ns_campaign=1490&ito=1490" rel="nofollow">
+                How UK's Covid-19 outbreak has barely changed in seven days
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        dailymail.co.uk
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-warning">
+            Might contain claim
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="https://www.dailymail.co.uk/news/article-8378001/North-Englands-coronavirus-infection-rate-nearly-TWICE-Londons.html?ns_mchannel=rss&ns_campaign=1490&ito=1490" rel="nofollow">
+                Coronavirus: North England infection rate nearly twice London's
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        dailymail.co.uk
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-warning">
+            Might contain claim
+        </div>
+    </div>
+    
+</div>
+
+
+
+</div>
+
+<div class="text-center text-gray" style="font-size: small; margin-top: 50px; margin-bottom: 50px">
+    
+    Part of the <a href="https://misdeed.fiit.stuba.sk">MISDEED</a> project at <a href="https://www.fiit.stuba.sk">FIIT STU</a>.
+    Powered by the <a href="https://documenter.getpostman.com/view/8615295/SVtPWq1j?version=latest">MonAnt</a> platform.
+    Put together by <a href="https://matus.tomlein.org">Matúš Tomlein</a>.
+    
+</div>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6380950-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-6380950-6');
+    </script>
+
+</body>
+</html>
