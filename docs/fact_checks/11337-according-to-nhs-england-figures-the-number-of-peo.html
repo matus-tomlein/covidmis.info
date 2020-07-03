@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CovidMis.info – According to NHS England figures, the number of people whose death certificates show death from only coronavirus, i.e. no pre-existing condition, is 1,265.</title>
+    <meta name="description" content="Fact checks related to COVID-19.">
+    <meta name="author" content="Matúš Tomlein">
+
+    <link rel="icon" href="/images/icon.png">
+
+    <link rel="stylesheet" href="/assets/stylesheets/spectre.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
+</head>
+
+<body>
+
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
+    <header class="navbar">
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                CovidMis.info
+            </a>
+        </section>
+        <section class="navbar-section">
+            <a href="/about" class="btn btn-link">
+                About
+            </a>
+        </section>
+    </header>
+
+    
+
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h4 class="text-center">
+            According to NHS England figures, the number of people whose death certificates show death from only coronavirus, i.e. no pre-existing condition, is 1,265.
+        </h4>
+
+        <p>
+            Covid-19 is the underlying cause of death for most people who die with it
+        </p>
+
+        <div class="text-center text-warning text-large m-2 p-2">
+            Verdict:
+            This was the correct number of Covid-19 deaths (but only among hospital patients) where no pre-existing condition was reported, up to 26 May. But this data isn’t the deaths “only” from coronavirus and doesn’t tell us what the underlying cause of death was. Covid-19 death was determined by a positive test result or where Covid-19 was mentioned on the death certificate.
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="https://fullfact.org/online/deaths-only-from-coronavirus/#dfb18e1a3cb5930dbbe5f3436086418c" class="btn btn-primary btn-lg">
+                Open at
+                fullfact.org
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="columns pt-2 mt-2 pb-2 mb-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>
+            Similar fact checks
+        </h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10496-108-people-died-from-covid-19-in-china-on-february.html">108 people died from Covid-19 in China on February 10th, one of the worst days so far.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 06, 2020,
+        <a href="https://fullfact.org/online/coronavirus-daily-deaths/#9a2a7fd09f0196e2b2df81f84ff32afc">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            It is true that 108 people died in China from Covid-19 on 10 February, however, this death toll has since been surpassed.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10883-the-united-states-has-achieved-a-significant-lower.html">"The United States has achieved a significant lower [COVID-19] mortality rate than almost all other countries."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 16, 2020,
+        <a href="https://www.factcheck.org/2020/04/trumps-inaccurate-covid-19-death-rate-comparison/#de5061172587b25644573098e2636739">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not What Data Show
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11015-germany-and-the-united-states-are-the-two-best-in.html">"Germany and the United States are the two best in deaths per 100,000 people" for COVID-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 11, 2020,
+        <a href="https://www.factcheck.org/2020/05/where-the-u-s-ranks-in-covid-19-deaths-per-capita/#94f76f4f1b8a4167f1f668f0f3a632f6">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10760-an-uninsured-17-year-old-boy-died-of-covid-19-symp.html">An uninsured 17-year-old boy died of COVID-19 symptoms after being refused care due to a lack of medical insurance.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 02, 2020,
+        <a href="https://www.snopes.com/fact-check/teen-insurance-coronavirus/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Mixture
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11022-just-2-9-of-deaths-were-caused-by-covid-19-in-the.html">Just 2.9% of deaths were caused by Covid-19 in the first three months of 2020.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 12, 2020,
+        <a href="https://fullfact.org/health/ons-2020-covid-first-quarter-deaths/#bd813654c0f89afecf99896da98ab57d">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            In the first 12 weeks of 2020, less than 1% of deaths registered in England and Wales had Covid-19 on the death certificate, but the rate has since risen to more than 30% for some weeks in April.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10768-seven-children-in-senegal-died-after-being-adminis.html">Seven children in Senegal died after being administered a COVID-19 coronavirus disease vaccine in April 2020.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 09, 2020,
+        <a href="https://www.snopes.com/fact-check/7-senegal-kids-die-covid-vax/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11025-the-ons-has-registered-4122-deaths-in-2020-due-to.html">The ONS has registered 4,122 deaths in 2020 due to Covid-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 12, 2020,
+        <a href="https://fullfact.org/health/ons-2020-covid-first-quarter-deaths/#4cdef058bfd53fa40ef02d479ca0bba2">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This was broadly correct for the first 14 weeks of the year, including a few days in April and in December 2019.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10782-the-covid-19-death-toll-is-exaggerated-because-the.html">The COVID-19 death toll is exaggerated because “the state” has instructed that “anyone who didnt die by a gun shot wound or car accident” be listed as a coronavirus victim.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 07, 2020,
+        <a href="https://www.factcheck.org/2020/04/social-media-posts-make-baseless-claim-on-covid-19-death-toll/#4cf571527a4d73cd70b309ee5c3e4492">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            No Evidence
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10792-in-new-york-every-contaminated-corpse-of-those-who.html">In New York, "every contaminated corpse" of those who died from COVID-19 "belongs to the state" and will be incinerated without any "wakes or memorial services to pay your last respects."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 01, 2020,
+        <a href="https://www.factcheck.org/2020/04/misinformation-on-covid-19-death-protocols-in-new-york/#e8cff0c34c8684d3e21a32cfd59ee236">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11048-covid-19-deaths-in-care-homes-are-rising.html">Covid-19 deaths in care homes are rising.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 14, 2020,
+        <a href="https://fullfact.org/health/care-homes-starmer-johnson/#f15efbd18036127e737c57153b690449">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This was true at the time, by one measure. By another measure it was probably not true. Now it seems clearer that deaths in care homes from suspected Covid-19 are falling.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11305-student-nurses-of-the-2017-cohort-were-asked-to-jo.html">Student nurses of the 2017 cohort were asked to join the NHS workforce early this year, due to Covid-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jun 22, 2020,
+        <a href="https://fullfact.org/online/student-nurses-covid/#5e8dc35ca01f93729698515947f72927">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is true, final year nursing students were given the option to join the workforce early and be paid for this work, due to Covid-19.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10924-dr-elisa-granato-one-of-the-first-participants-in.html">Dr Elisa Granato, one of the first participants in a UK Covid-19 vaccine trial, has died.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 26, 2020,
+        <a href="https://fullfact.org/online/elisa-granato-fake/#6e0361f32557705a28255e6ad665d830">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is false. She is not dead.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10926-it-took-51-days-for-the-uk-to-go-from-announcing-i.html">It took 51 days for the UK to go from announcing its first Covid-19 death to 20,319.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 27, 2020,
+        <a href="https://fullfact.org/online/stadiums-coronavirus-deaths/#80758f4c779cccbc283935afc6fd91ef">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Correct. The first patient who died having tested positive for Covid-19 was announced on 5 March. The total deaths was 20,319 on 24 April.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10927-the-number-of-deaths-in-the-uk-from-covid-19-is-ju.html">The number of deaths in the UK from Covid-19 is just shy of the capacity of the Manchester arena.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 27, 2020,
+        <a href="https://fullfact.org/online/stadiums-coronavirus-deaths/#29cac84fea39238b17631cff88dc58c2">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            The number of people who died in hospital in the UK having tested positive for Covid-19, by 25 April, is around the same as the capacity of Manchester arena: about 21,000.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10801-it-took-president-barack-obama-millions-infected-a.html">"It took [President Barack] Obama ‘millions infected and over 1,000 deaths’ to declare the H1N1 flu a health emergency,” but President Donald Trump “declared a health emergency” before the first coronavirus death.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 30, 2020,
+        <a href="https://www.factcheck.org/2020/03/flawed-comparison-on-coronavirus-h1n1-emergency-timelines/#91f5c8d18a63f4d020d01d93d920e4fd">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Misleading
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10930-a-new-pentagon-study-shows-that-people-who-had-a-f.html">"A new Pentagon study shows that people who had a flu shot are 36% more likely to get COVID-19."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 22, 2020,
+        <a href="https://www.factcheck.org/2020/04/no-evidence-that-flu-shot-increases-risk-of-covid-19/#dedfaf94e396f134c3ad6cdaf6f53988">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10552-a-doctor-in-italy-shared-numerous-details-about-ho.html">A doctor in Italy shared numerous details about how hospitals in the country are dealing with COVID-19, a disease caused by the new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 10, 2020,
+        <a href="https://www.snopes.com/fact-check/italy-doctor-cornona-not-flu/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Correct-attribution
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11324-the-official-uk-death-toll-from-the-coronavirus-pa.html">The official UK death toll from the coronavirus pandemic now equals the death toll from the Blitz.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jun 24, 2020,
+        <a href="https://fullfact.org/online/deaths-coronavirus-blitz/#29e600a4480dd6ceb861e031c1ad5d7d">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            At the time this claim was made, the government’s “official” published count of Covid-19 deaths was slightly under the number of deaths during the Blitz, although the numbers are very similar. The true number of deaths related to Covid-19 is likely to be higher than the toll during the Blitz.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10940-the-nhs-has-issued-a-letter-saying-that-some-child.html">The NHS has issued a letter saying that some children infected with coronavirus have been exhibiting symptoms similar to toxic shock syndrome.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 30, 2020,
+        <a href="https://fullfact.org/online/letter-coronavirus-children/#d9e8e0ca39eada8c94832701a860cb96">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is a real letter issued to NHS primary care medical professionals. This letter was intended for medical professionals and refers to only a small number of cases.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10820-a-voice-recording-on-whatsapp-claims-there-will-be.html">A voice recording on WhatsApp claims there will be 900 deaths a day at the peak of the new coronavirus outbreak, one third will be children with no underlying health conditions, ambulances won’t be sent to people struggling to breathe, and all ice rinks are now being used as mortuaries.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 08, 2020,
+        <a href="https://fullfact.org/health/viral-voice-message-ambulance-trust/#71ef509cade1267412827c2050d9c025">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is incorrect. South East Coast Ambulance Service NHS Foundation Trust, where the person in the recording suggests they work, and Public Health England have confirmed the information is inaccurate.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11077-how-many-who-have-no-other-morbidities-under-the-a.html">How many who have no other morbidities under the age of 60 have died from this Covid-19? 350</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 20, 2020,
+        <a href="https://fullfact.org/health/its-not-right-youre-more-likely-drown-die-covid-19-if-youre-under-60-no-health-problems/#e383b5eed8fdd55d83e5300b73a7f201">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            The latest NHS figures for England show that 253 people under the age of 60 with no underlying health conditions have died from Covid-19 in hospitals.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11334-italy-disobeyed-world-health-law-from-the-who-sayi.html">Italy disobeyed world health law from the WHO saying not to carry out autopsies on Covid-19 patients.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jun 26, 2020,
+        <a href="https://fullfact.org/online/italy-covid-5g/#8861aedfcb7c14a67d442972bdc7722f">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            The WHO never said autopsies couldn’t take place.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10316-satellite-images-showing-high-levels-of-sulphur-di.html">Satellite images showing high levels of sulphur dioxide above China are possible evidence of mass cremations of people who have died from coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Feb 13, 2020,
+        <a href="https://fullfact.org/health/satellites-wuhan-sulphur-dioxide-coronavirus/#f0e93dc5354d6216b3e1af6a1548593a">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            False. The maps are not satellite images, and do not show actual levels of sulphur dioxide. They are simply forecasts based on historical data and weather patterns.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11084-the-survival-rate-for-covid-19-is-98-54-in-the-uk.html">The survival rate for Covid-19 is 98.54% in the UK.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 19, 2020,
+        <a href="https://fullfact.org/online/survival-rate-figures/#2bda0138996dfef4df2e8a3f1f8b4763">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            We don’t know what the survival rate is yet, as we don’t know how many people have had the disease. This figure comes from a claim about the US which is a slight over-estimate based on available figures.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11088-far-more-people-have-died-of-covid-19-in-the-uk-th.html">Far more people have died of Covid-19 in the UK than in Japan</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 19, 2020,
+        <a href="https://fullfact.org/health/uk-japan-covid-comparison/#05a4e344370c1d670463aa3f48758378">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is correct. At the time this post appeared there had been 31,855 Covid-19 deaths reported in the UK, compared with 628 in Japan.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10710-the-total-number-of-deaths-from-covid-19-in-the-uk.html">The total number of deaths from Covid-19 in the UK is now at 233, the same number of deaths reported in Italy about two weeks ago.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 24, 2020,
+        <a href="https://fullfact.org/online/deaths-covid-19-uk-italy/#0d146d3d8bfb6e43019bd5120ea1eb13">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Correct. On 21 March, Public Health England reported a total of 233 deaths in the UK from Covid-19. However, not enough is known to say whether the number of deaths will grow at the same rate in the UK as in Italy.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10712-the-total-number-of-deaths-from-covid-19-in-italy.html">The total number of deaths from Covid-19 in Italy rose from 233 to 4,032 over about two weeks.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 24, 2020,
+        <a href="https://fullfact.org/online/deaths-covid-19-uk-italy/#9f9ee849c934179a39ddd9043bb3ceef">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Correct. As reported by the Italian government, the number of deaths from Covid-19 rose from 233 on 7 March to 4,032 on 20 March.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11355-a-group-of-43-european-countries-and-territories-h.html">A group of 43 European countries and territories have far more people than the UK, but fewer Covid-19 deaths.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jun 29, 2020,
+        <a href="https://fullfact.org/health/uk-europe-covid-comparison/#39f5c37b2edac719f521048d2a285a93">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is correct. Although the list excludes other European countries with high death tolls, such as France, Italy, Spain and Belgium.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11101-the-deaths-of-181-nhs-workers-have-involved-covid.html">The deaths of 181 NHS workers have involved Covid-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 22, 2020,
+        <a href="https://fullfact.org/health/we-dont-know-exactly-how-many-nhs-workers-have-died-covid-19/#82184526d757a41ba80b289ff952bcfc">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This figure is correct for England only.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11104-96-3-of-the-italys-covid-19-deaths-were-actually-c.html">96.3% of the Italy’s Covid-19 deaths were actually caused by other diseases.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 22, 2020,
+        <a href="https://fullfact.org/health/sgarbi-coronavirus/#3b8fd1e35094470d9728e21d590e7445">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is incorrect. Official data shows that 96.3% of Covid-19 patients had other health conditions when they died.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10466-i-think-the-3-4-is-really-a-false-number-referring.html">"I think the 3.4% is really a false number," referring to the World Health Organization saying 3.4% of reported COVID-19 patients worldwide have died.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 05, 2020,
+        <a href="https://www.factcheck.org/2020/03/trump-and-the-coronavirus-death-rate/#34de685237d05265501721635e02e7f2">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            We Explain the Number
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11107-more-than-a-third-of-covid-19-deaths-had-diabetes.html">More than a third of Covid-19 deaths had diabetes.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 22, 2020,
+        <a href="https://fullfact.org/health/diabetes-covid-19-deaths-england/#8d49b30231d3784b7c25c24150599faa">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is incorrect. NHS data shows that of Covid-19 patients who died in hospital in England just over a quarter had diabetes.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10852-data-from-a-new-app-which-tracks-symptoms-of-covid.html">Data from a new app which tracks symptoms of Covid-19 claims that up to 6.6 million people in the UK have the disease.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 27, 2020,
+        <a href="https://fullfact.org/health/kings-app/#5066a5a61c01a95a8c7cbbf886b46465">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This data cannot be extrapolated to the UK population. The number of people with Covid-19 may be higher, lower, or the same as claimed.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10723-there-is-no-coronavirus.html">There is no ‘coronavirus’</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 01, 2020,
+        <a href="https://healthfeedback.org/claimreview/the-coronavirus-that-causes-covid-19-is-real-the-story-that-claims-otherwise-is-a-work-of-fiction/#7271e5ab38e3750d13df65ebe18149a3">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Inaccurate
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10981-the-cdc-has-adjusted-their-covid19-deaths-from-640.html">"The CDC has adjusted their COVID19 deaths from 64,000 to 37,000."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 04, 2020,
+        <a href="https://www.factcheck.org/2020/05/cdc-hasnt-reduced-covid-19-death-toll/#19092b9c78421516cc223f2499839997">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11378-nearly-99-of-covid-19-patients-who-are-vitamin-d-d.html">Nearly 99% of Covid-19 patients who are vitamin D deficient die, according to a research study.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jun 30, 2020,
+        <a href="https://fullfact.org/health/vitamin-d-study-flawed/#ef96a04c2bdabc5d16311bece488de3b">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            A study from Indonesia did claim to show this, but there are problems with the study methods that mean it doesn’t prove this is the case. The paper has now been removed by the authors from the online research library it appeared on.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10613-we-just-passed-a-law-saying-you-do-not-have-to-pay.html">"We just passed a law saying you do not have to pay for any of this, period," referring to health care coverage for COVID-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://www.factcheck.org/2020/03/factchecking-the-march-democratic-debate/#6549d5ea278115c2de742c1f62b5f884">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Covers Tests Not Care
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10232-coronavirus-is-not-a-new-virus.html">Coronavirus is not a new virus</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 24, 2020,
+        <a href="https://healthfeedback.org/claimreview/the-2019-coronavirus-outbreak-is-caused-by-a-novel-virus-past-mentions-of-coronaviruses-refer-to-different-strains/#3c6aa5972374b9b774008ad45343e067">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Inaccurate
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+
+</div>
+
+<div class="text-center text-gray" style="font-size: small; margin-top: 50px; margin-bottom: 50px">
+    
+    Part of the <a href="https://misdeed.fiit.stuba.sk">MISDEED</a> project at <a href="https://www.fiit.stuba.sk">FIIT STU</a>.
+    Powered by the <a href="https://documenter.getpostman.com/view/8615295/SVtPWq1j?version=latest">MonAnt</a> platform.
+    Put together by <a href="https://matus.tomlein.org">Matúš Tomlein</a>.
+    
+</div>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6380950-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-6380950-6');
+    </script>
+
+</body>
+</html>

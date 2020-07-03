@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CovidMis.info – Are people with asthma more at risk from COVID-19?</title>
+    <meta name="description" content="Fact checks related to COVID-19.">
+    <meta name="author" content="Matúš Tomlein">
+
+    <link rel="icon" href="/images/icon.png">
+
+    <link rel="stylesheet" href="/assets/stylesheets/spectre.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/spectre-exp.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/Chart.min.css">
+    <script type="text/javascript" src="/assets/javascripts/libs/force-graph.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/chartjs-plugin-colorschemes.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/moment.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/libs/mithril.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/app/render.js"></script>
+</head>
+
+<body>
+
+    
+
+<script>
+    var language = 'en';
+</script>
+
+<div class="container grid-lg">
+    <header class="navbar">
+        <section class="navbar-section">
+            <a href="/graph" class="btn btn-link">
+                Web of misinfo
+            </a>
+        </section>
+        <section class="navbar-center">
+            <a href="/" class="navbar-brand mr-2">
+                CovidMis.info
+            </a>
+        </section>
+        <section class="navbar-section">
+            <a href="/about" class="btn btn-link">
+                About
+            </a>
+        </section>
+    </header>
+
+    
+
+<div class="hero hero-sm">
+    <div class="hero-body">
+        <h4 class="text-center">
+            Are people with asthma more at risk from COVID-19?
+        </h4>
+
+        <p>
+            
+        </p>
+
+        <div class="text-center text-warning text-large m-2 p-2">
+            Verdict:
+            Not Enough Experts
+        </div>
+
+        <div class="text-center m-2 p-2">
+            <a href="https://metafact.io/factchecks/1617-are-people-with-asthma-more-at-risk-from-covid-19" class="btn btn-primary btn-lg">
+                Open at
+                metafact.io
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="columns pt-2 mt-2 pb-2 mb-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>
+            Similar fact checks
+        </h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11264-does-nicotine-protect-us-against-coronavirus.html">Does nicotine protect us against coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jun 15, 2020,
+        <a href="https://metafact.io/factchecks/1618-does-nicotine-protect-us-against-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11265-are-diabetics-more-at-risk-from-covid-19.html">Are diabetics more at risk from COVID-19?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jun 15, 2020,
+        <a href="https://metafact.io/factchecks/1619-are-diabetics-more-at-risk-from-covid-19">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10500-rashes-are-a-symptom-of-the-new-coronavirus.html">Rashes are a symptom of the new coronavirus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 06, 2020,
+        <a href="https://fullfact.org/health/coronavirus-rash/#6870c9db92e529b6a3dd4f9ae41c0692">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            No official advice list rashes as a symptom of the new coronavirus.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11140-are-there-many-unknowns-relating-to-covid-19.html">Are there many unknowns relating to COVID-19?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 28, 2020,
+        <a href="https://metafact.io/factchecks/1564-are-there-many-unknowns-relating-to-covid-19">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10632-the-new-coronavirus-is-the-least-deadly-virus-and.html">The new coronavirus is the “least deadly virus” and has a death rate lower than the 2009 H1N1 outbreak.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 13, 2020,
+        <a href="https://www.factcheck.org/2020/03/infographic-on-facebook-distorts-comparative-facts-on-viruses/#754910be73d2ca9877af693b2602c5c8">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            False
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10765-are-men-at-greater-risk-from-covid-19.html">Are men at greater risk from COVID-19?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 08, 2020,
+        <a href="https://metafact.io/factchecks/1529-are-men-at-greater-risk-from-covid-19">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11159-are-some-countries-close-to-herd-immunity-for-covi.html">Are some countries close to herd immunity for COVID-19?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jun 02, 2020,
+        <a href="https://metafact.io/factchecks/1570-are-some-countries-close-to-herd-immunity-for-covid-19">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11043-will-covid-19-save-lives-from-lower-air-pollution.html">Will COVID-19 save lives from lower air pollution?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 14, 2020,
+        <a href="https://metafact.io/factchecks/1558-will-covid-19-save-lives-from-lower-air-pollution">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11048-covid-19-deaths-in-care-homes-are-rising.html">Covid-19 deaths in care homes are rising.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 14, 2020,
+        <a href="https://fullfact.org/health/care-homes-starmer-johnson/#f15efbd18036127e737c57153b690449">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This was true at the time, by one measure. By another measure it was probably not true. Now it seems clearer that deaths in care homes from suspected Covid-19 are falling.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10538-can-humans-get-coronavirus-from-cats.html">Can humans get coronavirus from cats?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://metafact.io/factchecks/1461-can-humans-get-coronavirus-from-cats">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10539-are-healthcare-systems-prepared-for-the-coronaviru.html">Are healthcare systems prepared for the coronavirus pandemic?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://metafact.io/factchecks/1464-are-healthcare-systems-prepared-for-the-coronavirus-pandemic">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10541-are-there-ways-for-individuals-to-prepare-for-the.html">Are there ways for individuals to prepare for the coronavirus pandemic? </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 11, 2020,
+        <a href="https://metafact.io/factchecks/1466-are-there-ways-for-individuals-to-prepare-for-the-coronavirus-pandemic">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10542-for-covid-19-are-there-any-lessons-learned-from-pr.html">For COVID-19, are there any lessons learned from previous flu pandemics?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://metafact.io/factchecks/1467-for-covid-19-are-there-any-lessons-learned-from-previous-flu-pandemics">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11000-prolonged-use-of-covid-19-related-face-masks-cause.html">Prolonged use of COVID-19-related face masks cause health problems due to breathing in too much exhaled carbon dioxide.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 07, 2020,
+        <a href="https://www.snopes.com/fact-check/masks-dangerous-health/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Mostly-false
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10676-people-with-type-a-blood-are-more-susceptible-to-c.html">People with Type-A blood are more susceptible to COVID-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 19, 2020,
+        <a href="https://www.snopes.com/fact-check/blood-type-covid-19/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Unproven
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10171-are-alcohol-sanitizers-effective-against-viruses-l.html">Are alcohol sanitizers effective against viruses like SARS/coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1416-are-alcohol-sanitizers-effective-against-viruses-like-sars-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11068-the-novel-coronavirus-is-going-to-go-away-without.html">The novel coronavirus "is going to go away without a vaccine."</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 19, 2020,
+        <a href="https://www.factcheck.org/2020/05/trump-baselessly-claims-coronavirus-will-go-away-without-vaccine/#d36ed596f6896ada0470078b573e7ba6">factcheck.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Based in Science
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10173-will-a-vaccine-be-discovered-for-the-novel-coronav.html">Will a vaccine be discovered for the novel coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1418-will-a-vaccine-be-discovered-for-the-novel-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-success">
+            Affirmative
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10174-is-the-novel-wuhan-coronavirus-more-dangerous-than.html">Is the novel Wuhan coronavirus more dangerous than SARS? </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1419-is-the-novel-wuhan-coronavirus-more-dangerous-than-sars">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10942-smoking-may-protect-against-covid-19.html">Smoking may protect against COVID-19</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Apr 23, 2020,
+        <a href="https://healthfeedback.org/claimreview/little-to-no-evidence-that-smoking-protects-against-covid-19-may-increase-risk-of-complications-instead/#ee0d9e1e716b5fe088e3f25a5dbe0b0a">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Unsupported
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10177-are-there-ways-to-lower-your-risk-of-getting-coron.html">Are there ways to lower your risk of getting coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1422-are-there-ways-to-lower-your-risk-of-getting-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-success">
+            Affirmative
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11076-youre-more-likely-to-drown-than-die-from-covid-19.html">You’re more likely to drown than die from Covid-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 20, 2020,
+        <a href="https://fullfact.org/health/its-not-right-youre-more-likely-drown-die-covid-19-if-youre-under-60-no-health-problems/#d7b285e5b5cf0f2bf4326e69634e8300">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is not a valid comparison to make, and the figures it’s based on aren’t accurate.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11077-how-many-who-have-no-other-morbidities-under-the-a.html">How many who have no other morbidities under the age of 60 have died from this Covid-19? 350</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 20, 2020,
+        <a href="https://fullfact.org/health/its-not-right-youre-more-likely-drown-die-covid-19-if-youre-under-60-no-health-problems/#e383b5eed8fdd55d83e5300b73a7f201">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            The latest NHS figures for England show that 253 people under the age of 60 with no underlying health conditions have died from Covid-19 in hospitals.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10568-can-humans-get-coronavirus-from-dogs.html">Can humans get coronavirus from dogs?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 12, 2020,
+        <a href="https://metafact.io/factchecks/1481-can-humans-get-coronavirus-from-dogs">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10191-is-the-novel-wuhan-coronavirus-more-dangerous-than.html">Is the novel Wuhan coronavirus more dangerous than MERS? </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 29, 2020,
+        <a href="https://metafact.io/factchecks/1425-is-the-novel-wuhan-coronavirus-more-dangerous-than-mers">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11088-far-more-people-have-died-of-covid-19-in-the-uk-th.html">Far more people have died of Covid-19 in the UK than in Japan</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 19, 2020,
+        <a href="https://fullfact.org/health/uk-japan-covid-comparison/#05a4e344370c1d670463aa3f48758378">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            This is correct. At the time this post appeared there had been 31,855 Covid-19 deaths reported in the UK, compared with 628 in Japan.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10965-will-covid-19-save-lives-from-other-infectious-dis.html">Will COVID-19 save lives from other infectious diseases?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 04, 2020,
+        <a href="https://metafact.io/factchecks/1549-will-covid-19-save-lives-from-other-infectious-diseases">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11262-are-public-restrooms-a-transmission-risk-for-covid.html">Are public restrooms a transmission risk for COVID-19?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jun 15, 2020,
+        <a href="https://metafact.io/factchecks/1616-are-public-restrooms-a-transmission-risk-for-covid-19">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10199-are-face-masks-effective-in-preventing-transmissio.html">Are face masks effective in preventing transmission of viruses like coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 28, 2020,
+        <a href="https://metafact.io/factchecks/1415-are-face-masks-effective-in-preventing-transmission-of-viruses-like-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10715-is-there-a-coronavirus-transmission-risk-when-driv.html">Is there a coronavirus transmission risk when driving with passengers?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 26, 2020,
+        <a href="https://metafact.io/factchecks/1510-is-there-a-coronavirus-transmission-risk-when-driving-with-passengers">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10973-will-covid-19-result-in-lives-saved-from-other-inf.html">Will COVID-19 result in lives saved from other infectious diseases?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 04, 2020,
+        <a href="https://metafact.io/factchecks/1549-will-covid-19-result-in-lives-saved-from-other-infectious-diseases">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10974-is-covid-19-more-dangerous-than-the-seasonal-flu.html">Is COVID-19 more dangerous than the seasonal flu?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1495-is-covid-19-more-dangerous-than-the-seasonal-flu">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10990-will-covid-19-result-in-more-lives-saved-from-othe.html">Will COVID-19 result in more lives saved from other infectious diseases?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        May 04, 2020,
+        <a href="https://metafact.io/factchecks/1549-will-covid-19-result-in-more-lives-saved-from-other-infectious-diseases">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Negative
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10479-coronavirus-pneumonia-is-a-dry-cough-with-no-runny.html">Coronavirus pneumonia is a dry cough with no runny nose.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 05, 2020,
+        <a href="https://fullfact.org/online/coronavirus-claims-symptoms-viral/#1f0d9401e23838f042b8ddb6ab3f3c6d">fullfact.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Some Covid-19 patients do get pneumonia, and one of the symptoms is a dry cough. A runny nose doesn’t rule out Covid-19.
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10608-are-governments-doing-enough-to-limit-the-coronavi.html">Are governments doing enough to limit the coronavirus pandemic?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1492-are-governments-doing-enough-to-limit-the-coronavirus-pandemic">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10609-are-children-more-at-risk-to-coronavirus.html">Are children more at risk to coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1493-are-children-more-at-risk-to-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11250-a-photograph-shows-the-damage-to-a-person-s-lung-f.html">A photograph shows the damage to a person's lung from the COVID-19 coronavirus disease.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jun 11, 2020,
+        <a href="https://www.snopes.com/fact-check/lung-from-covid-19-patient/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-success">
+            True
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10612-people-who-have-survived-the-covid-19-coronavirus.html">People who have survived the COVID-19 coronavirus disease can become reinfected by the virus.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 14, 2020,
+        <a href="https://www.snopes.com/fact-check/covid-19-reinfection/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Unproven
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/11253-the-united-states-top-infectious-diseases-expert-d.html">The United States' top infectious diseases expert, Dr. Anthony Fauci, said people in the U.S. do not need to wear masks to protect against COVID-19.</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jun 11, 2020,
+        <a href="https://www.snopes.com/fact-check/fauci-masks-no-longer-needed/">snopes.com</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Outdated
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10232-coronavirus-is-not-a-new-virus.html">Coronavirus is not a new virus</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Jan 24, 2020,
+        <a href="https://healthfeedback.org/claimreview/the-2019-coronavirus-outbreak-is-caused-by-a-novel-virus-past-mentions-of-coronaviruses-refer-to-different-strains/#3c6aa5972374b9b774008ad45343e067">healthfeedback.org</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-error">
+            Inaccurate
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10619-is-covid-19-more-dangerous-the-seasonal-flu.html">Is COVID-19 more dangerous the seasonal flu?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1495-is-covid-19-more-dangerous-the-seasonal-flu">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10622-will-people-get-coronavirus-pandemic-fatigue.html">Will people get Coronavirus pandemic fatigue?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 16, 2020,
+        <a href="https://metafact.io/factchecks/1498-will-people-get-coronavirus-pandemic-fatigue">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="/fact_checks/10751-are-certain-types-of-soap-more-effective-on-corona.html">Are certain types of soap more effective on coronavirus?</a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        Mar 28, 2020,
+        <a href="https://metafact.io/factchecks/1520-are-certain-types-of-soap-more-effective-on-coronavirus">metafact.io</a>
+    </div>
+    <div class="column col-6 text-right mb-2 pb-2">
+        <div class="text-warning">
+            Not Enough Experts
+        </div>
+    </div>
+    
+</div>
+
+
+
+    
+    <div class="columns pt-2 mt-2">
+    <div class="column col-12 mt-2 pt-2 mb-2 pb-2">
+        <h4>
+            Articles found on the Web
+        </h4>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="http://www.medicinenet.com/script/main/art.asp?articlekey=238839" rel="nofollow">
+                Asthma Isn't a Risk Factor for Worsening COVID-19: Study
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        medicinenet.com
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-error">
+            Likely contains claim
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="https://www.nytimes.com/2020/04/16/health/coronavirus-asthma-risk.html" rel="nofollow">
+                Asthma Is Absent Among Top Covid-19 Risk Factors, Early Data Shows
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        nytimes.com
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-error">
+            Likely contains claim
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="https://www.dailymail.co.uk/femail/article-8194415/Medical-experts-weigh-asthma-puts-risk-COVID-19-complications.html?ns_mchannel=rss&ns_campaign=1490&ito=1490" rel="nofollow">
+                Medical experts weigh in on whether asthma puts you at risk of COVID-19 complications
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        dailymail.co.uk
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-error">
+            Likely contains claim
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="http://www.medicinenet.com/script/main/art.asp?articlekey=230556" rel="nofollow">
+                Coronavirus Fears Have People With Asthma, Emphysema Avoiding the ER
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        medicinenet.com
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-warning">
+            Might contain claim
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="https://www.webmd.com/lung/news/20200403/asthma-copd-raise-odds-for-severe-covid-19" rel="nofollow">
+                Asthma, COPD Raise Odds for Severe COVID-19
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        webmd.com
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-warning">
+            Might contain claim
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="http://feeds.foxnews.com/~r/foxnews/health/~3/bfg9ZwHnCO0/how-does-coronavirus-affect-asthma-sufferers" rel="nofollow">
+                How does coronavirus affect asthma sufferers?
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        feeds.foxnews.com
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-warning">
+            Might contain claim
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="https://www.webmd.com/lung/news/20200421/coronavirus-fears-have-people-with-asthma-emphysema-avoiding-the-er" rel="nofollow">
+                COVID Keeping People With Lung Diseases Out of ER
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        webmd.com
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-warning">
+            Might contain claim
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="http://www.medicinenet.com/script/main/art.asp?articlekey=229782" rel="nofollow">
+                Asthma, COPD Raise Odds for Severe COVID-19, Lung Experts Warn
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        medicinenet.com
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-warning">
+            Might contain claim
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="http://www.medicinenet.com/script/main/art.asp?articlekey=230504" rel="nofollow">
+                Don't Cut Back on Asthma Meds During Pandemic, Expert Advises
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        medicinenet.com
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-warning">
+            Might contain claim
+        </div>
+    </div>
+    
+    <div class="column col-12 mt-2">
+        <h6>
+            <a href="http://www.medicinenet.com/script/main/art.asp?articlekey=229130" rel="nofollow">
+                COVID-19: Asthma Patients Should Stay on Steroids
+            </a>
+        </h6>
+    </div>
+    <div class="column col-6 mb-2 pb-2">
+        medicinenet.com
+    </div>
+    <div class="column col-6 mb-2 pb-2 text-right">
+        <div class="text-warning">
+            Might contain claim
+        </div>
+    </div>
+    
+</div>
+
+
+
+</div>
+
+<div class="text-center text-gray" style="font-size: small; margin-top: 50px; margin-bottom: 50px">
+    
+    Part of the <a href="https://misdeed.fiit.stuba.sk">MISDEED</a> project at <a href="https://www.fiit.stuba.sk">FIIT STU</a>.
+    Powered by the <a href="https://documenter.getpostman.com/view/8615295/SVtPWq1j?version=latest">MonAnt</a> platform.
+    Put together by <a href="https://matus.tomlein.org">Matúš Tomlein</a>.
+    
+</div>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6380950-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-6380950-6');
+    </script>
+
+</body>
+</html>
